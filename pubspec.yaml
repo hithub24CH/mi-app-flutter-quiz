@@ -1,0 +1,41 @@
+name: quiz_app_flutter
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0' # Usaremos un rango más estable que una versión beta
+
+# Aquí se listan los paquetes externos que tu app necesita.
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  shared_preferences: ^2.2.2
+  audioplayers: ^6.5.0
+  flutter_animate: ^4.5.2
+  percent_indicator: ^4.2.3 # O la versión más reciente
+  provider: ^6.1.1 # O la versión más reciente
+
+# Aquí se listan las dependencias que solo se usan para desarrollo y pruebas.
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0 # He actualizado la versión de lints a una más común
+  
+
+# La siguiente sección es específica para la configuración de Flutter.
+flutter:
+
+  # Esto activa el uso de los componentes de Material Design.
+  uses-material-design: true
+
+  # Aquí es donde se declaran los assets (imágenes, archivos JSON, etc.).
+  assets:
+    - assets/
+    - assets/sounds/ # Es una buena práctica ser explícito también
+    # Si tuvieras más carpetas de assets, las añadirías aquí:
+    # - assets/images/
+    # - assets/fonts/

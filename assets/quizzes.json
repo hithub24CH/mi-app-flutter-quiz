@@ -1,0 +1,1247 @@
+[
+  {
+    "id": "ley_004_v1",
+    "title": "Ley N° 004 Marcelo Quiroga S.C.",
+    "category": "Leyes Anticorrupción", 
+    "description": "Cuestionario sobre la Ley de Lucha Contra la Corrupción, Enriquecimiento Ilícito e Investigación de Fortunas.",
+    "questions": [
+      {
+        "id": "ley004_q1",
+        "text": "¿Cuál es el objeto principal de la Ley N° 004, según su Artículo 1?",
+        "options": [
+          "Establecer mecanismos y procedimientos destinados exclusivamente a sancionar actos de corrupción cometidos por ex servidoras y ex servidores públicos.",
+          "Establecer mecanismos y procedimientos destinados a prevenir, investigar, procesar y sancionar actos de corrupción, pero sin contemplar la recuperación del patrimonio afectado del Estado.",
+          "Establecer mecanismos y procedimientos orientados únicamente a la prevención de actos de corrupción que afecten recursos privados nacionales.",
+          "Establecer mecanismos y procedimientos destinados a prevenir, investigar, procesar y sancionar actos de corrupción cometidos por diversos actores, así como recuperar el patrimonio afectado del Estado a través de los órganos jurisdiccionales competentes",
+          "Establecer únicamente los procedimientos para investigar el patrimonio de personas naturales o jurídicas extranjeras que comprometan recursos del Estado."
+        ],
+        "correctAnswerIndex": 3
+      },
+      {
+        "id": "ley004_q2",
+        "text": "Según el Artículo 1, la Ley N° 004 busca recuperar el patrimonio afectado del Estado a través de:",
+        "options": [
+          "Los órganos legislativos y ejecutivos únicamente.",
+          "Las entidades de control social y organizaciones no gubernamentales.",
+          "Los órganos jurisdiccionales competentes.",
+          "Los tratados y convenciones internacionales exclusivamente.",
+          "Las servidoras y servidores públicos en ejercicio de sus funciones."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "ley004_q3",
+        "text": "Conforme al Artículo 2, ¿cómo se define la corrupción?",
+        "options": [
+          "Es el requerimiento o la aceptación, únicamente por un servidor público, de cualquier objeto de valor pecuniario para sí mismo, sin que necesariamente afecte los intereses del Estado.",
+          "Es el ofrecimiento u otorgamiento indirecto, de una persona natural o jurídica extranjera, de favores o promesas a cambio de una omisión que beneficie al Estado.",
+          "Es únicamente la aceptación de dádivas o ventajas por parte de un servidor público a cambio de la acción u omisión de cualquier acto, sin importar si es para sí mismo o para otra persona.",
+          "Es el requerimiento o la aceptado, el ofrecimiento u otorgamiento directo o indirecto, de un ex servidor público, de cualquier objeto de valor pecuniario para otra entidad, a cambio de una acción que no afecte los intereses del Estado.",
+          "Es el requerimiento o la aceptado, el ofrecimiento u otorgamiento directo o indirecto, de un servidor público, de una persona natural o jurídica, nacional o extranjera, de cualquier objeto de valor pecuniario u otros beneficios como dádivas, favores, promesas o ventajas para sí mismo o para otra persona o entidad, a cambio de la acción u omisión de cualquier acto que afecte a los intereses del Estado."
+        ],
+        "correctAnswerIndex": 4
+      },
+      {
+        "id": "ley004_q4",
+        "text": "En la definición de corrupción del Artículo 2, el \"objeto de valor pecuniario u otros beneficios\" se considera a cambio de:",
+        "options": [
+          "La acción de cualquier acto que beneficie al servidor público, independientemente de los intereses del Estado.",
+          "La omisión de cualquier acto que afecte los intereses de una persona natural o jurídica privada.",
+          "La acción u omisión de cualquier acto que afecte a los intereses del Estado.",
+          "Únicamente la acción de un acto que afecte los intereses del Estado, excluyendo la omisión.",
+          "La acción u omisión de cualquier acto que no tenga relación con los intereses del Estado."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "ley004_q5",
+        "text": "Según el Artículo 3, ¿cuál es una de las finalidades de la presente Ley?",
+        "options": [
+          "Fomentar la impunidad en hechos de corrupción para agilizar procesos judiciales.",
+          "La recuperación y protección del patrimonio privado con la participación exclusiva de entidades públicas.",
+          "La prevención, acabar con la impunidad en hechos de corrupción y la efectiva lucha contra la corrupción, recuperación y protección del patrimonio del Estado, con la participación activa de las entidades públicas, privadas y la sociedad civil.",
+          "La lucha contra la corrupción con la participación pasiva de la sociedad civil y entidades privadas.",
+          "Únicamente la protección del patrimonio del Estado, sin considerar la prevención o la lucha contra la impunidad."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "ley004_q6",
+        "text": "¿Cuál de los siguientes NO es un principio que rige la presente Ley, según el Artículo 4?",
+        "options": [
+          "Suma Qamaña (Vivir bien).",
+          "Ética.",
+          "Discrecionalidad en la administración de justicia.",
+          "Celeridad.",
+          "Defensa del Patrimonio del Estado."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "ley004_q7",
+        "text": "El principio de \"Transparencia\" en el Artículo 4 se define como:",
+        "options": [
+          "El comportamiento de la persona conforme a los principios morales de servicio a la comunidad.",
+          "La práctica y manejo visible de los recursos del Estado por las servidoras y servidores públicos, así como personas naturales y jurídicas, nacionales o extranjeras que presten servicios o comprometan recursos del Estado.",
+          "La obligación constitucional de precautelar y resguardar el patrimonio del Estado, denunciando todo acto o hecho de corrupción.",
+          "La complementariedad entre el acceso y el disfrute de los bienes materiales y la realización afectiva, subjetiva y espiritual.",
+          "El intercambio de información sin restricción entre entidades que luchan contra la corrupción."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "ley004_q8",
+        "text": "Según el principio \"Ama Suwa (No seas ladrón), Uhua'na machapi'tya (No robar)\", ¿quiénes tienen la obligación de proteger y custodiar los bienes y patrimonio del Estado como si fueran propios?",
+        "options": [
+          "Únicamente los servidores públicos nacionales",
+          "Solo las personas extranjeras que realizan negocios con el Estado.",
+          "Exclusivamente las entidades públicas.",
+          "Toda persona nacional o extranjera.",
+          "Las organizaciones de la sociedad civil dedicadas a la fiscalización."
+        ],
+        "correctAnswerIndex": 3
+      },
+      {
+        "id": "ley004_q9",
+        "text": "Según el Artículo 5, numeral I, ¿a quiénes se aplica la presente Ley?",
+        "options": [
+          "Únicamente a los servidores públicos del nivel central del Estado Plurinacional.",
+          "Solo a las personas privadas, naturales o jurídicas, que cometan delitos de corrupción.",
+          "Exclusivamente al Ministerio Público, Procuraduría General de Estado y Defensoría del Pueblo.",
+          "A los servidores y ex servidores públicos de los Órganos del Estado Plurinacional y entidades territoriales autónomas, pero excluyendo a las Fuerzas Armadas y Policía Boliviana.",
+          "A los servidores y ex servidores públicos de todos los Órganos del Estado, entidades e instituciones del nivel central, descentralizadas, desconcentradas, entidades territoriales autónomas, Ministerio Público, Procuraduría, Defensoría, Banco Central, Contraloría, Universidades, Fuerzas Armadas, Policía Boliviana, entidades con participación patrimonial del Estado y personas privadas que cometan delitos de corrupción afectando al Estado."
+        ],
+        "correctAnswerIndex": 4
+      },
+      {
+        "id": "ley004_q10",
+        "text": "El Artículo 5, numeral II, establece que esta Ley, de conformidad con la Constitución Política del Estado:",
+        "options": [
+          "Reconoce inmunidad y fuero preferente para ciertos altos funcionarios.",
+          "No reconoce inmunidad, fuero o privilegio alguno, debiendo ser de aplicación preferente",
+          "Reconoce ciertos privilegios para ex servidores públicos, siendo de aplicación supletoria.",
+          "No reconoce inmunidad, pero sí fuero especial para casos de corrupción de menor cuantía.",
+          "Es de aplicación secundaria frente a otras leyes específicas sobre la materia."
+        ],
+        "correctAnswerIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "rm_001_2025_v1",
+    "title": "R.M. 0001/2025 - Normas Gestión Educativa",
+    "category": "Normativas Educativas", 
+    "description": "Cuestionario sobre las Normas Generales para la Gestión Educativa 2025 del Subsistema de Educación Regular.",
+    "questions": [
+      {
+        "id": "rm001_q1",
+        "text": "¿Cuál es el objeto principal de la R.M. 0001/2025?",
+        "options": [
+          "Establecer el currículo base para la educación alternativa.",
+          "Regular los procedimientos de planificación, organización, ejecución, acompañamiento y evaluación de la Gestión Educativa 2025 del Subsistema de Educación Regular.",
+          "Definir las políticas salariales para el magisterio en 2025.",
+          "Aprobar el nuevo reglamento de faltas y sanciones para estudiantes."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q2",
+        "text": "Según el Artículo 3, la gestión educativa en el Subsistema de Educación Regular comprende el periodo de:",
+        "options": [
+          "Planificación, desarrollo y evaluación únicamente.",
+          "Inscripción, planificación, organización, desarrollo y evaluación.",
+          "Inscripción, ejecución curricular y cierre de gestión.",
+          "Organización administrativa, desarrollo curricular y evaluación de aprendizajes."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q3",
+        "text": "¿Cuántos días hábiles trabajados contempla el calendario escolar 2025 para el desarrollo y evaluación curricular?",
+        "options": [
+          "180 días hábiles.",
+          "190 días hábiles.",
+          "200 días hábiles.",
+          "210 días hábiles."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "rm001_q4",
+        "text": "El periodo de inscripción de estudiantes para la gestión 2025, según el calendario, se realizará:",
+        "options": [
+          "Del 15 al 19 de enero.",
+          "Del 20 al 24 de enero.",
+          "Del 27 al 31 de enero.",
+          "La primera semana de febrero."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q5",
+        "text": "La planificación y organización de la Gestión Educativa 2025 se efectuará:",
+        "options": [
+          "El 27 y 28 de enero.",
+          "La primera semana de clases.",
+          "El 30 y 31 de enero.",
+          "Durante todo el primer trimestre."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "rm001_q6",
+        "text": "El descanso pedagógico para la gestión 2025 iniciará el:",
+        "options": [
+          "Lunes 01 de julio y durará una semana.",
+          "Lunes 07 de julio y tendrá una duración de dos (2) semanas hábiles.",
+          "Lunes 14 de julio y durará dos semanas calendario.",
+          "Lunes 07 de julio y durará tres (3) semanas hábiles."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q7",
+        "text": "Para las unidades educativas con Calendario Educativo Regionalizado del Pueblo Indígena Weenhayek, la entrega de Diplomas de Bachiller se realizará:",
+        "options": [
+          "Conjuntamente con el resto del país en diciembre.",
+          "Al inicio del segundo trimestre.",
+          "A la culminación de su gestión educativa específica.",
+          "Según disposición de la Dirección Distrital."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "rm001_q8",
+        "text": "¿Quiénes son responsables de coordinar acciones preventivas de atención inmediata ante eventos adversos como incendios o inundaciones?",
+        "options": [
+          "Únicamente el Ministerio de Educación.",
+          "Las direcciones departamentales de educación y direcciones distritales educativas.",
+          "Los directores de unidades educativas.",
+          "Las Juntas Escolares de Padres de Familia."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q9",
+        "text": "En unidades educativas de \"alta demanda\" que realizaron preinscripciones en noviembre de 2024, la inscripción para 2025 será:",
+        "options": [
+          "Mediante sorteo público en enero de 2025.",
+          "Automática, sin necesidad de presencia física del padre, madre o tutor.",
+          "Condicionada a una entrevista con el director.",
+          "Priorizando a los estudiantes con mejores promedios."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q10",
+        "text": "¿Cuál es el orden de prioridad para preinscripciones en unidades educativas de \"alta demanda\" para la gestión 2026?",
+        "options": [
+          "Hijos de maestros, vivan en la zona, padres trabajen cerca.",
+          "Hermanas/os, vivan en la zona aledaña, padres/madres/tutores cuya fuente laboral esté cerca.",
+          "Vivan en la zona, hermanos, padres trabajen cerca.",
+          "Estudiantes con excelencia académica, hermanos, vivan en la zona."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q11",
+        "text": "La inscripción de estudiantes nuevos al primer año de escolaridad de Educación Inicial en Familia Comunitaria se realizará:",
+        "options": [
+          "Del jueves 23 al viernes 24 de enero.",
+          "Del lunes 20 hasta el día martes 21 de enero.",
+          "Durante toda la última semana de enero.",
+          "La primera semana de febrero."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q12",
+        "text": "¿Qué documento NO es un requisito indispensable al momento de la inscripción para estudiantes nuevos que ingresan por primera vez al sistema (pudiendo firmar compromiso)?",
+        "options": [
+          "Certificado de Nacimiento original.",
+          "Cédula de Identidad del estudiante.",
+          "Certificado o Carnet de Vacunas (para Inicial y Primaria).",
+          "Fotografía tamaño carnet con fondo rojo."
+        ],
+        "correctAnswerIndex": 3
+      },
+      {
+        "id": "rm001_q13",
+        "text": "La edad cronológica para la inscripción al Primer Año de Educación Inicial en Familia Comunitaria es de:",
+        "options": [
+          "3 años cumplidos al 30 de junio de 2025.",
+          "4 años cumplidos al 30 de junio de 2025.",
+          "5 años cumplidos al 30 de junio de 2025.",
+          "4 años cumplidos al 31 de diciembre de 2025."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q14",
+        "text": "La inscripción de estudiantes antiguos en la misma unidad educativa es:",
+        "options": [
+          "Condicionada a la presentación de todos los documentos actualizados.",
+          "Automática, debiendo ser ratificada con presencia física la primera semana de clases (urbano/provincial).",
+          "Mediante un nuevo formulario RUDE cada año.",
+          "Sujeta a la aprobación de la libreta del año anterior."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q15",
+        "text": "Para la apertura de un nuevo paralelo (Paralelo A) se requiere un mínimo de:",
+        "options": [
+          "Veinte (20) estudiantes.",
+          "Veintiún (21) estudiantes.",
+          "Veinticinco (25) estudiantes.",
+          "Treinta (30) estudiantes."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q16",
+        "text": "En unidades educativas nocturnas, el número mínimo de estudiantes por año de escolaridad para un solo paralelo es de:",
+        "options": [
+          "Cinco (5) estudiantes.",
+          "Diez (10) estudiantes.",
+          "Quince (15) estudiantes.",
+          "Veinte (20) estudiantes."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q17",
+        "text": "El número máximo de estudiantes por paralelo en Educación Primaria Comunitaria Vocacional de primero a quinto año es de:",
+        "options": [
+          "Veinticinco (25) estudiantes.",
+          "Treinta (30) estudiantes.",
+          "Treinta y cinco (35) estudiantes.",
+          "Cuarenta (40) estudiantes."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q18",
+        "text": "En Educación Secundaria Comunitaria Productiva, la cantidad recomendada de estudiantes por paralelo es de:",
+        "options": [
+          "Treinta (30) estudiantes.",
+          "Treinta y cinco (35) estudiantes.",
+          "Cuarenta (40) estudiantes.",
+          "Veinticinco (25) estudiantes."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q19",
+        "text": "Las unidades educativas con atención Modular Multigrado en Secundaria podrán funcionar con un mínimo de:",
+        "options": [
+          "Tres (3) estudiantes.",
+          "Cinco (5) estudiantes.",
+          "Diez (10) estudiantes.",
+          "Quince (15) estudiantes."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q20",
+        "text": "El formulario RUDE impreso deberá ser firmado por:",
+        "options": [
+          "El director de la unidad educativa y el estudiante.",
+          "El padre, madre o tutor únicamente.",
+          "El director de la unidad educativa y el padre, madre o tutor.",
+          "El director de la unidad educativa y el maestro de curso."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "rm001_q21",
+        "text": "¿Está permitido rechazar a estudiantes por motivo de discapacidad?",
+        "options": [
+          "Sí, si la unidad educativa no cuenta con la infraestructura adecuada.",
+          "No, está prohibido tanto en la inscripción como en todo el proceso educativo.",
+          "Sí, si el estudiante requiere atención especializada que la UE no puede brindar.",
+          "Solo en unidades educativas privadas."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q22",
+        "text": "Los traslados de estudiantes durante la gestión educativa 2025 se realizarán hasta:",
+        "options": [
+          "El final del primer trimestre.",
+          "El inicio del segundo trimestre.",
+          "El final del segundo trimestre.",
+          "Cualquier momento del año con justificación."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q23",
+        "text": "Las estudiantes en situación de embarazo gozarán de licencia temporal:",
+        "options": [
+          "Solo si presentan complicaciones médicas.",
+          "Según prescripción médica en el periodo pre y postparto, garantizando su derecho a la educación.",
+          "Únicamente en el periodo postparto por 30 días.",
+          "No está contemplada licencia, pero sí flexibilidad horaria."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q24",
+        "text": "¿Cuál de los siguientes NO es un instrumento de planificación educativa mencionado en el Artículo 32?",
+        "options": [
+          "Plan Operativo Anual (POA).",
+          "Proyecto Socioproductivo (PSP).",
+          "Plan de Desarrollo Curricular (PDC).",
+          "Reglamento Interno de la Unidad Educativa (RIUE)."
+        ],
+        "correctAnswerIndex": 3
+      },
+      {
+        "id": "rm001_q25",
+        "text": "El Cuaderno Pedagógico es un instrumento de uso:",
+        "options": [
+          "Opcional para el maestro.",
+          "Obligatorio para el director de la unidad educativa.",
+          "Obligatorio para el maestro.",
+          "Recomendado para estudiantes de secundaria."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "rm001_q26",
+        "text": "Los Textos de Aprendizaje distribuidos por el Ministerio de Educación son de uso:",
+        "options": [
+          "Opcional y pueden ser reemplazados por otros textos.",
+          "Obligatorio en todos los niveles, áreas y ámbitos en UEs fiscales y de convenio.",
+          "Obligatorio solo en unidades educativas fiscales.",
+          "Recomendado, pero con costo para los padres de familia."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q27",
+        "text": "Los actos de promoción en Educación Inicial y Primaria Comunitaria Vocacional son:",
+        "options": [
+          "Obligatorios y deben seguir un protocolo nacional.",
+          "No son obligatorios, pero por consenso de padres y tutores se podrán realizar.",
+          "Prohibidos para evitar gastos a los padres.",
+          "Obligatorios solo en unidades educativas privadas."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q28",
+        "text": "¿En conmemoración a qué escritor se instituyó el \"Día Plurinacional de la Lectura\" el 5 de septiembre?",
+        "options": [
+          "Adela Zamudio.",
+          "Franz Tamayo.",
+          "Óscar Alfaro.",
+          "Alcides Arguedas."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "rm001_q29",
+        "text": "Para promover el pensamiento crítico, los maestros deberán organizar la lectura comprensiva por un tiempo de:",
+        "options": [
+          "Cinco (5) minutos en cada inicio de la jornada escolar.",
+          "Diez (10) minutos en cada inicio de la jornada escolar.",
+          "Quince (15) minutos al finalizar la jornada escolar.",
+          "Veinte (20) minutos una vez por semana."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q30",
+        "text": "En el marco de la Gestión de Riesgos, el Formulario EDAN-E debe aplicarse en las primeras:",
+        "options": [
+          "12 horas tras un evento adverso.",
+          "24 horas tras un evento adverso.",
+          "48 horas tras un evento adverso.",
+          "72 horas tras un evento adverso."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "rm001_q31",
+        "text": "La duración de la hora pedagógica en Educación Inicial en Familia Comunitaria Escolarizada es de:",
+        "options": [
+          "30 minutos.",
+          "35 minutos.",
+          "40 minutos.",
+          "45 minutos."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "rm001_q32",
+        "text": "En Educación Primaria y Secundaria (turnos mañana/tarde), se deberán cumplir:",
+        "options": [
+          "5 horas pedagógicas de 45 minutos.",
+          "6 horas pedagógicas de 40 minutos.",
+          "6 horas pedagógicas de 45 minutos.",
+          "7 horas pedagógicas de 35 minutos."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q33",
+        "text": "¿Quiénes son responsables de reportar la información de los estudiantes destacados para el incentivo \"Bachiller Destacado - Excelencia en el Bachillerato\"?",
+        "options": [
+          "Los padres de familia.",
+          "Los propios estudiantes.",
+          "Los directores de unidades educativas, en coordinación con la Comisión Técnico Pedagógica.",
+          "Las Direcciones Departamentales de Educación."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "rm001_q34",
+        "text": "¿El uso de uniforme en unidades educativas fiscales, privadas y de convenio es obligatorio?",
+        "options": [
+          "Sí, es obligatorio para mantener la disciplina.",
+          "No es obligatorio, no siendo impedimento para el ingreso a clases.",
+          "Es obligatorio solo en unidades educativas privadas.",
+          "Es obligatorio solo para actos cívicos."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q35",
+        "text": "Los viajes de promoción en la gestión 2025 están:",
+        "options": [
+          "Permitidos con autorización de la Dirección Distrital.",
+          "Permitidos solo para estudiantes con excelencia académica.",
+          "Terminantemente prohibidos.",
+          "Permitidos si los padres asumen todos los costos."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "rm001_q36",
+        "text": "La Hoja de Concepto del personal docente debe ser registrada por los directores de UEs:",
+        "options": [
+          "Al inicio de la gestión educativa.",
+          "Al finalizar cada trimestre.",
+          "A la conclusión de la gestión educativa, con carácter obligatorio.",
+          "Solo si el docente lo solicita."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "rm001_q37",
+        "text": "¿Pueden los maestros que ganaron una compulsa y abandonaron el cargo volver a compulsar en la misma gestión?",
+        "options": [
+          "Sí, si justifican el abandono.",
+          "No, no podrán volver a compulsar en ningún otro cargo en la presente gestión.",
+          "Sí, pero solo para cargos en áreas rurales.",
+          "Sí, previa autorización de la Dirección Departamental."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q38",
+        "text": "La actualización de datos en el Registro Docente Administrativo (RDA) tiene un costo de:",
+        "options": [
+          "Un arancel fijado por el Ministerio de Educación.",
+          "Son gratuitos.",
+          "Depende del tipo de trámite.",
+          "Un porcentaje del salario mínimo nacional."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q39",
+        "text": "Respecto a las pensiones en unidades educativas privadas para la gestión 2025, se establece que:",
+        "options": [
+          "Habrá un incremento del 5%.",
+          "No existirá incremento.",
+          "El incremento será definido por cada unidad educativa.",
+          "El incremento será acorde a la UFV."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q40",
+        "text": "¿Cuántas becas completas (100% de la mensualidad) deben otorgar las unidades educativas privadas por el criterio de hermanos?",
+        "options": [
+          "A partir del segundo hermano.",
+          "A partir del tercer hermano, bajo estudio económico.",
+          "A todos los hermanos si son más de tres.",
+          "No es obligatorio otorgar becas por hermandad."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q41",
+        "text": "Las unidades educativas privadas deben otorgar beca del 100% de la mensualidad a:",
+        "options": [
+          "Los cinco mejores estudiantes de Primaria y Secundaria.",
+          "Al mejor estudiante de cada curso.",
+          "A los tres mejores estudiantes en Educación Primaria y a los tres mejores en Educación Secundaria.",
+          "Solo si el estudiante lo solicita y demuestra necesidad."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "rm001_q42",
+        "text": "El \"Plan de Convivencia Pacífica y Armónica\" en la unidad educativa debe ser elaborado por:",
+        "options": [
+          "El director de la unidad educativa únicamente.",
+          "La Comisión de Convivencia Pacífica y Armónica conformada con participación de la comunidad educativa.",
+          "La Dirección Distrital de Educación.",
+          "Los Gobiernos Estudiantiles."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q43",
+        "text": "¿Está permitido rechazar la inscripción de hijos de madres o padres solteros, divorciados o por pertenecer a una determinada religión?",
+        "options": [
+          "Sí, si va contra el ideario de la unidad educativa (privadas).",
+          "Queda terminantemente prohibido.",
+          "Solo se permite en casos excepcionales.",
+          "Depende de la normativa interna de cada UE."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q44",
+        "text": "En caso de violación, estupro o abuso deshonesto contra estudiantes, ¿quiénes tienen la obligación de denunciar el hecho de forma inmediata?",
+        "options": [
+          "Solo el director de la unidad educativa.",
+          "Los maestros y personal administrativo.",
+          "La comunidad educativa en su conjunto (directores, maestros, administrativos, Juntas Escolares, Consejos Educativos, Gobiernos Estudiantiles).",
+          "Únicamente la víctima o sus padres."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "rm001_q45",
+        "text": "¿Está permitido expulsar a estudiantes embarazadas de la unidad educativa?",
+        "options": [
+          "Sí, si su estado afecta el normal desarrollo de clases.",
+          "Está prohibido rechazar o expulsar, debiendo la UE y comunidad educativa dar apoyo.",
+          "Solo en unidades educativas privadas.",
+          "Sí, pero se debe garantizar su inscripción en otra UE."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q46",
+        "text": "Los quioscos de las unidades educativas deben priorizar:",
+        "options": [
+          "Alimentos de producción nacional, bajos en azúcares, sodio y grasas.",
+          "Golosinas y bebidas azucaradas de bajo costo.",
+          "Productos importados con registro sanitario.",
+          "Cualquier tipo de alimento que soliciten los estudiantes."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "id": "rm001_q47",
+        "text": "¿Está permitido que directores o maestros obliguen a los estudiantes a participar en movilizaciones de protesta o actos políticos?",
+        "options": [
+          "Sí, si es en horario extraescolar y con permiso de los padres.",
+          "Queda terminantemente prohibido.",
+          "Solo si la movilización es en favor de la educación.",
+          "Sí, como parte de su formación ciudadana."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q48",
+        "text": "El incumplimiento de la R.M. 0001/2025 por parte de las autoridades educativas:",
+        "options": [
+          "Será motivo de una llamada de atención verbal.",
+          "Será sancionado de acuerdo a las normas vigentes.",
+          "No conlleva sanciones, solo recomendaciones.",
+          "Queda a criterio de la Dirección Departamental."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q49",
+        "text": "La información generada por las direcciones (departamentales, distritales, de UE) sobre el cumplimiento de la R.M. 0001/2025 se constituye en:",
+        "options": [
+          "Un informe interno de carácter reservado.",
+          "Declaración Jurada.",
+          "Sugerencias para futuras normativas.",
+          "Material de consulta opcional."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "rm001_q50",
+        "text": "Los aspectos académicos, técnicos o administrativos no previstos en la R.M. 0001/2025 serán resueltos mediante:",
+        "options": [
+          "Decisión autónoma de cada Dirección Departamental.",
+          "Consenso entre directores de unidades educativas.",
+          "La emisión de instructivos emitidos por el Ministerio de Educación a través del Viceministerio de Educación Regular.",
+          "Consulta directa al Ministro de Educación."
+        ],
+        "correctAnswerIndex": 2
+      }
+    ]
+  },
+  
+{
+  "id": "ley_070_v1",
+  "title": "Ley N° 070 - Avelino Siñani - Elizardo Pérez",
+  "category": "Normativas Educativas",
+  "description": "Cuestionario sobre la Ley de la Educación de Bolivia.",
+  "questions": [
+    {
+      "id": "ley070_q1",
+      "text": "¿Cuál es el número y denominación completa de la Ley de Educación boliviana promulgada el 20 de diciembre de 2010?",
+      "options": [
+        "Ley N° 070. Ley de la Reforma Educativa.",
+        "Ley N° 1565. Ley de la Educación \"Avelino Siñani - Elizardo Pérez”.",
+        "Ley N° 070. Ley de la Educación \"Avelino Siñani - Elizardo Pérez”.",
+        "Ley N° 070. Ley General de Educación Boliviana."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q2",
+      "text": "Según el Artículo 1 de la Ley 070, ¿quién tiene la primera responsabilidad financiera de la educación?",
+      "options": [
+        "Las organizaciones sociales y comunitarias.",
+        "Los padres y madres de familia.",
+        "El Estado.",
+        "Las instituciones educativas privadas."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q3",
+      "text": "Conforme al Artículo 1, la educación es obligatoria hasta:",
+      "options": [
+        "La educación primaria.",
+        "La educación secundaria.",
+        "El bachillerato.",
+        "La educación superior."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q4",
+      "text": "El Artículo 2 de la Ley 070 reconoce y garantiza la participación social y comunitaria de:",
+      "options": [
+        "Únicamente los docentes y directores.",
+        "Madres y padres de familia en el sistema educativo.",
+        "Solamente las autoridades del Ministerio de Educación.",
+        "Exclusivamente los estudiantes mayores de edad."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q5",
+      "text": "¿Cómo se define la educación según el Artículo 1, numeral 5?",
+      "options": [
+        "Opcional, privada, local, autoritaria, colonizadora y de baja calidad.",
+        "Unitaria, pública, universal, democrática, participativa, comunitaria, descolonizadora y de calidad.",
+        "Fragmentada, fiscal, selectiva, individualista, centralizada y de calidad variable.",
+        "Unitaria, privada, universal, democrática, impositiva, individual y de excelencia."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q6",
+      "text": "Una de las bases de la educación, según el Artículo 3, es que es:",
+      "options": [
+        "Colonizadora, opresora y pro-imperialista.",
+        "Patriarcalizadora y mantenedora de estructuras.",
+        "Descolonizadora, liberadora, revolucionaria y anti-imperialista.",
+        "Neutra, apolítica y tradicional."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q7",
+      "text": "El Artículo 3 establece que la educación es universal porque:",
+      "options": [
+        "Atiende solo a los habitantes de las capitales de departamento.",
+        "Se enfoca principalmente en la población en edad escolar.",
+        "Atiende a todas y todos los habitantes del Estado Plurinacional, así como a bolivianos en el exterior, a lo largo de toda la vida.",
+        "Prioriza a los bolivianos residentes en el país."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q8",
+      "text": "¿Cuál de los siguientes NO es un principio ético moral de la sociedad plural mencionado en el Artículo 3, numeral 13?",
+      "options": [
+        "Ama qhilla (no seas flojo).",
+        "Suma qamaña (Vivir Bien).",
+        "Sálvese quien pueda.",
+        "Ivi maraei (tierra sin mal)."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q9",
+      "text": "Según el Artículo 4, uno de los fines de la educación es:",
+      "options": [
+        "Mantener la educación colonizada y la sociedad con injusticia.",
+        "Contribuir a la consolidación de la educación descolonizada, para garantizar un Estado Plurinacional y una sociedad del Vivir Bien.",
+        "Fomentar la dependencia cultural y el individualismo.",
+        "Ignorar la participación de los habitantes en la educación."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q10",
+      "text": "El Artículo 5 establece como objetivo de la educación:",
+      "options": [
+        "Desarrollar la formación individual, priorizando la teoría sobre la práctica.",
+        "Desarrollar la formación integral de las personas y el fortalecimiento de la conciencia social crítica de la vida y en la vida para Vivir Bien.",
+        "Limitar el desarrollo de potencialidades físicas e intelectuales.",
+        "Fomentar la discriminación en la formación individual y colectiva."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q11",
+      "text": "La intraculturalidad, según el Artículo 6, promueve:",
+      "options": [
+        "La adopción de culturas extranjeras como modelo principal.",
+        "La homogeneización de todas las culturas nacionales.",
+        "La recuperación, fortalecimiento, desarrollo y cohesión al interior de las culturas de las naciones y pueblos indígena originario campesinos, comunidades interculturales y afrobolivianas.",
+        "El aislamiento de las culturas originarias del resto del mundo."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q12",
+      "text": "¿En qué lengua debe iniciarse la educación según el Artículo 7?",
+      "options": [
+        "Obligatoriamente en castellano.",
+        "En la lengua materna.",
+        "En una lengua extranjera de alta demanda.",
+        "En la lengua que decida el Ministerio de Educación."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q13",
+      "text": "El Sistema Educativo Plurinacional, de acuerdo al Artículo 8, comprende los siguientes subsistemas, EXCEPTO:",
+      "options": [
+        "Subsistema de Educación Regular.",
+        "Subsistema de Educación Alternativa y Especial.",
+        "Subsistema de Educación a Distancia Obligatoria.",
+        "Subsistema de Educación Superior de Formación Profesional."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q14",
+      "text": "La Educación Regular, según el Artículo 9, es la educación:",
+      "options": [
+        "Opcional y no procesual, desde la educación inicial hasta la secundaria.",
+        "Sistemática, normada, obligatoria y procesual que se brinda desde la Educación Inicial en Familia Comunitaria hasta el bachillerato.",
+        "Exclusivamente para jóvenes, sin carácter intracultural.",
+        "Flexible y no normada, enfocada solo en el desarrollo cognitivo."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q15",
+      "text": "La Educación Inicial en Familia Comunitaria, de acuerdo al Artículo 12, tiene una duración de:",
+      "options": [
+        "Tres años.",
+        "Cuatro años.",
+        "Cinco años.",
+        "Dos años."
+      ],
+      "correctAnswerIndex": 3
+    },
+    {
+      "id": "ley070_q16",
+      "text": "¿Cuál es la duración de la Educación Primaria Comunitaria Vocacional según el Artículo 13?",
+      "options": [
+        "Cinco años.",
+        "Seis años.",
+        "Cuatro años.",
+        "Siete años."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q17",
+      "text": "La Educación Secundaria Comunitaria Productiva, según el Artículo 14, está orientada a la formación y obtención del Diploma de:",
+      "options": [
+        "Bachiller Científico Humanístico únicamente.",
+        "Bachiller Técnico Humanístico, y de manera progresiva con grado de Técnico Medio.",
+        "Técnico Superior únicamente.",
+        "Bachiller Artístico y Deportivo."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q18",
+      "text": "El Subsistema de Educación Alternativa y Especial, según el Artículo 16, está destinada a atender necesidades de:",
+      "options": [
+        "Únicamente personas con discapacidad.",
+        "Personas, familias, comunidades y organizaciones que requieren dar continuidad a sus estudios o precisan formación permanente.",
+        "Exclusivamente jóvenes que no completaron la educación regular.",
+        "Solo adultos mayores para recreación."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q19",
+      "text": "El reconocimiento de saberes, conocimientos y experiencias adquiridos en la práctica cotidiana y comunitaria corresponde al:",
+      "options": [
+        "Subsistema de Educación Regular.",
+        "Subsistema de Educación Alternativa y Especial (Artículo 18).",
+        "Subsistema de Educación Superior de Formación Profesional.",
+        "Únicamente a programas no formales."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q20",
+      "text": "La Educación de Personas Jóvenes y Adultas, dentro del Subsistema de Educación Alternativa, está destinada a personas:",
+      "options": [
+        "Mayores a dieciocho años.",
+        "Mayores a quince años (Artículo 23).",
+        "Sin límite de edad inferior.",
+        "Mayores a veintiún años."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q21",
+      "text": "¿Cuál de las siguientes es un área de la Educación Especial según el Artículo 26?",
+      "options": [
+        "Educación para Personas con Altas Capacidades Financieras.",
+        "Educación para Personas con Talento Extraordinario.",
+        "Educación para Personas con Dificultades Sociales.",
+        "Educación para Personas con Talentos Deportivos Específicos."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q22",
+      "text": "La Formación Superior de Maestras y Maestros, según el Artículo 31, es el proceso de formación profesional en las dimensiones:",
+      "options": [
+        "Únicamente pedagógica y sociocultural.",
+        "Pedagógica, sociocultural y comunitaria.",
+        "Solamente técnica y administrativa.",
+        "Pedagógica, administrativa y financiera."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q23",
+      "text": "El currículo único de la formación de maestras y maestros, según el Artículo 35, comprende la formación general y especializada en:",
+      "options": [
+        "Tres años de estudio con grado académico de técnico superior.",
+        "Cuatro años de estudio con grado académico de licenciatura.",
+        "Cinco años de estudio con grado académico de licenciatura.",
+        "Seis años de estudio con grado académico de maestría."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q24",
+      "text": "Las Escuelas Superiores de Formación de Maestras y Maestros son las únicas instituciones autorizadas para:",
+      "options": [
+        "Ofertar programas de postgrado en educación.",
+        "Ofertar y desarrollar programas académicos de formación de maestras y maestros (Artículo 36).",
+        "Certificar competencias laborales en educación.",
+        "Administrar todas las unidades educativas del país."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q25",
+      "text": "La Formación Superior Técnica y Tecnológica, conforme al Artículo 41, es la formación profesional:",
+      "options": [
+        "Exclusivamente teórica y abstracta.",
+        "Desarticulada del desarrollo productivo.",
+        "Técnica e integral, articulada al desarrollo productivo, sostenible, sustentable y autogestionario, de carácter científico, práctico-teórico y productivo.",
+        "Orientada solo a la investigación básica sin aplicación práctica."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q26",
+      "text": "Los Institutos Técnicos e Institutos Tecnológicos, según el Artículo 43, son instituciones de carácter:",
+      "options": [
+        "Únicamente fiscal.",
+        "Solamente privado.",
+        "Fiscal, de convenio y privado.",
+        "Exclusivamente de convenio."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q27",
+      "text": "¿Cuál es uno de los niveles de la Formación Artística según el Artículo 50?",
+      "options": [
+        "Nivel Técnico Básico.",
+        "Nivel Técnico Medio.",
+        "Nivel Profesional Artístico.",
+        "Nivel Doctorado Artístico."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q28",
+      "text": "Las Universidades del Estado Plurinacional de Bolivia, según el Artículo 55, son:",
+      "options": [
+        "Solo Universidades Públicas Autónomas y Privadas.",
+        "Universidades Públicas Autónomas, Privadas e Internacionales.",
+        "Universidades Públicas Autónomas, Privadas, Indígenas y de Régimen Especial.",
+        "Universidades Públicas Autónomas, Militares y Eclesiásticas."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q29",
+      "text": "Las Universidades Indígenas, según el Artículo 60, son instituciones académico científicas de carácter:",
+      "options": [
+        "Privado y con fines de lucro.",
+        "Público, articuladas a la territorialidad y organización de las naciones y pueblos indígena originario campesinos.",
+        "Mixto, enfocadas en la cultura occidental.",
+        "Público, pero administradas por entidades privadas."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q30",
+      "text": "Las Universidades de Régimen Especial, de acuerdo al Artículo 61, son:",
+      "options": [
+        "Universidad Indígena y Universidad Campesina.",
+        "Universidad Militar y Universidad Policial.",
+        "Universidad Católica y Universidad Adventista.",
+        "Universidad Abierta y Universidad Virtual."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q31",
+      "text": "La Agencia Plurinacional de Evaluación y Acreditación de la Educación Superior Universitaria (APEAESU) se crea según el Artículo:",
+      "options": [
+        "67",
+        "68",
+        "69",
+        "70"
+      ],
+      "correctAnswerIndex": 0
+    },
+    {
+      "id": "ley070_q32",
+      "text": "La organización curricular, según el Artículo 69, establece los mecanismos de articulación entre:",
+      "options": [
+        "La educación formal y la no formal.",
+        "Los niveles inicial y primario únicamente.",
+        "La teoría y la práctica educativa.",
+        "La educación fiscal y la privada."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q33",
+      "text": "El currículo regionalizado, según el Artículo 70, se refiere al conjunto organizado de planes y programas que expresa:",
+      "options": [
+        "La uniformidad total con el currículo base.",
+        "La particularidad y complementariedad en armonía con el currículo base, considerando el contexto sociocultural y lingüístico.",
+        "La independencia total del currículo base.",
+        "La primacía sobre el currículo base."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q34",
+      "text": "¿Quién ejerce tuición sobre la administración y gestión del Sistema Educativo Plurinacional, según el Artículo 72?",
+      "options": [
+        "Las Gobernaciones Departamentales.",
+        "Los Gobiernos Municipales.",
+        "El Estado Plurinacional, a través del Ministerio de Educación.",
+        "Las Juntas de Padres de Familia."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q35",
+      "text": "La estructura administrativa y gestión del Sistema Educativo Plurinacional, según el Artículo 76, se organiza en los siguientes niveles, EXCEPTO:",
+      "options": [
+        "Nivel Central.",
+        "Nivel Departamental.",
+        "Nivel Municipal.",
+        "Nivel Autonómico."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q36",
+      "text": "Las Direcciones Departamentales de Educación (DDE) son entidades:",
+      "options": [
+        "Centralizadas del Ministerio de Educación.",
+        "Descentralizadas del Ministerio de Educación (Artículo 78).",
+        "Autónomas sin dependencia del Ministerio.",
+        "Dependientes directamente de la Presidencia."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q37",
+      "text": "Los Directores y Subdirectores Departamentales serán designados por:",
+      "options": [
+        "Los Gobernadores Departamentales.",
+        "El Ministerio de Educación, como resultado de concurso de méritos y examen de competencia (Artículo 79).",
+        "La Asamblea Legislativa Plurinacional.",
+        "Elección popular de los maestros."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q38",
+      "text": "Según el Artículo 80, una atribución de los Gobiernos Municipales es:",
+      "options": [
+        "Formular el currículo base nacional.",
+        "Dotar, financiar y garantizar los servicios básicos, infraestructura, mobiliario, material educativo y equipamiento de las Unidades Educativas de Educación Regular, Alternativa y Especial.",
+        "Designar a los Directores Departamentales de Educación.",
+        "Aprobar los planes de estudio de las universidades."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q39",
+      "text": "El Diploma de Bachiller, a la culminación de estudios del nivel de Educación Secundaria Comunitaria Productiva, será otorgado por:",
+      "options": [
+        "Las Unidades Educativas.",
+        "Las Direcciones Distritales.",
+        "El Ministerio de Educación a través de las Direcciones Departamentales de Educación (Artículo 81).",
+        "Las Universidades Públicas."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q40",
+      "text": "El Estado reconocerá las competencias laborales y artísticas de ciudadanos bolivianos desarrolladas en la práctica a lo largo de la vida, a través del:",
+      "options": [
+        "Instituto Nacional de Cualificaciones.",
+        "Sistema Plurinacional de Certificación de Competencias (Artículo 82).",
+        "Ministerio de Trabajo y Previsión Social.",
+        "Escalafón del Magisterio."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q41",
+      "text": "¿Qué entidad se crea con el Artículo 83 de la Ley 070?",
+      "options": [
+        "El Consejo Nacional de Calidad Educativa.",
+        "El Observatorio Plurinacional de la Calidad Educativa.",
+        "La Superintendencia de Educación.",
+        "La Agencia de Acreditación Educativa Nacional."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q42",
+      "text": "El Instituto Plurinacional de Estudio de Lenguas y Culturas (IPELC) se crea según el Artículo:",
+      "options": [
+        "86",
+        "87",
+        "88",
+        "89"
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q43",
+      "text": "El financiamiento del Sistema Educativo Plurinacional, según el Artículo 89, provendrá de:",
+      "options": [
+        "Únicamente el Tesoro General del Estado.",
+        "Solo las entidades territoriales autónomas.",
+        "Recursos del Tesoro General del Estado y de las entidades territoriales autónomas.",
+        "Principalmente donaciones internacionales."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q44",
+      "text": "La Participación Social Comunitaria, definida en el Artículo 90, es la instancia de participación de:",
+      "options": [
+        "Únicamente el personal docente y administrativo.",
+        "Los actores sociales, actores comunitarios, madres y padres de familia con representación y legitimidad, vinculados al ámbito educativo.",
+        "Solo las autoridades del Ministerio de Educación.",
+        "Exclusivamente las organizaciones estudiantiles."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q45",
+      "text": "Uno de los objetivos de la Participación Social Comunitaria (Artículo 91) es:",
+      "options": [
+        "Administrar directamente las unidades educativas.",
+        "Sustituir las funciones del Ministerio de Educación.",
+        "Participar en la formulación y lineamientos de políticas educativas en todo el Sistema Educativo Plurinacional.",
+        "Definir los contenidos curriculares de manera exclusiva."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q46",
+      "text": "¿Qué instancia es la máxima para la formulación y definición de lineamientos de la política plurinacional de educación, convocada cada cinco años?",
+      "options": [
+        "El Consejo Educativo Plurinacional.",
+        "El Congreso Plurinacional de Educación (Artículo 92).",
+        "La Asamblea de Actores Educativos.",
+        "El Encuentro Pedagógico Nacional."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q47",
+      "text": "Los Consejos Educativos de naciones y pueblos indígena originario campesinos participan en:",
+      "options": [
+        "La gestión financiera de las universidades privadas.",
+        "La formulación de políticas y gestión educativas, velando por la adecuada implementación de una educación intracultural, intercultural, plurilingüe (Artículo 92).",
+        "La designación de autoridades universitarias.",
+        "La aprobación de los presupuestos de las DDE."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q48",
+      "text": "La Disposición Transitoria Primera establece un plazo para que el Observatorio de la Calidad Educativa adecúe su estructura. ¿Cuál es ese plazo?",
+      "options": [
+        "Treinta días.",
+        "Sesenta días.",
+        "Noventa días.",
+        "Ciento veinte días."
+      ],
+      "correctAnswerIndex": 3
+    },
+    {
+      "id": "ley070_q49",
+      "text": "¿Qué Ley es abrogada por la Disposición Abrogatoria Única de la Ley 070?",
+      "options": [
+        "La Ley de Administración y Control Gubernamentales (SAFCO).",
+        "La Ley 1565 de Reforma Educativa.",
+        "El Código de la Educación Boliviana de 1955.",
+        "La Ley del Escalafón del Magisterio."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q50",
+      "text": "Según la Disposición Final Primera, la Ley 070 entrará en vigencia a partir de:",
+      "options": [
+        "Un año después de su promulgación.",
+        "Seis meses después de su publicación.",
+        "La fecha de su promulgación y publicación.",
+        "El inicio del siguiente año fiscal."
+      ],
+      "correctAnswerIndex": 2
+    }
+  ]
+}
+]
