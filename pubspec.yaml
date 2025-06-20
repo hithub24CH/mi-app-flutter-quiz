@@ -19,12 +19,13 @@ dependencies:
   provider: ^6.1.1 # O la versión más reciente
 
 # Aquí se listan las dependencias que solo se usan para desarrollo y pruebas.
+# ... (la sección de dependencies se queda como está) ...
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^3.0.0 # He actualizado la versión de lints a una más común
-  
+  flutter_lints: ^3.0.0
 
 # La siguiente sección es específica para la configuración de Flutter.
 flutter:
@@ -35,7 +36,28 @@ flutter:
   # Aquí es donde se declaran los assets (imágenes, archivos JSON, etc.).
   assets:
     - assets/
-    - assets/sounds/ # Es una buena práctica ser explícito también
-    # Si tuvieras más carpetas de assets, las añadirías aquí:
-    # - assets/images/
-    # - assets/fonts/
+    - assets/sounds/
+
+  # =======================================================
+  # === AÑADE ESTE BLOQUE COMPLETO DE CÓDIGO AQUÍ ===
+  # =======================================================
+  fonts:
+    - family: Poppins
+      fonts:
+        # Texto Normal
+        - asset: fonts/Poppins-Regular.ttf
+          weight: 400
+        
+        # Texto en Cursiva
+        - asset: fonts/Poppins-Italic.ttf
+          style: italic
+        
+        # Texto Semi-Negrita (muy útil para subtítulos)
+        - asset: fonts/Poppins-SemiBold.ttf
+          weight: 600
+        
+        # Texto en Negrita (para títulos)
+        - asset: fonts/Poppins-Bold.ttf
+          weight: 700
+  # =======================================================
+  # =======================================================
