@@ -1,84 +1,79 @@
-// lib/screens/quiz_screen.dart (MEJORAS VISUALES Y DE LAYOUT)
+// lib/screens/quiz_screen.dart (VERSIÓN FINAL, COMPLETA Y COMENTADA)
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import '../models/quiz_model.dart';
 import '../providers/quiz_provider.dart';
 import 'results_screen.dart';
 
+// --- ESTRUCTURA: Widget de Entrada (Stateless) ---
+// Su única responsabilidad es actuar como punto de entrada y no gestiona estado.
 class QuizScreen extends StatelessWidget {
-  final Quiz quiz;
-  const QuizScreen({super.key, required this.quiz});
-
+  const QuizScreen({super.key});
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (_) => QuizProvider(quiz: quiz),
-      child: const _QuizScreenView(),
-    );
+    // El Provider ya fue creado en la pantalla anterior (WelcomeScreen),
+    // por lo que aquí solo mostramos la vista interna que sí gestiona un estado.
+    return const _QuizScreenView();
   }
 }
 
+// --- ESTRUCTURA: Widget de la Vista (Stateful) ---
+// Necesita ser StatefulWidget para poder usar initState y dispose,
+// que son cruciales para manejar el listener del Provider de forma segura.
 class _QuizScreenView extends StatefulWidget {
   const _QuizScreenView();
-
   @override
   State<_QuizScreenView> createState() => _QuizScreenViewState();
 }
 
 class _QuizScreenViewState extends State<_QuizScreenView> {
+  // --- CORRECCIÓN CLAVE ANTI-CUELGUE (1/3): Referencia Segura al Provider ---
+  // Se declara una variable final que guardará la instancia del provider.
+  // Es 'late' porque se inicializará en initState, garantizando que tendrá un valor.
   late final QuizProvider _quizProvider;
 
   @override
   void initState() {
     super.initState();
+    // --- CORRECCIÓN CLAVE ANTI-CUELGUE (2/3): Inicialización Segura ---
+    // Obtenemos la referencia al provider UNA SOLA VEZ, usando listen: false.
+    // Esto se hace ANTES de que el widget pueda ser destruido, por lo que es seguro.
     _quizProvider = Provider.of<QuizProvider>(context, listen: false);
 
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      _quizProvider.addListener(_onQuizStateChanged);
-    });
+    // Se añade el listener usando la referencia segura que acabamos de obtener.
+    _quizProvider.addListener(_onQuizStateChanged);
   }
 
+  // --- ESTRUCTURA: Controlador de Finalización del Quiz ---
+  // Este método es llamado por el listener cada vez que el provider notifica un cambio.
   void _onQuizStateChanged() {
-    if (_quizProvider.quizCompleted) {
-      if (mounted) {
-        Navigator.of(context).pushReplacement(
-          MaterialPageRoute(
-            builder: (_) => ResultsScreen(
-              quiz: _quizProvider.quiz,
-              userAnswers: _quizProvider.userAnswers,
-            ),
-          ),
-        );
-      }
+    // Usamos nuestra referencia segura (_quizProvider) para comprobar el estado.
+    // 'mounted' confirma que el widget todavía está en el árbol visual antes de navegar.
+    if (_quizProvider.quizCompleted && mounted) {
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (_) => const ResultsScreen(),
+        ),
+      );
     }
   }
 
   @override
   void dispose() {
+    // --- CORRECCIÓN CLAVE ANTI-CUELGUE (3/3): Limpieza Segura ---
+    // Se quita el listener usando la referencia _quizProvider.
+    // Esto NO usa 'context' y es la forma 100% segura de evitar el cuelgue.
     _quizProvider.removeListener(_onQuizStateChanged);
     super.dispose();
   }
 
+  // --- ESTRUCTURA: Construcción de la Interfaz de Usuario ---
   @override
   Widget build(BuildContext context) {
+    // 'context.watch' se suscribe a los cambios del provider para reconstruir la UI.
     final provider = context.watch<QuizProvider>();
     final theme = Theme.of(context);
-
-    if (provider.isLoading) {
-      return Scaffold(
-          appBar: AppBar(title: Text(provider.quiz.title)),
-          body: const Center(child: CircularProgressIndicator()));
-    }
-
-    if (provider.questions.isEmpty) {
-      return Scaffold(
-          appBar: AppBar(title: Text(provider.quiz.title)),
-          body: const Center(
-              child: Text('Este cuestionario no tiene preguntas.')));
-    }
-
     final currentQuestion = provider.currentQuestion;
 
     return Scaffold(
@@ -86,24 +81,43 @@ class _QuizScreenViewState extends State<_QuizScreenView> {
         title: Text(provider.quiz.title),
         automaticallyImplyLeading: !provider.isAnswered,
       ),
-      // <-- CAMBIO 1: USAMOS UNA COLUMN COMO WIDGET PRINCIPAL
+      // --- ESTRUCTURA: Layout Principal (Fijo + Desplazable) ---
+      // Una Column permite tener una parte fija arriba (el timer) y una parte
+      // que ocupa el resto del espacio (la lista de preguntas).
       body: Column(
         children: [
-          // <-- CAMBIO 1: LA BARRA DE PROGRESO AHORA ESTÁ AQUÍ, FUERA DEL SCROLL
           Padding(
             padding:
                 const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: LinearProgressIndicator(
-                value: provider.progress,
-                minHeight: 12, // <-- CAMBIO: BARRA MÁS DELGADA
-                backgroundColor: Colors.grey.shade300,
-                valueColor: const AlwaysStoppedAnimation<Color>(Colors.green),
-              ),
+            child: Column(
+              children: [
+                // --- ESTRUCTURA: Barra de Progreso del Temporizador ---
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: LinearProgressIndicator(
+                    value: provider.timerProgress,
+                    minHeight: 12,
+                    backgroundColor: Colors.grey.shade300,
+                    valueColor: AlwaysStoppedAnimation<Color>(
+                      provider.timerProgress > 0.5
+                          ? Colors.green
+                          : provider.timerProgress > 0.2
+                              ? Colors.orange
+                              : Colors.red,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  'Tiempo: ${provider.tiempoRestante}s',
+                  style: theme.textTheme.bodyMedium
+                      ?.copyWith(color: Colors.grey.shade700),
+                ),
+              ],
             ),
           ),
-          // <-- CAMBIO 1: EL CUSTOMSCROLLVIEW AHORA OCUPA EL RESTO DEL ESPACIO
+          // --- ESTRUCTURA: Cuerpo Desplazable del Quiz ---
+          // Expanded asegura que el CustomScrollView ocupe todo el espacio restante.
           Expanded(
             child: CustomScrollView(
               slivers: [
@@ -116,12 +130,12 @@ class _QuizScreenViewState extends State<_QuizScreenView> {
                       children: [
                         Text(
                           'Pregunta ${provider.currentQuestionIndex + 1}/${provider.totalQuestions}',
-                          style: theme.textTheme.titleMedium?.copyWith(
-                            color: Colors.blueGrey,
-                          ),
+                          style: theme.textTheme.titleMedium
+                              ?.copyWith(color: Colors.blueGrey),
                           textAlign: TextAlign.center,
                         ),
                         const SizedBox(height: 12),
+                        // --- ESTRUCTURA: Contenedor de la Pregunta ---
                         Container(
                           padding: const EdgeInsets.all(16.0),
                           decoration: BoxDecoration(
@@ -137,10 +151,8 @@ class _QuizScreenViewState extends State<_QuizScreenView> {
                           ),
                           child: Text(
                             currentQuestion.text,
-                            // <-- CAMBIO 2: TEXTO MÁS PEQUEÑO Y EN NEGRITA
-                            style: theme.textTheme.titleLarge?.copyWith(
-                              fontWeight: FontWeight.bold,
-                            ),
+                            style: theme.textTheme.titleLarge
+                                ?.copyWith(fontWeight: FontWeight.bold),
                             textAlign: TextAlign.center,
                           ),
                         ).animate(key: ValueKey(currentQuestion.id)).flipH(
@@ -152,6 +164,9 @@ class _QuizScreenViewState extends State<_QuizScreenView> {
                     ),
                   ),
                 ),
+                // --- ESTRUCTURA: Lista de Opciones (SliverList) ---
+                // Se usa SliverList porque es la forma eficiente de tener una lista
+                // dentro de un CustomScrollView.
                 SliverPadding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   sliver: SliverList.builder(
@@ -192,14 +207,7 @@ class _QuizScreenViewState extends State<_QuizScreenView> {
                             ),
                           ),
                         ),
-                      )
-                          .animate(
-                              key: ValueKey('${currentQuestion.id}_$index'))
-                          .fadeIn(duration: 300.ms, delay: (150 * index).ms)
-                          .slideX(
-                              begin: 0.2,
-                              duration: 300.ms,
-                              curve: Curves.easeOut);
+                      );
                     },
                   ),
                 ),
@@ -221,6 +229,9 @@ class _QuizScreenViewState extends State<_QuizScreenView> {
     );
   }
 
+  // --- ESTRUCTURA: Métodos Helper para la UI ---
+  // Estos métodos determinan el color y el icono de cada opción de respuesta
+  // basándose en si el usuario ya ha respondido o no.
   Color _getOptionColor(QuizProvider provider, int optionIndex) {
     if (!provider.isAnswered) return Colors.grey[300]!;
     final currentQuestion = provider.currentQuestion;

@@ -1,63 +1,61 @@
+# pubspec.yaml (CONFIGURACIÓN FINAL Y COMENTADA)
+
 name: quiz_app_flutter
 description: "A new Flutter project."
 publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.0.0 <4.0.0' # Usaremos un rango más estable que una versión beta
+  sdk: '>=3.1.0 <4.0.0'
 
-# Aquí se listan los paquetes externos que tu app necesita.
+# =======================================================
+# === ESTRUCTURA: Dependencias de Producción ===
+# =======================================================
 dependencies:
   flutter:
     sdk: flutter
 
+  # UI & State Management
+  provider: ^6.1.2
+  flutter_animate: ^4.5.0
+  percent_indicator: ^4.2.3
   cupertino_icons: ^1.0.8
-  shared_preferences: ^2.2.2
-  audioplayers: ^6.5.0
-  flutter_animate: ^4.5.2
-  percent_indicator: ^4.2.3 # O la versión más reciente
-  provider: ^6.1.1 # O la versión más reciente
 
-# Aquí se listan las dependencias que solo se usan para desarrollo y pruebas.
-# ... (la sección de dependencies se queda como está) ...
+  # Functionality
+  audioplayers: ^6.0.0
+  shared_preferences: ^2.2.3
 
+# =======================================================
+# === ESTRUCTURA: Dependencias de Desarrollo ===
+# =======================================================
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^4.0.0
 
-  flutter_lints: ^3.0.0
-
-# La siguiente sección es específica para la configuración de Flutter.
+# =======================================================
+# === ESTRUCTURA: Configuración Específica de Flutter ===
+# =======================================================
 flutter:
-
-  # Esto activa el uso de los componentes de Material Design.
   uses-material-design: true
 
-  # Aquí es donde se declaran los assets (imágenes, archivos JSON, etc.).
+  # --- CORRECCIÓN CLAVE: Declaración de Assets Explícita ---
+  # Se declara cada archivo individualmente. Esta es la forma más robusta
+  # de garantizar que Flutter encuentre tus assets, usando los nombres y
+  # extensiones correctos de tu repositorio (correct_answer.mp3).
   assets:
-    - assets/
-    - assets/sounds/
+    - assets/quizzes.json
+    - assets/sounds/correct_answer.mp3
+    - assets/sounds/wrong_answer.mp3
 
-  # =======================================================
-  # === AÑADE ESTE BLOQUE COMPLETO DE CÓDIGO AQUÍ ===
-  # =======================================================
+  # --- ESTRUCTURA: Fuentes Personalizadas ---
   fonts:
     - family: Poppins
       fonts:
-        # Texto Normal
         - asset: fonts/Poppins-Regular.ttf
-          weight: 400
-        
-        # Texto en Cursiva
         - asset: fonts/Poppins-Italic.ttf
           style: italic
-        
-        # Texto Semi-Negrita (muy útil para subtítulos)
         - asset: fonts/Poppins-SemiBold.ttf
           weight: 600
-        
-        # Texto en Negrita (para títulos)
         - asset: fonts/Poppins-Bold.ttf
           weight: 700
-  # =======================================================
-  # =======================================================

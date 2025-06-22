@@ -1,137 +1,151 @@
-// lib/providers/quiz_provider.dart
+// lib/providers/quiz_provider.dart (EL CEREBRO DEL QUIZ, COMPLETO Y COMENTADO)
 
 import 'dart:async';
-import 'dart:math';
 import 'package:flutter/foundation.dart';
 import 'package:audioplayers/audioplayers.dart';
 import '../models/quiz_model.dart';
 import '../models/question_model.dart';
-import '../services/quiz_state_service.dart';
 
-class QuizProvider with ChangeNotifier {
-  final QuizStateService _stateService = QuizStateService();
-  final AudioPlayer _audioPlayer = AudioPlayer();
+class QuizProvider extends ChangeNotifier {
+  // =======================================================
+  // === ESTRUCTURA: Propiedades del Estado del Quiz ===
+  // =======================================================
 
-  final Quiz quiz;
-  List<Question> _shuffledQuestions = [];
-  int _currentQuestionIndex = 0;
-  int _score = 0;
-  Map<String, int> _userAnswers = {};
-  bool _answered = false;
-  int? _selectedOptionIndex;
-  bool _isLoading = true;
-  bool quizCompleted = false;
+  // --- DATOS INMUTABLES ---
+  final Quiz quiz; // El quiz original que se está jugando.
 
-  static const int _questionTimeInSeconds = 20;
-  Timer? _timer;
-  double _progress = 1.0;
+  // --- ESTADO INTERNO DEL JUEGO ---
+  final List<Question> questions; // La lista de preguntas, ya barajada.
+  final List<int?> userAnswers =
+      []; // Un registro de las respuestas del usuario.
 
-  Question get currentQuestion => _shuffledQuestions[_currentQuestionIndex];
-  int get currentQuestionIndex => _currentQuestionIndex;
-  int get totalQuestions => _shuffledQuestions.length;
-  int get score => _score;
-  bool get isAnswered => _answered;
-  int? get selectedOptionIndex => _selectedOptionIndex;
-  bool get isLoading => _isLoading;
-  double get progress => _progress;
-  Map<String, int> get userAnswers => _userAnswers;
-  List<Question> get questions => _shuffledQuestions;
+  int currentQuestionIndex = 0; // Índice de la pregunta actual.
+  int score = 0; // Puntuación acumulada.
+  int? selectedOptionIndex; // La opción que el usuario acaba de seleccionar.
+  bool _quizCompleted = false; // Bandera para saber si el quiz ha terminado.
 
-  QuizProvider({required this.quiz}) {
-    _initialize();
+  // --- ESTADO DEL TEMPORIZADOR ---
+  static const int tiempoPorPregunta =
+      15; // Tiempo fijo por pregunta (en segundos).
+  Timer? _timer; // El objeto Timer que controla el paso del tiempo.
+  int _tiempoRestante =
+      tiempoPorPregunta; // Segundos restantes para la pregunta actual.
+
+  // =======================================================
+  // === ESTRUCTURA: Constructor ===
+  // =======================================================
+
+  // --- FUNCIÓN: Se ejecuta una sola vez al crear el Provider. ---
+  QuizProvider({required this.quiz}) : questions = List.from(quiz.questions) {
+    // 1. Copia y baraja las preguntas para que cada partida sea diferente.
+    questions.shuffle();
+    // 2. Inicia el temporizador para la primera pregunta.
+    _iniciarTemporizador();
   }
 
-  void _initialize() async {
-    _isLoading = true;
-    notifyListeners();
+  // =======================================================
+  // === ESTRUCTURA: Getters (Atajos para la UI) ===
+  // =======================================================
 
-    _shuffledQuestions = List.of(quiz.questions)..shuffle(Random());
-    await _loadState();
+  // --- FUNCIÓN: Proveen acceso de solo lectura a propiedades calculadas o privadas. ---
+  int get tiempoRestante => _tiempoRestante;
+  double get timerProgress =>
+      _tiempoRestante > 0 ? _tiempoRestante / tiempoPorPregunta : 0;
+  bool get quizCompleted => _quizCompleted;
+  Question get currentQuestion => questions[currentQuestionIndex];
+  int get totalQuestions => questions.length;
+  bool get isAnswered => selectedOptionIndex != null;
 
-    _isLoading = false;
-    notifyListeners();
+  // =======================================================
+  // === ESTRUCTURA: Métodos Privados (Lógica Interna) ===
+  // =======================================================
 
-    if (!_isLoading && _shuffledQuestions.isNotEmpty) {
-      _startTimer();
+  // --- MEJORA CLAVE: Método de Sonido "A Prueba de Fallos" ---
+  // Se encarga únicamente de reproducir un sonido y manejar posibles errores.
+  Future<void> _playSound(String soundFile) async {
+    try {
+      // --- MEJORA: Usa un reproductor temporal para efectos de sonido cortos. ---
+      // Es la forma más segura de evitar conflictos y problemas de caché.
+      await AudioPlayer().play(AssetSource('sounds/$soundFile'));
+    } catch (e) {
+      // Si el archivo no se encuentra, la app no se colgará.
+      // Imprime el error en la consola para que el desarrollador lo sepa.
+      debugPrint(
+          "Error al reproducir el sonido (ignorado para no colgar la app): $e");
     }
   }
 
-  void _startTimer() {
-    _timer?.cancel();
-    _progress = 1.0;
-    _timer = Timer.periodic(const Duration(milliseconds: 100), (timer) {
-      if (!isDisposed) {
-        _progress -= (100 / (_questionTimeInSeconds * 1000));
-        if (_progress <= 0) {
-          timer.cancel();
-          answerQuestion(-1);
-        }
-        notifyListeners();
+  // --- MEJORA: Lógica del Temporizador. ---
+  // Inicia un temporizador que se repite cada segundo.
+  void _iniciarTemporizador() {
+    _tiempoRestante = tiempoPorPregunta;
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (_tiempoRestante > 0) {
+        _tiempoRestante--;
       } else {
-        timer.cancel();
+        // Si el tiempo llega a 0, llama a answerQuestion como si el usuario
+        // hubiera respondido una opción inválida (-1).
+        answerQuestion(-1);
       }
+      // Notifica a la UI que el tiempo ha cambiado para que se actualice la barra.
+      notifyListeners();
     });
   }
 
-  Future<void> _loadState() async {
-    final savedState = await _stateService.loadQuizState();
-    if (savedState != null && savedState['quizId'] == quiz.id) {
-      _currentQuestionIndex = savedState['currentQuestionIndex'];
-      _score = savedState['score'];
-      _userAnswers = Map<String, int>.from(savedState['userAnswers']);
-    } else {
-      await _stateService.clearQuizState();
-    }
-  }
-
-  Future<void> answerQuestion(int selectedIndex) async {
-    if (_answered) return;
+  // Detiene el temporizador actual para que no siga corriendo.
+  void _detenerTemporizador() {
     _timer?.cancel();
-    _answered = true;
-
-    final isCorrect = selectedIndex == currentQuestion.correctAnswerIndex;
-    if (isCorrect) {
-      _audioPlayer.play(AssetSource('sounds/correct_answer.mp3'));
-      _score++;
-    } else {
-      _audioPlayer.play(AssetSource('sounds/wrong_answer.mp3'));
-    }
-
-    if (selectedIndex != -1) _userAnswers[currentQuestion.id] = selectedIndex;
-    _selectedOptionIndex = selectedIndex;
-    notifyListeners();
-
-    await _stateService.saveQuizState(
-      quizId: quiz.id,
-      currentQuestionIndex: _currentQuestionIndex,
-      score: _score,
-      userAnswers: _userAnswers,
-    );
-
-    Future.delayed(const Duration(seconds: 1), _prepareNextQuestion);
   }
 
-  void _prepareNextQuestion() {
-    final bool isLast = _currentQuestionIndex >= _shuffledQuestions.length - 1;
-    if (!isLast) {
-      _currentQuestionIndex++;
-      _answered = false;
-      _selectedOptionIndex = null;
-      _startTimer();
+  // Avanza a la siguiente pregunta o finaliza el quiz.
+  void _nextQuestion() {
+    if (currentQuestionIndex < questions.length - 1) {
+      currentQuestionIndex++;
+      selectedOptionIndex = null;
+      notifyListeners(); // Notifica a la UI que muestre la nueva pregunta.
+      _iniciarTemporizador(); // Inicia el temporizador para la nueva pregunta.
     } else {
-      quizCompleted = true;
+      _quizCompleted = true; // Marca el quiz como completado.
+      notifyListeners(); // Notifica a QuizScreen para que navegue a la pantalla de resultados.
     }
-    notifyListeners();
   }
 
-  bool _isDisposed = false;
-  bool get isDisposed => _isDisposed;
+  // =======================================================
+  // === ESTRUCTURA: Métodos Públicos (Acciones del Usuario) ===
+  // =======================================================
 
+  // --- FUNCIÓN: Se llama cuando el usuario toca una opción o se acaba el tiempo. ---
+  void answerQuestion(int optionIndex) {
+    if (isAnswered) return; // Evita que se pueda responder dos veces.
+
+    _detenerTemporizador();
+    selectedOptionIndex = optionIndex;
+
+    // Comprueba si la respuesta es correcta y reproduce el sonido correspondiente.
+    if (optionIndex == currentQuestion.correctAnswerIndex) {
+      score++;
+      // --- CORRECCIÓN CLAVE: Nombres y extensiones de archivo correctos ---
+      _playSound('correct_answer.mp3');
+    } else {
+      _playSound('wrong_answer.mp3');
+    }
+
+    userAnswers.add(optionIndex); // Guarda la respuesta del usuario.
+    notifyListeners(); // Notifica a la UI para que muestre el feedback (colores verde/rojo).
+
+    // Espera 2 segundos antes de pasar a la siguiente pregunta.
+    Future.delayed(const Duration(seconds: 2), _nextQuestion);
+  }
+
+  // =======================================================
+  // === ESTRUCTURA: Limpieza del Provider ===
+  // =======================================================
+
+  // --- FUNCIÓN: Se llama automáticamente cuando el Provider ya no se necesita. ---
   @override
   void dispose() {
-    _isDisposed = true;
-    _timer?.cancel();
-    _audioPlayer.dispose();
+    // Es crucial detener el temporizador para evitar fugas de memoria (memory leaks).
+    _detenerTemporizador();
     super.dispose();
   }
 }
