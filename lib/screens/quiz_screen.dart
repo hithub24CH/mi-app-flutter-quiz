@@ -3,24 +3,37 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import '../models/quiz_model.dart';
 import '../providers/quiz_provider.dart';
 import 'results_screen.dart';
 
-// --- ESTRUCTURA: Widget de Entrada (Stateless) ---
-// Su única responsabilidad es actuar como punto de entrada y no gestiona estado.
+// =======================================================
+// === ESTRUCTURA: Widget de Entrada (Stateless) ===
+// =======================================================
+// Su única responsabilidad es recibir el 'quiz' desde WelcomeScreen
+// y crear el Provider para la sesión de juego.
 class QuizScreen extends StatelessWidget {
-  const QuizScreen({super.key});
+  final Quiz quiz;
+  const QuizScreen({super.key, required this.quiz});
+
   @override
   Widget build(BuildContext context) {
-    // El Provider ya fue creado en la pantalla anterior (WelcomeScreen),
-    // por lo que aquí solo mostramos la vista interna que sí gestiona un estado.
-    return const _QuizScreenView();
+    // --- ESTRUCTURA: Creación del Provider ---
+    // El Provider se crea y vive únicamente mientras esta pantalla exista.
+    // Esta es tu arquitectura original, que es simple y segura para este caso.
+    return ChangeNotifierProvider(
+      create: (_) => QuizProvider(quiz: quiz),
+      child:
+          const _QuizScreenView(), // Llama a la vista interna que tiene el estado.
+    );
   }
 }
 
-// --- ESTRUCTURA: Widget de la Vista (Stateful) ---
+// =======================================================
+// === ESTRUCTURA: Widget de la Vista (Stateful) ===
+// =======================================================
 // Necesita ser StatefulWidget para poder usar initState y dispose,
-// que son cruciales para manejar el listener del Provider de forma segura.
+// que son cruciales para manejar el listener del Provider de forma segura y evitar cuelgues.
 class _QuizScreenView extends StatefulWidget {
   const _QuizScreenView();
   @override
@@ -28,32 +41,36 @@ class _QuizScreenView extends StatefulWidget {
 }
 
 class _QuizScreenViewState extends State<_QuizScreenView> {
-  // --- CORRECCIÓN CLAVE ANTI-CUELGUE (1/3): Referencia Segura al Provider ---
-  // Se declara una variable final que guardará la instancia del provider.
-  // Es 'late' porque se inicializará en initState, garantizando que tendrá un valor.
+  // --- CORRECCIÓN ANTI-CUELGUE (1/3): Referencia Segura al Provider ---
+  // Se declara una variable final que guardará la instancia del provider
+  // para poder usarla en dispose() sin depender del 'context'.
   late final QuizProvider _quizProvider;
 
   @override
   void initState() {
     super.initState();
-    // --- CORRECCIÓN CLAVE ANTI-CUELGUE (2/3): Inicialización Segura ---
+    // --- CORRECCIÓN ANTI-CUELGUE (2/3): Inicialización Segura ---
     // Obtenemos la referencia al provider UNA SOLA VEZ, usando listen: false.
     // Esto se hace ANTES de que el widget pueda ser destruido, por lo que es seguro.
     _quizProvider = Provider.of<QuizProvider>(context, listen: false);
-
     // Se añade el listener usando la referencia segura que acabamos de obtener.
     _quizProvider.addListener(_onQuizStateChanged);
   }
 
   // --- ESTRUCTURA: Controlador de Finalización del Quiz ---
-  // Este método es llamado por el listener cada vez que el provider notifica un cambio.
+  // Este método es llamado por el listener cuando el quiz termina.
   void _onQuizStateChanged() {
-    // Usamos nuestra referencia segura (_quizProvider) para comprobar el estado.
+    // --- CORRECCIÓN CLAVE: Navegación Manual de Datos ---
+    // Cuando el quiz se completa, pasamos los resultados a la siguiente pantalla
+    // a través de su constructor. Esto evita el ProviderNotFoundException.
     // 'mounted' confirma que el widget todavía está en el árbol visual antes de navegar.
     if (_quizProvider.quizCompleted && mounted) {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (_) => const ResultsScreen(),
+          builder: (_) => ResultsScreen(
+            quiz: _quizProvider.quiz,
+            userAnswers: _quizProvider.userAnswers,
+          ),
         ),
       );
     }
@@ -61,14 +78,16 @@ class _QuizScreenViewState extends State<_QuizScreenView> {
 
   @override
   void dispose() {
-    // --- CORRECCIÓN CLAVE ANTI-CUELGUE (3/3): Limpieza Segura ---
+    // --- CORRECCIÓN ANTI-CUELGUE (3/3): Limpieza Segura ---
     // Se quita el listener usando la referencia _quizProvider.
     // Esto NO usa 'context' y es la forma 100% segura de evitar el cuelgue.
     _quizProvider.removeListener(_onQuizStateChanged);
     super.dispose();
   }
 
-  // --- ESTRUCTURA: Construcción de la Interfaz de Usuario ---
+  // =======================================================
+  // === ESTRUCTURA: Construcción de la Interfaz de Usuario ===
+  // =======================================================
   @override
   Widget build(BuildContext context) {
     // 'context.watch' se suscribe a los cambios del provider para reconstruir la UI.
@@ -151,8 +170,11 @@ class _QuizScreenViewState extends State<_QuizScreenView> {
                           ),
                           child: Text(
                             currentQuestion.text,
-                            style: theme.textTheme.titleLarge
-                                ?.copyWith(fontWeight: FontWeight.bold),
+                            // --- MEJORA: Tamaño de fuente de la pregunta ajustado ---
+                            style: theme.textTheme.titleMedium?.copyWith(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),
                             textAlign: TextAlign.center,
                           ),
                         ).animate(key: ValueKey(currentQuestion.id)).flipH(
@@ -196,7 +218,9 @@ class _QuizScreenViewState extends State<_QuizScreenView> {
                                 Expanded(
                                   child: Text(
                                     currentQuestion.options[index],
-                                    style: theme.textTheme.bodyLarge?.copyWith(
+                                    // --- MEJORA: Tamaño de fuente de las opciones ajustado ---
+                                    style: theme.textTheme.bodyMedium?.copyWith(
+                                      fontSize: 16,
                                       color: (optionColor == Colors.grey[300]!)
                                           ? Colors.black87
                                           : Colors.white,
@@ -229,7 +253,9 @@ class _QuizScreenViewState extends State<_QuizScreenView> {
     );
   }
 
-  // --- ESTRUCTURA: Métodos Helper para la UI ---
+  // =======================================================
+  // === ESTRUCTURA: Métodos Helper para la UI ===
+  // =======================================================
   // Estos métodos determinan el color y el icono de cada opción de respuesta
   // basándose en si el usuario ya ha respondido o no.
   Color _getOptionColor(QuizProvider provider, int optionIndex) {

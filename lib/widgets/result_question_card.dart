@@ -1,19 +1,20 @@
-// lib/widgets/result_question_card.dart
+// lib/widgets/result_question_card.dart (UI ORIGINAL RESTAURADA Y COMENTADA)
+
 import 'package:flutter/material.dart';
 import '../models/question_model.dart';
 
 class ResultQuestionCard extends StatelessWidget {
+  final int questionNumber;
   final Question question;
   final int? selectedAnswerIndex;
   final bool isCorrect;
-  final int questionNumber;
 
   const ResultQuestionCard({
     super.key,
-    required this.question,
-    this.selectedAnswerIndex,
-    required this.isCorrect,
     required this.questionNumber,
+    required this.question,
+    required this.selectedAnswerIndex,
+    required this.isCorrect,
   });
 
   @override
@@ -21,72 +22,77 @@ class ResultQuestionCard extends StatelessWidget {
     return Card(
       elevation: 2,
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+        // --- UI ORIGINAL RESTAURADA: Borde de color para feedback ---
+        side: BorderSide(
+            color: isCorrect ? Colors.green : Colors.red, width: 1.5),
+      ),
       child: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
+        // --- UI ORIGINAL RESTAURADA: Layout con Row ---
+        child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Pregunta $questionNumber: ${question.text}',
-              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+            // --- UI ORIGINAL RESTAURADA: El "Redondito" ---
+            CircleAvatar(
+              radius: 15,
+              backgroundColor: isCorrect ? Colors.green : Colors.red,
+              child: Text(
+                questionNumber.toString(),
+                style: const TextStyle(
+                    color: Colors.white, fontWeight: FontWeight.bold),
+              ),
             ),
-            const SizedBox(height: 12),
-            ..._buildOptions(context),
+            const SizedBox(width: 16),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    question.text,
+                    style: const TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                  const SizedBox(height: 12),
+                  // --- UI MEJORADA: Muestra la respuesta correcta siempre ---
+                  Text.rich(
+                    TextSpan(children: [
+                      const TextSpan(
+                          text: 'Respuesta correcta: ',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.green)),
+                      TextSpan(
+                          text: question.options[question.correctAnswerIndex]),
+                    ]),
+                    style: const TextStyle(fontSize: 14, color: Colors.green),
+                  ),
+                  // --- UI MEJORADA: Muestra la respuesta del usuario si fue incorrecta ---
+                  if (!isCorrect) ...[
+                    const SizedBox(height: 4),
+                    Text.rich(
+                      TextSpan(children: [
+                        const TextSpan(
+                            text: 'Tu respuesta: ',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.red)),
+                        TextSpan(
+                            text: selectedAnswerIndex == -1 ||
+                                    selectedAnswerIndex == null
+                                ? 'No respondida'
+                                : question.options[selectedAnswerIndex!]),
+                      ]),
+                      style: const TextStyle(fontSize: 14, color: Colors.red),
+                    ),
+                  ],
+                ],
+              ),
+            ),
           ],
         ),
       ),
     );
-  }
-
-  List<Widget> _buildOptions(BuildContext context) {
-    return List.generate(question.options.length, (index) {
-      Color color = Theme.of(context).cardColor;
-      IconData? icon;
-
-      if (index == question.correctAnswerIndex) {
-        color = Colors.green.withOpacity(0.2);
-        icon = Icons.check_circle;
-      }
-
-      if (index == selectedAnswerIndex && !isCorrect) {
-        color = Colors.red.withOpacity(0.2);
-        icon = Icons.cancel;
-      }
-
-      return Container(
-        margin: const EdgeInsets.symmetric(vertical: 4),
-        padding: const EdgeInsets.all(12),
-        decoration: BoxDecoration(
-          color: color,
-          borderRadius: BorderRadius.circular(8),
-          border: Border.all(
-            color: index == selectedAnswerIndex
-                ? Theme.of(context).primaryColor
-                : Colors.transparent,
-            width: 2,
-          ),
-        ),
-        child: Row(
-          children: [
-            if (icon != null) ...[
-              Icon(
-                icon,
-                color: (index == question.correctAnswerIndex)
-                    ? Colors.green
-                    : Colors.red,
-                size: 20,
-              ),
-              const SizedBox(width: 8),
-            ],
-            Expanded(
-              child: Text(
-                question.options[index],
-                style: const TextStyle(fontSize: 14),
-              ),
-            ),
-          ],
-        ),
-      );
-    });
   }
 }

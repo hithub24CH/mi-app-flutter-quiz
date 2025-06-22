@@ -1,12 +1,12 @@
-// lib/screens/welcome_screen.dart (TU UI ORIGINAL CON ARQUITECTURA MEJORADA)
+// lib/screens/welcome_screen.dart (RESTAURADO A TU ARQUITECTURA ORIGINAL Y COMENTADO)
 
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import '../models/quiz_model.dart';
-import '../providers/quiz_provider.dart';
 import '../services/quiz_loader_service.dart';
 import 'quiz_screen.dart';
 
+// --- ESTRUCTURA: Pantalla de Bienvenida ---
+// Carga y muestra la lista de quizzes disponibles.
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
   @override
@@ -14,32 +14,32 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
+  // --- ESTADO: Futuro que contendrá la lista de quizzes ---
   late Future<List<Quiz>> _quizzesFuture;
 
   @override
   void initState() {
     super.initState();
+    // Inicia la carga de los quizzes desde el archivo JSON al crear la pantalla.
     _quizzesFuture = QuizLoaderService().loadQuizzes();
   }
 
-  // --- MEJORA CLAVE: Método Centralizado de Navegación ---
-  // Crea la "sesión de juego" con el Provider antes de navegar.
-  // Esta es la solución a los cuelgues y errores de Provider.
+  // --- ESTRUCTURA: Método de Navegación ---
+  // Recibe un objeto Quiz y navega a la pantalla de juego, pasándole los datos.
+  // Esta es tu arquitectura original, simple y segura.
   void _navigateToQuiz(Quiz quiz) {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (_) => ChangeNotifierProvider(
-          create: (_) => QuizProvider(quiz: quiz),
-          child: const QuizScreen(),
-        ),
+        builder: (_) => QuizScreen(quiz: quiz),
       ),
     );
   }
 
-  // --- ESTRUCTURA: Creación del Mega Cuestionario ---
+  // --- ESTRUCTURA: Método para crear el Mega Quiz ---
+  // Combina las preguntas de todos los quizzes en uno solo.
   Quiz _createMegaQuiz(List<Quiz> allQuizzes) {
     final allQuestions = allQuizzes.expand((quiz) => quiz.questions).toList();
-    allQuestions.shuffle();
+    allQuestions.shuffle(); // Baraja las preguntas para mayor rejugabilidad.
     return Quiz(
       id: 'mega_quiz',
       title: 'Mega Cuestionario',
@@ -56,22 +56,27 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       body: FutureBuilder<List<Quiz>>(
         future: _quizzesFuture,
         builder: (context, snapshot) {
+          // --- LÓGICA DE CARGA: Muestra un spinner mientras los datos cargan ---
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
           }
+          // --- LÓGICA DE ERROR: Muestra un mensaje si la carga falla ---
           if (snapshot.hasError) {
             return Center(child: Text('Error al cargar: ${snapshot.error}'));
           }
+          // --- LÓGICA DE DATOS VACÍOS: Muestra un mensaje si no hay quizzes ---
           if (!snapshot.hasData || snapshot.data!.isEmpty) {
             return const Center(
                 child: Text('No se encontraron cuestionarios.'));
           }
+
+          // --- CONSTRUCCIÓN DE LA UI: Muestra la pantalla principal ---
           final quizzes = snapshot.data!;
           return Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(
               children: [
-                // --- ESTRUCTURA: Botón Mega Cuestionario (Usa la nueva navegación) ---
+                // --- ESTRUCTURA: Botón para el Mega Cuestionario ---
                 ElevatedButton.icon(
                   icon: const Icon(Icons.all_inclusive),
                   label: const Text('Iniciar Mega Cuestionario'),
@@ -84,7 +89,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   },
                 ),
                 const SizedBox(height: 10),
-                // --- ESTRUCTURA: Botón Resetear Progreso ---
+                // --- ESTRUCTURA: Botón para Resetear Progreso ---
                 TextButton.icon(
                   icon: const Icon(Icons.delete_sweep, color: Colors.red),
                   label: const Text(
@@ -100,7 +105,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   },
                 ),
                 const SizedBox(height: 20),
-                // --- ESTRUCTURA: Lista de Cuestionarios (Usa la nueva navegación) ---
+                // --- ESTRUCTURA: Lista de Cuestionarios Individuales ---
                 Expanded(
                   child: ListView.builder(
                     itemCount: quizzes.length,

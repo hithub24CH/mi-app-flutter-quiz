@@ -1,30 +1,30 @@
-// lib/services/quiz_loader_service.dart
+// lib/services/quiz_loader_service.dart (COMPLETO Y COMENTADO)
 
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 import '../models/quiz_model.dart';
 
+// =======================================================
+// === ESTRUCTURA: Servicio de Carga de Quizzes ===
+// =======================================================
+// Su única responsabilidad es leer y parsear el archivo JSON.
 class QuizLoaderService {
-  // Esta función es asíncrona porque leer un archivo toma tiempo.
-  // Devuelve un Future que eventualmente contendrá una lista de Quizzes.
+  // --- FUNCIÓN: Cargar y Convertir los Quizzes ---
+  // Es un 'Future' porque leer un archivo es una operación asíncrona.
   Future<List<Quiz>> loadQuizzes() async {
-    try {
-      // 1. Carga el contenido del archivo JSON como un string.
-      final String response =
-          await rootBundle.loadString('assets/quizzes.json');
+    // 1. Carga el contenido del archivo JSON como un String.
+    final String jsonString =
+        await rootBundle.loadString('assets/quizzes.json');
 
-      // 2. Decodifica el string JSON a una estructura de datos de Dart (en este caso, una Lista de Mapas).
-      final List<dynamic> data = json.decode(response) as List<dynamic>;
+    // 2. Decodifica el String JSON en una lista dinámica de Dart.
+    final List<dynamic> jsonList = json.decode(jsonString);
 
-      // 3. Mapea cada elemento de la lista a un objeto Quiz usando el constructor .fromJson que creamos.
-      return data
-          .map((quizJson) => Quiz.fromJson(quizJson as Map<String, dynamic>))
-          .toList();
-    } catch (e) {
-      // Si algo sale mal (el archivo no existe, el JSON está mal formateado, etc.),
-      // imprime el error en la consola y lanza una excepción para que FutureBuilder la maneje.
-      print('Error al cargar los cuestionarios desde JSON: $e');
-      throw Exception('No se pudo cargar el archivo de cuestionarios: $e');
-    }
+    // 3. Usa 'map' para recorrer la lista de quizzes del JSON.
+    //    Por cada uno, llama a nuestro constructor 'Quiz.fromJson' (ahora corregido)
+    //    para convertirlo en un objeto Quiz.
+    //    Finalmente, '.toList()' lo convierte en la lista final de objetos Quiz.
+    return jsonList
+        .map((jsonItem) => Quiz.fromJson(jsonItem as Map<String, dynamic>))
+        .toList();
   }
 }
