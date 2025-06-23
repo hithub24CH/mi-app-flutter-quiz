@@ -1,150 +1,186 @@
-// lib/providers/quiz_provider.dart (EL CEREBRO DEL QUIZ, COMPLETO Y COMENTADO)
+//==============================================================================
+// === IMPORTACIONES ESENCIALES ===
+//==============================================================================
+import 'dart:async'; // Necesario para usar 'Timer', el temporizador de cada pregunta.
+import 'package:flutter/foundation.dart'; // Para 'ChangeNotifier' y 'debugPrint'.
+import 'package:audioplayers/audioplayers.dart'; // Para reproducir los sonidos de acierto/error.
+import '../models/quiz_model.dart'; // Importa el molde de lo que es un 'Quiz'.
+import '../models/question_model.dart'; // Importa el molde de lo que es una 'Question'.
 
-import 'dart:async';
-import 'package:flutter/foundation.dart';
-import 'package:audioplayers/audioplayers.dart';
-import '../models/quiz_model.dart';
-import '../models/question_model.dart';
-
+//==============================================================================
+// === DEFINICIÓN DE LA CLASE ===
+//==============================================================================
+// QuizProvider "extiende" ChangeNotifier. Esto le da la habilidad de
+// "notificar" a los widgets que lo están escuchando (como QuizScreen)
+// cuando alguno de sus datos internos ha cambiado.
 class QuizProvider extends ChangeNotifier {
-  // =======================================================
-  // === ESTRUCTURA: Propiedades del Estado del Quiz ===
-  // =======================================================
+  //============================================================================
+  // === ESTADO INTERNO DEL JUEGO (Las variables que controlan todo) ===
+  //============================================================================
 
-  // --- DATOS INMUTABLES ---
-  final Quiz quiz; // El quiz original que se está jugando.
+  // El objeto 'Quiz' completo que se está jugando. Contiene el título y la lista original de preguntas.
+  // Es 'final' porque no cambiará durante la sesión de juego.
+  final Quiz quiz;
 
-  // --- ESTADO INTERNO DEL JUEGO ---
-  final List<Question> questions; // La lista de preguntas, ya barajada.
-  final List<int?> userAnswers =
-      []; // Un registro de las respuestas del usuario.
+  // Una copia de las preguntas del quiz. La usamos para poder barajarlas sin modificar el 'quiz' original.
+  final List<Question> questions;
 
-  int currentQuestionIndex = 0; // Índice de la pregunta actual.
-  int score = 0; // Puntuación acumulada.
-  int? selectedOptionIndex; // La opción que el usuario acaba de seleccionar.
-  bool _quizCompleted = false; // Bandera para saber si el quiz ha terminado.
+  // Almacena las respuestas del usuario. Es una lista de enteros (el índice de la opción elegida).
+  // Puede contener 'null' si el usuario no responde a tiempo.
+  final List<int?> userAnswers = [];
 
-  // --- ESTADO DEL TEMPORIZADOR ---
+  // Puntero que indica en qué pregunta de la lista 'questions' nos encontramos.
+  int currentQuestionIndex = 0;
+
+  // Contador de respuestas correctas.
+  int score = 0;
+
+  // Guarda el índice de la opción que el usuario seleccionó. Es 'null' antes de responder.
+  // Su estado (null o no) nos ayuda a saber si la pregunta ya fue respondida.
+  int? selectedOptionIndex;
+
+  // Bandera que se vuelve 'true' cuando se responden todas las preguntas.
+  // Será la señal para navegar a la pantalla de resultados.
+  bool _quizCompleted = false;
+
+  // El temporizador y sus variables de control.
   static const int tiempoPorPregunta =
-      15; // Tiempo fijo por pregunta (en segundos).
-  Timer? _timer; // El objeto Timer que controla el paso del tiempo.
-  int _tiempoRestante =
-      tiempoPorPregunta; // Segundos restantes para la pregunta actual.
+      15; // Tiempo fijo en segundos para cada pregunta.
+  Timer? _timer; // El objeto Timer que descuenta el tiempo.
+  int _tiempoRestante = tiempoPorPregunta; // El contador de segundos actual.
 
-  // =======================================================
-  // === ESTRUCTURA: Constructor ===
-  // =======================================================
-
-  // --- FUNCIÓN: Se ejecuta una sola vez al crear el Provider. ---
-  QuizProvider({required this.quiz}) : questions = List.from(quiz.questions) {
-    // 1. Copia y baraja las preguntas para que cada partida sea diferente.
+  //============================================================================
+  // === CONSTRUCTOR (Lo que se ejecuta al crear un QuizProvider) ===
+  //============================================================================
+  // Cuando se crea un QuizProvider (desde QuizScreen), recibe el 'quiz' seleccionado.
+  QuizProvider({required this.quiz})
+      // Lista de inicialización: Antes de que el cuerpo del constructor se ejecute...
+      // 1. Se crea una copia de las preguntas del quiz para poder manipularla.
+      : questions = List.from(quiz.questions) {
+    // Cuerpo del constructor:
+    // 2. Baraja aleatoriamente el orden de las preguntas para que cada juego sea diferente.
     questions.shuffle();
-    // 2. Inicia el temporizador para la primera pregunta.
+    // 3. Inicia el temporizador para la primera pregunta.
     _iniciarTemporizador();
   }
 
-  // =======================================================
-  // === ESTRUCTURA: Getters (Atajos para la UI) ===
-  // =======================================================
-
-  // --- FUNCIÓN: Proveen acceso de solo lectura a propiedades calculadas o privadas. ---
+  //============================================================================
+  // === GETTERS (Propiedades calculadas para facilitar el acceso desde la UI) ===
+  //============================================================================
+  // La UI (QuizScreen) no necesita acceder directamente a '_tiempoRestante',
+  // puede usar este getter que es más limpio y seguro.
   int get tiempoRestante => _tiempoRestante;
+
+  // Calcula el progreso del temporizador como un valor entre 0.0 y 1.0.
+  // Perfecto para usarlo en un 'LinearProgressIndicator'.
   double get timerProgress =>
       _tiempoRestante > 0 ? _tiempoRestante / tiempoPorPregunta : 0;
+
+  // Permite a la UI (QuizScreen) saber si el quiz ha terminado.
   bool get quizCompleted => _quizCompleted;
+
+  // Devuelve el objeto 'Question' actual basado en el 'currentQuestionIndex'.
   Question get currentQuestion => questions[currentQuestionIndex];
+
+  // Devuelve el número total de preguntas en este quiz.
   int get totalQuestions => questions.length;
+
+  // Un booleano muy útil que indica si la pregunta actual ya ha sido respondida.
+  // La UI lo usa para deshabilitar los botones de opción después de una respuesta.
   bool get isAnswered => selectedOptionIndex != null;
 
-  // =======================================================
-  // === ESTRUCTURA: Métodos Privados (Lógica Interna) ===
-  // =======================================================
+  //============================================================================
+  // === MÉTODOS (Las acciones y la lógica del juego) ===
+  //============================================================================
 
-  // --- MEJORA CLAVE: Método de Sonido "A Prueba de Fallos" ---
-  // Se encarga únicamente de reproducir un sonido y manejar posibles errores.
+  // Método privado para reproducir un sonido.
   Future<void> _playSound(String soundFile) async {
     try {
-      // --- MEJORA: Usa un reproductor temporal para efectos de sonido cortos. ---
-      // Es la forma más segura de evitar conflictos y problemas de caché.
+      // Crea una instancia del reproductor y le dice que toque un archivo de la carpeta 'assets/sounds/'.
       await AudioPlayer().play(AssetSource('sounds/$soundFile'));
     } catch (e) {
-      // Si el archivo no se encuentra, la app no se colgará.
-      // Imprime el error en la consola para que el desarrollador lo sepa.
-      debugPrint(
-          "Error al reproducir el sonido (ignorado para no colgar la app): $e");
+      // Si hay un error (ej. el archivo no existe), lo imprime en la consola de depuración.
+      debugPrint("Error al reproducir el sonido: $e");
     }
   }
 
-  // --- MEJORA: Lógica del Temporizador. ---
-  // Inicia un temporizador que se repite cada segundo.
+  // Inicia el temporizador para una pregunta.
   void _iniciarTemporizador() {
-    _tiempoRestante = tiempoPorPregunta;
+    _tiempoRestante = tiempoPorPregunta; // Resetea el contador.
+    // Crea un temporizador que se ejecuta cada segundo.
     _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       if (_tiempoRestante > 0) {
-        _tiempoRestante--;
+        _tiempoRestante--; // Si queda tiempo, lo descuenta.
       } else {
-        // Si el tiempo llega a 0, llama a answerQuestion como si el usuario
-        // hubiera respondido una opción inválida (-1).
+        // Si el tiempo llega a 0, llama a 'answerQuestion' con -1 para indicar "no respondida".
         answerQuestion(-1);
       }
-      // Notifica a la UI que el tiempo ha cambiado para que se actualice la barra.
+      // ¡CLAVE! Notifica a los listeners (QuizScreen) que un dato ha cambiado.
+      // Esto hará que la UI se redibuje para mostrar el nuevo tiempo restante.
       notifyListeners();
     });
   }
 
-  // Detiene el temporizador actual para que no siga corriendo.
+  // Detiene el temporizador actual. Se llama cuando el usuario responde o se acaba el tiempo.
   void _detenerTemporizador() {
-    _timer?.cancel();
+    _timer
+        ?.cancel(); // El '?' es un "null-check": solo cancela si _timer no es nulo.
   }
 
-  // Avanza a la siguiente pregunta o finaliza el quiz.
-  void _nextQuestion() {
-    if (currentQuestionIndex < questions.length - 1) {
-      currentQuestionIndex++;
-      selectedOptionIndex = null;
-      notifyListeners(); // Notifica a la UI que muestre la nueva pregunta.
-      _iniciarTemporizador(); // Inicia el temporizador para la nueva pregunta.
-    } else {
-      _quizCompleted = true; // Marca el quiz como completado.
-      notifyListeners(); // Notifica a QuizScreen para que navegue a la pantalla de resultados.
-    }
-  }
-
-  // =======================================================
-  // === ESTRUCTURA: Métodos Públicos (Acciones del Usuario) ===
-  // =======================================================
-
-  // --- FUNCIÓN: Se llama cuando el usuario toca una opción o se acaba el tiempo. ---
+  // El método MÁS IMPORTANTE. Se llama cuando el usuario toca una opción.
   void answerQuestion(int optionIndex) {
-    if (isAnswered) return; // Evita que se pueda responder dos veces.
+    // Bloqueo de seguridad: si ya se respondió, no hace nada. Evita respuestas múltiples.
+    if (isAnswered) return;
 
-    _detenerTemporizador();
-    selectedOptionIndex = optionIndex;
+    _detenerTemporizador(); // Lo primero es parar el reloj.
+    selectedOptionIndex =
+        optionIndex; // Guarda la opción elegida por el usuario.
 
-    // Comprueba si la respuesta es correcta y reproduce el sonido correspondiente.
+    // Comprueba si la respuesta es correcta.
     if (optionIndex == currentQuestion.correctAnswerIndex) {
-      score++;
-      // --- CORRECCIÓN CLAVE: Nombres y extensiones de archivo correctos ---
-      _playSound('correct_answer.mp3');
+      score++; // Aumenta la puntuación.
+      _playSound('correct_answer.mp3'); // Reproduce sonido de acierto.
     } else {
-      _playSound('wrong_answer.mp3');
+      _playSound('wrong_answer.mp3'); // Reproduce sonido de error.
     }
 
-    userAnswers.add(optionIndex); // Guarda la respuesta del usuario.
-    notifyListeners(); // Notifica a la UI para que muestre el feedback (colores verde/rojo).
+    userAnswers.add(optionIndex); // Añade la respuesta a la lista histórica.
 
-    // Espera 2 segundos antes de pasar a la siguiente pregunta.
+    // ¡CLAVE! Notifica a la UI que la pregunta ha sido respondida.
+    // Esto hará que QuizScreen se redibuje y muestre los colores de correcto/incorrecto.
+    notifyListeners();
+
+    // Espera 2 segundos (para que el usuario vea el feedback) y luego pasa a la siguiente pregunta.
     Future.delayed(const Duration(seconds: 2), _nextQuestion);
   }
 
-  // =======================================================
-  // === ESTRUCTURA: Limpieza del Provider ===
-  // =======================================================
+  // Pasa a la siguiente pregunta o finaliza el quiz.
+  void _nextQuestion() {
+    // Si no hemos llegado al final de la lista de preguntas...
+    if (currentQuestionIndex < questions.length - 1) {
+      currentQuestionIndex++; // Avanza el puntero.
+      selectedOptionIndex =
+          null; // Resetea la "respuesta seleccionada" para la nueva pregunta.
 
-  // --- FUNCIÓN: Se llama automáticamente cuando el Provider ya no se necesita. ---
+      // ¡CLAVE! Notifica a la UI para que se redibuje con la nueva pregunta.
+      notifyListeners();
+      _iniciarTemporizador(); // Inicia el temporizador para la nueva pregunta.
+    } else {
+      // Si era la última pregunta...
+      _quizCompleted = true; // Marca el quiz como completado.
+      // ¡CLAVE! Notifica a la UI. QuizScreen tiene un listener que, al ver que
+      // _quizCompleted es true, navegará a la pantalla de resultados.
+      notifyListeners();
+    }
+  }
+
+  //============================================================================
+  // === MÉTODO DE LIMPIEZA (Se llama cuando el Provider ya no se necesita) ===
+  //============================================================================
+  // Es una buena práctica detener cualquier proceso en segundo plano (como timers)
+  // cuando el widget que lo usa se destruye para evitar fugas de memoria.
   @override
   void dispose() {
-    // Es crucial detener el temporizador para evitar fugas de memoria (memory leaks).
     _detenerTemporizador();
     super.dispose();
   }

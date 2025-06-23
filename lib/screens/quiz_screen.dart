@@ -1,5 +1,7 @@
-// lib/screens/quiz_screen.dart (VERSIÓN FINAL, COMPLETA Y COMENTADA)
-
+//==============================================================================
+// === IMPORTACIONES ===
+// Objetivo: Traer las herramientas y "planos" necesarios para esta pantalla.
+//==============================================================================
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -7,33 +9,27 @@ import '../models/quiz_model.dart';
 import '../providers/quiz_provider.dart';
 import 'results_screen.dart';
 
-// =======================================================
-// === ESTRUCTURA: Widget de Entrada (Stateless) ===
-// =======================================================
-// Su única responsabilidad es recibir el 'quiz' desde WelcomeScreen
-// y crear el Provider para la sesión de juego.
+//==============================================================================
+// === WIDGET DE ENTRADA (Wrapper) ===
+// Objetivo: Preparar el entorno para la pantalla de juego.
+//==============================================================================
 class QuizScreen extends StatelessWidget {
   final Quiz quiz;
   const QuizScreen({super.key, required this.quiz});
 
   @override
   Widget build(BuildContext context) {
-    // --- ESTRUCTURA: Creación del Provider ---
-    // El Provider se crea y vive únicamente mientras esta pantalla exista.
-    // Esta es tu arquitectura original, que es simple y segura para este caso.
     return ChangeNotifierProvider(
       create: (_) => QuizProvider(quiz: quiz),
-      child:
-          const _QuizScreenView(), // Llama a la vista interna que tiene el estado.
+      child: const _QuizScreenView(),
     );
   }
 }
 
-// =======================================================
-// === ESTRUCTURA: Widget de la Vista (Stateful) ===
-// =======================================================
-// Necesita ser StatefulWidget para poder usar initState y dispose,
-// que son cruciales para manejar el listener del Provider de forma segura y evitar cuelgues.
+//==============================================================================
+// === WIDGET DE LA VISTA (El que dibuja y tiene lógica de ciclo de vida) ===
+// Objetivo: Dibujar la UI y reaccionar a eventos del ciclo de vida.
+//==============================================================================
 class _QuizScreenView extends StatefulWidget {
   const _QuizScreenView();
   @override
@@ -41,29 +37,16 @@ class _QuizScreenView extends StatefulWidget {
 }
 
 class _QuizScreenViewState extends State<_QuizScreenView> {
-  // --- CORRECCIÓN ANTI-CUELGUE (1/3): Referencia Segura al Provider ---
-  // Se declara una variable final que guardará la instancia del provider
-  // para poder usarla en dispose() sin depender del 'context'.
   late final QuizProvider _quizProvider;
 
   @override
   void initState() {
     super.initState();
-    // --- CORRECCIÓN ANTI-CUELGUE (2/3): Inicialización Segura ---
-    // Obtenemos la referencia al provider UNA SOLA VEZ, usando listen: false.
-    // Esto se hace ANTES de que el widget pueda ser destruido, por lo que es seguro.
     _quizProvider = Provider.of<QuizProvider>(context, listen: false);
-    // Se añade el listener usando la referencia segura que acabamos de obtener.
     _quizProvider.addListener(_onQuizStateChanged);
   }
 
-  // --- ESTRUCTURA: Controlador de Finalización del Quiz ---
-  // Este método es llamado por el listener cuando el quiz termina.
   void _onQuizStateChanged() {
-    // --- CORRECCIÓN CLAVE: Navegación Manual de Datos ---
-    // Cuando el quiz se completa, pasamos los resultados a la siguiente pantalla
-    // a través de su constructor. Esto evita el ProviderNotFoundException.
-    // 'mounted' confirma que el widget todavía está en el árbol visual antes de navegar.
     if (_quizProvider.quizCompleted && mounted) {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
@@ -78,19 +61,13 @@ class _QuizScreenViewState extends State<_QuizScreenView> {
 
   @override
   void dispose() {
-    // --- CORRECCIÓN ANTI-CUELGUE (3/3): Limpieza Segura ---
-    // Se quita el listener usando la referencia _quizProvider.
-    // Esto NO usa 'context' y es la forma 100% segura de evitar el cuelgue.
     _quizProvider.removeListener(_onQuizStateChanged);
     super.dispose();
   }
 
-  // =======================================================
-  // === ESTRUCTURA: Construcción de la Interfaz de Usuario ===
-  // =======================================================
+  // --- CONSTRUCCIÓN DE LA INTERFAZ DE USUARIO ---
   @override
   Widget build(BuildContext context) {
-    // 'context.watch' se suscribe a los cambios del provider para reconstruir la UI.
     final provider = context.watch<QuizProvider>();
     final theme = Theme.of(context);
     final currentQuestion = provider.currentQuestion;
@@ -100,17 +77,14 @@ class _QuizScreenViewState extends State<_QuizScreenView> {
         title: Text(provider.quiz.title),
         automaticallyImplyLeading: !provider.isAnswered,
       ),
-      // --- ESTRUCTURA: Layout Principal (Fijo + Desplazable) ---
-      // Una Column permite tener una parte fija arriba (el timer) y una parte
-      // que ocupa el resto del espacio (la lista de preguntas).
       body: Column(
         children: [
+          //--- SECCIÓN DEL TEMPORIZADOR ---
           Padding(
             padding:
                 const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
             child: Column(
               children: [
-                // --- ESTRUCTURA: Barra de Progreso del Temporizador ---
                 ClipRRect(
                   borderRadius: BorderRadius.circular(10),
                   child: LinearProgressIndicator(
@@ -135,11 +109,11 @@ class _QuizScreenViewState extends State<_QuizScreenView> {
               ],
             ),
           ),
-          // --- ESTRUCTURA: Cuerpo Desplazable del Quiz ---
-          // Expanded asegura que el CustomScrollView ocupe todo el espacio restante.
+          //--- SECCIÓN PRINCIPAL CON SCROLL ---
           Expanded(
             child: CustomScrollView(
               slivers: [
+                //--- Widget para el texto de la pregunta ---
                 SliverToBoxAdapter(
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
@@ -154,7 +128,6 @@ class _QuizScreenViewState extends State<_QuizScreenView> {
                           textAlign: TextAlign.center,
                         ),
                         const SizedBox(height: 12),
-                        // --- ESTRUCTURA: Contenedor de la Pregunta ---
                         Container(
                           padding: const EdgeInsets.all(16.0),
                           decoration: BoxDecoration(
@@ -170,7 +143,6 @@ class _QuizScreenViewState extends State<_QuizScreenView> {
                           ),
                           child: Text(
                             currentQuestion.text,
-                            // --- MEJORA: Tamaño de fuente de la pregunta ajustado ---
                             style: theme.textTheme.titleMedium?.copyWith(
                               fontWeight: FontWeight.bold,
                               fontSize: 18,
@@ -186,9 +158,7 @@ class _QuizScreenViewState extends State<_QuizScreenView> {
                     ),
                   ),
                 ),
-                // --- ESTRUCTURA: Lista de Opciones (SliverList) ---
-                // Se usa SliverList porque es la forma eficiente de tener una lista
-                // dentro de un CustomScrollView.
+                //--- Widget para la lista de opciones ---
                 SliverPadding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   sliver: SliverList.builder(
@@ -216,25 +186,30 @@ class _QuizScreenViewState extends State<_QuizScreenView> {
                                 ),
                                 const SizedBox(width: 12),
                                 Expanded(
+                                  // El widget que contiene el texto de la opción.
                                   child: Text(
                                     currentQuestion.options[index],
-                                    // --- MEJORA: Tamaño de fuente de las opciones ajustado ---
+                                    // El estilo se aplica aquí.
                                     style: theme.textTheme.bodyMedium?.copyWith(
                                       fontSize: 16,
+                                      // El color del texto es reactivo para garantizar la legibilidad.
+                                      // Si el fondo es gris claro (sin responder), el texto es negro.
+                                      // Si el fondo tiene color (verde/rojo), el texto es blanco.
                                       color: (optionColor == Colors.grey[300]!)
                                           ? Colors.black87
                                           : Colors.white,
                                     ),
                                   ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      );
-                    },
-                  ),
-                ),
+                                ), // Cierre del Expanded
+                              ], // Cierre de la lista de children del Row
+                            ), // Cierre del Padding
+                          ), // Cierre del InkWell
+                        ), // Cierre del Card
+                      ); // Cierre del return del itemBuilder
+                    }, // Cierre del itemBuilder
+                  ), // Cierre del SliverList.builder
+                ), // Cierre del SliverPadding
+                //--- Widget para la puntuación ---
                 SliverToBoxAdapter(
                   child: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 20.0),
@@ -245,19 +220,17 @@ class _QuizScreenViewState extends State<_QuizScreenView> {
                     ),
                   ),
                 ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
+              ], // Cierre de la lista de slivers
+            ), // Cierre del CustomScrollView
+          ), // Cierre del Expanded
+        ], // Cierre de la lista de children de Column
+      ), // Cierre del Scaffold
+    ); // Cierre del return del build
   }
 
-  // =======================================================
-  // === ESTRUCTURA: Métodos Helper para la UI ===
-  // =======================================================
-  // Estos métodos determinan el color y el icono de cada opción de respuesta
-  // basándose en si el usuario ya ha respondido o no.
+  //============================================================================
+  // === MÉTODOS DE AYUDA (Helper Methods) para la UI ===
+  //============================================================================
   Color _getOptionColor(QuizProvider provider, int optionIndex) {
     if (!provider.isAnswered) return Colors.grey[300]!;
     final currentQuestion = provider.currentQuestion;

@@ -1,24 +1,37 @@
-// Necesitamos definir cómo se estructurarán nuestras preguntas.
-// lib/models/question_model.dart
-class Question {
-  final String id; // Útil si necesitas identificar preguntas específicas
-  final String text; // El enunciado de la pregunta
-  final List<String> options; // Lista de opciones de respuesta
-  final int
-  correctAnswerIndex; // El índice de la respuesta correcta en la lista 'options'
+// lib/models/question_model.dart (LA SOLUCIÓN DEFINITIVA)
 
-  Question({
+// =======================================================
+// === ESTRUCTURA: Clase que define una Pregunta ===
+// =======================================================
+// Define cómo es un objeto 'Question' en nuestra aplicación.
+class Question {
+  // --- ESTRUCTURA: Propiedades del Modelo ---
+  final String id;
+  final String text;
+  final List<String> options; // Una lista de strings para las opciones.
+  final int correctAnswerIndex;
+
+  // --- ESTRUCTURA: Constructor ---
+  // El constructor estándar para crear un objeto 'Question' en el código.
+  const Question({
     required this.id,
     required this.text,
     required this.options,
     required this.correctAnswerIndex,
   });
 
-  // (Opcional) Un constructor factory para crear una Question desde un Map (JSON)
+  // =======================================================
+  // === CORRECCIÓN CLAVE: Lógica de Conversión de JSON a Objeto ===
+  // =======================================================
+  // Este constructor convierte un mapa JSON en un objeto 'Question'.
   factory Question.fromJson(Map<String, dynamic> json) {
     return Question(
       id: json['id'] as String,
       text: json['text'] as String,
+      // --- CORRECCIÓN DEFINITIVA Y ÚNICA: Conversión de Tipo Explícita ---
+      // 'List<String>.from()' toma la lista del JSON (que es List<dynamic>)
+      // y la convierte de forma segura en una List<String>, que es lo que
+      // nuestro constructor espera. ESTO ARREGLA EL BUG DE "1 PREGUNTA".
       options: List<String>.from(json['options'] as List),
       correctAnswerIndex: json['correctAnswerIndex'] as int,
     );
