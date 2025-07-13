@@ -1671,7 +1671,2872 @@
       "correctAnswerIndex": 2
     }
   ]
-} 
+} ,
+{
+    "id": "maquinas_herramientas_v1",
+    "title": "Máquinas y Herramientas",
+    "category": "Historia de la Tecnología",
+    "description": "Cuestionario sobre la evolución histórica de las herramientas y las máquinas herramientas.",
+    "questions": [
+      {
+        "id": "hh_q1",
+        "text": "Según la definición simple que ofrece el texto, ¿qué son las herramientas?",
+        "options": [
+          "Máquinas complejas para la industria.",
+          "Dispositivos que reemplazan el trabajo humano.",
+          "Una prolongación de la mano del hombre.",
+          "Los primeros inventos de la Edad de Hierro."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "hh_q2",
+        "text": "¿Durante qué período y hace cuántos años, según la cronología, se desarrollan las primeras herramientas de corte y los taladros rudimentarios?",
+        "options": [
+          "Edad de Piedra, hace 50.000 años.",
+          "Edad de Bronce, hace 6.500 años.",
+          "Edad de Hierro, hace 3.400 años (1500 aC).",
+          "Imperio Persa, hace 1.000 años antes de Cristo."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "hh_q3",
+        "text": "¿Cuál es la diferencia fundamental entre una herramienta y una máquina herramienta, según el documento?",
+        "options": [
+          "Las herramientas son manuales y las máquinas herramientas son automáticas.",
+          "Las herramientas se piensan en función de los materiales, mientras que las máquinas herramientas se piensan en función de la operatoria a realizar.",
+          "Las herramientas son de metal y las máquinas herramientas son eléctricas.",
+          "No existe ninguna diferencia, los términos son intercambiables."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "hh_q4",
+        "text": "¿A quién se le atribuye la invención y construcción de la máquina a vapor para usos industriales, dando origen a la Primera Revolución Industrial?",
+        "options": [
+          "Denis Papin.",
+          "Thomas Newcomen.",
+          "James Watt.",
+          "Leonardo da Vinci."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "hh_q5",
+        "text": "¿Cuál fue la contribución más significativa de Leonardo da Vinci a la mecánica, según el texto?",
+        "options": [
+          "La construcción de la primera máquina de vapor.",
+          "El diseño y fabricación de los primeros taladros para cañones.",
+          "Los bocetos y cálculos sobre la relación entre engranajes y la forma de sus dientes en el 'Códice Atlántico'.",
+          "La invención del acero al carbono para herramientas."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "hh_q6",
+        "text": "¿Qué industrial inglés construyó la mandrinadora-agujereadora de precisión que fue crucial para fabricar los cilindros de la máquina de vapor de Watt?",
+        "options": [
+          "John Wilkinson.",
+          "Joseph Whitworth.",
+          "Henry Maudslay.",
+          "Robert Mushet."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "id": "hh_q7",
+        "text": "¿Cuál fue uno de los aportes más importantes de Joseph Whitworth, que se convirtió en un estándar mundial conocido como BSW?",
+        "options": [
+          "El desarrollo de las herramientas de acero aleado.",
+          "El primer sistema estandarizado de rosca.",
+          "La invención del torno con torretas.",
+          "La introducción de la caja de cambios Norton en los tornos."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "hh_q8",
+        "text": "¿Qué descubrimiento trascendental realizó Frederick Winslow Taylor en 1898 que revolucionó las herramientas de corte?",
+        "options": [
+          "El metal duro o 'Widia'.",
+          "Los aceros al carbono templados.",
+          "El nitruro de boro cúbico (CBN).",
+          "Los aceros rápidos."
+        ],
+        "correctAnswerIndex": 3
+      },
+      {
+        "id": "hh_q9",
+        "text": "La propiedad de los aceros de Taylor que les permitía conservar su dureza a altas temperaturas (600°C) se denominó:",
+        "options": [
+          "Resistencia térmica.",
+          "Temple superficial.",
+          "Dureza al rojo vivo.",
+          "Maleabilidad extrema."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "hh_q10",
+        "text": "En la Feria de Leipzig de 1927, la firma Krupp Widia Factory presentó un nuevo material revolucionario para herramientas. ¿Cuál era su nombre comercial y qué significaba su denominación alemana 'hardmetal'?",
+        "options": [
+          "Cermet - cerámica metálica.",
+          "Acero rápido - acero veloz.",
+          "Widia - metal duro.",
+          "Midvale - acero de valle."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "hh_q11",
+        "text": "¿Qué tecnología, que llegó a finales del siglo XIX, permitió reemplazar las máquinas de vapor y eliminar limitaciones para el mejoramiento de las máquinas herramientas?",
+        "options": [
+          "Los motores de combustión interna.",
+          "Los motores de corriente continua.",
+          "El control numérico (CN).",
+          "Las turbinas hidráulicas."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "hh_q12",
+        "text": "¿Qué innovación tecnológica se desarrolló después de 1945 y mejoró notoriamente las mediciones de tolerancias, siendo el precursor del CNC?",
+        "options": [
+          "El control numérico (CN).",
+          "El AUTOCAD.",
+          "Las herramientas de Cermet.",
+          "El láser."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "id": "hh_q13",
+        "text": "La mega fábrica de Henry Ford para el modelo 'T' se basó en las recomendaciones de la 'organización científica del trabajo' de un importante ingeniero. ¿De quién se trataba?",
+        "options": [
+          "Joseph Whitworth.",
+          "Henry Maudslay.",
+          "Frederick Winslow Taylor.",
+          "John Wilkinson."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "hh_q14",
+        "text": "Según el texto, ¿qué herramientas del futuro ya existen en el Siglo XXI para las máquinas construidas a medida?",
+        "options": [
+          "Cermet y nitruro de silicio.",
+          "Acero rápido y metal duro.",
+          "Control numérico computarizado (CNC) y CAD/CAM.",
+          "El láser y el ultrasonido."
+        ],
+        "correctAnswerIndex": 3
+      },
+      {
+        "id": "hh_q15",
+        "text": "¿Qué ingeniero inglés es reconocido por construir en 1797 un torno para cilindrar con una estructura totalmente metálica y rígida, marcando una nueva era en la precisión?",
+        "options": [
+          "John Wilkinson",
+          "Henry Maudslay",
+          "Joseph Whitworth",
+          "James Watt"
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "hh_q16",
+        "text": "Según la anécdota del texto, ¿por qué Henry Ford denominó 'Modelo T' a su automóvil más famoso?",
+        "options": [
+          "Porque era la vigésima letra del alfabeto y ya había producido 19 modelos.",
+          "Porque la 'T' significaba 'tungsteno', en honor al nuevo material de las herramientas.",
+          "A modo de agradecimiento por la colaboración que Frederick W. Taylor le brindó en la diagramación de la fábrica.",
+          "Porque fue el primer modelo que incluyó una transmisión de tipo 'T'."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "hh_q17",
+        "text": "¿Cuál fue el origen del descubrimiento del metal duro (hardmetal), que luego se comercializaría como Widia?",
+        "options": [
+          "La incapacidad de mecanizar un tocho de tungsteno destinado a ser un filamento para lámparas en la empresa Osram.",
+          "Un proyecto militar del gobierno alemán para crear un nuevo tipo de blindaje.",
+          "Un experimento de la familia Krupp para mejorar la dureza del acero al carbono.",
+          "La búsqueda de un material para sustituir al diamante en aplicaciones industriales."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "id": "hh_q18",
+        "text": "El metal duro se comercializó con la marca 'Widia'. ¿Qué significa este nombre?",
+        "options": [
+          "Es el acrónimo de 'Winslow Diamond', en honor a su supuesto inventor.",
+          "Significa 'Victoria' en alemán, por su superioridad en el corte.",
+          "Es una abreviatura del alemán 'wie diamant' (como o igual al diamante), por su dureza equiparable.",
+          "Es el nombre de la ciudad alemana donde se inventó."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "hh_q19",
+        "text": "¿Qué tecnología, inspirada en el funcionamiento de una pianola musical, fue la precursora del control numérico (CN)?",
+        "options": [
+          "El uso de engranajes calculados por Leonardo da Vinci.",
+          "El uso de una cinta de papel perforada para automatizar los movimientos de una máquina.",
+          "La aplicación de motores eléctricos para reemplazar la máquina de vapor.",
+          "El sistema de plantillas para los tornos copiadores."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "hh_q20",
+        "text": "¿Quién introdujo el control numérico (CN) en una máquina herramienta en 1948 para fresar superficies complejas en un proyecto aeronáutico?",
+        "options": [
+          "Franco Stulen.",
+          "Alfred Krupp.",
+          "John T. Parsons.",
+          "Jacques de Vaucanson."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "hh_q21",
+        "text": "¿Cuál es una de las ventajas clave del control numérico computarizado (CNC) mencionada en el texto?",
+        "options": [
+          "Utiliza herramientas más baratas que las máquinas convencionales.",
+          "Reduce el consumo de energía eléctrica en un 50%.",
+          "Permite la fabricación de piezas muy complicadas, como superficies tridimensionales, que eran imposibles de hacer manualmente.",
+          "Elimina por completo la necesidad de un programador."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "hh_q22",
+        "text": "¿Qué material, conocido comercialmente como Borazon y descubierto en 1957 por Robert H. Wentorf Jr., tiene una dureza apenas un punto menor a la del diamante?",
+        "options": [
+          "Nitruro de silicio.",
+          "Nitruro de boro cúbico (CBN).",
+          "Cerámica de segunda generación (negra).",
+          "Diamante policristalino (PCD)."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "hh_q23",
+        "text": "En el siglo XXI surgen las herramientas de CERMET. ¿Qué significa este término?",
+        "options": [
+          "Un compuesto de cerámica y tungsteno.",
+          "Una cerámica reforzada con fibras de boro.",
+          "Un tipo especial de acero rápido sinterizado.",
+          "Es una abreviatura de cerámica metalizada, compuesta por carburo y nitruro de titanio."
+        ],
+        "correctAnswerIndex": 3
+      },
+      {
+        "id": "hh_q24",
+        "text": "¿Qué innovaciones en los procesos de mecanizado se mencionan junto con el fresado por LÁSER y el uso de ultrasonido en el siglo XXI?",
+        "options": [
+          "MAV (mecanizado de alta velocidad) y MAA (mecanizados de altos avances).",
+          "CN (control numérico) y CNC (control numérico computarizado).",
+          "El Taylorismo y el Fordismo.",
+          "El uso de micro gránulo y el diamante policristalino."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "id": "hh_q25",
+        "text": "Según la definición del Capítulo 2, ¿por qué el torno de Jacques de Vaucanson (1751) se considera una de las primeras máquinas herramienta?",
+        "options": [
+          "Porque incorporó la herramienta de corte a una cabeza ajustable, eliminando la actuación directa del hombre en el corte.",
+          "Porque fue la primera máquina en utilizar energía eléctrica.",
+          "Porque fue la primera máquina en tener una estructura completamente metálica.",
+          "Porque fue la primera en ser controlada por una cinta perforada."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "id": "hh_q26",
+        "text": "De acuerdo con la tabla de rubros en la página 10 del Capítulo 2, ¿cuál es el segundo sector con mayor utilización de máquinas herramientas, después del metalmecánico?",
+        "options": [
+          "Textil (9%).",
+          "Plástico (11%).",
+          "Maderero (8%).",
+          "Gráfico (2%)."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "hh_q27",
+        "text": "¿Qué figura histórica, según la anécdota de la página 12, exigió 'quiero repuestos iguales', impulsando la estandarización de piezas en la industria armamentística?",
+        "options": [
+          "Henry Ford.",
+          "Alfred Krupp.",
+          "Napoleón Bonaparte.",
+          "Frederick Taylor."
+        ],
+        "correctAnswerIndex": 2
+      }
+    ]
+},
+{
+    "id": "convivencia_pacifica_v1",
+    "title": "Plan de Convivencia Pacífica y Armónica",
+    "category": "Normativa Educativa Boliviana",
+    "description": "Cuestionario sobre los lineamientos para la construcción de planes de convivencia pacífica y armónica en el sistema educativo de Bolivia, basado en el marco normativo y los enfoques pedagógicos.",
+    "questions": [
+      {
+        "id": "convivencia_q1",
+        "text": "Según la introducción, la UNESCO considera el fomento a la convivencia pacífica como una de las herramientas más productivas para:",
+        "options": [
+          "Acelerar el cambio de directores en las unidades educativas.",
+          "Reducir la carga horaria de los docentes.",
+          "Asegurar, promover y proteger el ejercicio de la plena ciudadanía.",
+          "Incrementar la competencia académica entre estudiantes."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q2",
+        "text": "¿Desde qué fecha está vigente la obligatoriedad para la construcción participativa del Plan de Convivencia Pacífica y Armónica?",
+        "options": [
+          "17 de julio de 2012.",
+          "17 de julio de 2014.",
+          "1 de agosto de 2012.",
+          "20 de diciembre de 2010."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q3",
+        "text": "La introducción menciona que el mayor desafío es acelerar el cambio de mentalidades, hábitos y formas de ser y actuar en:",
+        "options": [
+          "Madres y padres de familia exclusivamente.",
+          "El personal administrativo y docente.",
+          "Niñas, niños y adolescentes.",
+          "Las autoridades del Ministerio de Educación."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q4",
+        "text": "El propósito de los \"Lineamientos\" es establecer directrices y ofrecer orientaciones para la construcción del Plan, el cual debe partir de un proceso:",
+        "options": [
+          "Rápido e individual, liderado por el director.",
+          "Plural y democrático con todos los actores de la comunidad educativa.",
+          "Cerrado y definido únicamente por el Ministerio.",
+          "Basado en las tradiciones de cada unidad educativa, sin consultar a nadie."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q5",
+        "text": "El Artículo 15, Parágrafo II, de la Constitución Política del Estado (CPE) establece que todas las personas, en particular las mujeres, tienen derecho a:",
+        "options": [
+          "Recibir un salario igualitario por su trabajo.",
+          "Ocupar cargos públicos de alta jerarquía.",
+          "No sufrir violencia física, sexual o psicológica, tanto en la familia como en la sociedad.",
+          "Acceder a créditos bancarios sin garantías."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q6",
+        "text": "La Ley N° 070 \"Avelino Siñani - Elizardo Pérez\", en su Artículo 3 (Bases de la educación), define la educación como promotora de la convivencia pacífica y que contribuye a:",
+        "options": [
+          "La formación de líderes políticos.",
+          "Erradicar toda forma de violencia en el ámbito educativo.",
+          "La homogeneización cultural del país.",
+          "La privatización del sistema educativo."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q7",
+        "text": "¿Qué garantiza el Artículo 116, inciso a) de la Ley N° 548 (Código Niña, Niño y Adolescente)?",
+        "options": [
+          "Educación sin violencia en contra de cualquier integrante de la comunidad educativa, preservando su integridad.",
+          "Acceso gratuito a internet en todas las escuelas.",
+          "Uniformes escolares gratuitos para todos.",
+          "Transporte escolar subvencionado por el Estado."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "id": "convivencia_q8",
+        "text": "Según el Artículo 152 de la Ley N° 548, el Plan de Convivencia Pacífica y Armónica tendrá un carácter:",
+        "options": [
+          "Opcional para las unidades educativas privadas.",
+          "Sugerido, pero no mandatorio.",
+          "Obligatorio para cada una de las unidades educativas y/o centros.",
+          "Voluntario, dependiendo de la decisión de los padres de familia."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q9",
+        "text": "La Ley Integral Nº 348, en su Artículo 19, obliga al Ministerio de Educación a incorporar en la currícula educativa la formación en:",
+        "options": [
+          "Estrategias de marketing digital.",
+          "Resolución pacífica de conflictos.",
+          "Mecánica automotriz básica.",
+          "Inversiones en la bolsa de valores."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q10",
+        "text": "La Ley Nº 045 Contra el Racismo y Toda Forma de Discriminación, en su Artículo 6, promueve la implementación de procesos de formación y educación en:",
+        "options": [
+          "Disciplina militar.",
+          "Oratoria y debate político.",
+          "Derechos humanos y en valores.",
+          "Competencias deportivas de alto rendimiento."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q11",
+        "text": "¿Qué prohíbe el Artículo 42, numeral 9 de la Ley Nº 342 de la Juventud en el sistema educativo?",
+        "options": [
+          "El uso de celulares en el aula.",
+          "La discriminación y marginación a las jóvenes y los jóvenes por su condición social, económica, identidad cultural, religiosa, sexual, embarazo, discapacidad y otros.",
+          "La formación de centros de estudiantes.",
+          "La realización de viajes de promoción."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q12",
+        "text": "El Decreto Supremo N° 1320 modifica al D.S. N° 1302 y establece que el director, docente o administrativo imputado formalmente por agresión sexual contra estudiantes será:",
+        "options": [
+          "Trasladado a otra unidad educativa.",
+          "Sancionado con una multa económica.",
+          "Suspendido de sus funciones sin goce de haberes, mientras dure el proceso penal.",
+          "Sometido a una evaluación psicológica solamente."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q13",
+        "text": "La Resolución Ministerial N° 1204/2018 se refiere a:",
+        "options": [
+          "El protocolo para casos de microtráfico de drogas.",
+          "El reglamento para la educación de adolescentes embarazadas.",
+          "La prohibición de la Violencia entre Pares en Instituciones Educativas.",
+          "El registro y retiro del Rótulo Observado en el RDA."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q14",
+        "text": "La Disposición Transitoria Octava de la Ley N° 548 dio un plazo al Ministerio de Educación para diseñar e implementar las políticas y planes de convivencia pacífica. ¿Cuál fue ese plazo?",
+        "options": [
+          "30 días calendario.",
+          "90 días hábiles.",
+          "No mayor a 180 días calendario.",
+          "Un año completo."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q15",
+        "text": "La Convención Internacional sobre la Eliminación de todas las Formas de Discriminación Racial (1965) es un instrumento de carácter:",
+        "options": [
+          "Local.",
+          "Nacional.",
+          "Internacional.",
+          "Regional."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q16",
+        "text": "¿Qué prohíbe el Artículo 117, inciso d), de la Ley Nº 548 sobre la disciplina escolar?",
+        "options": [
+          "Las tareas para la casa.",
+          "Los exámenes sorpresa.",
+          "Las sanciones corporales.",
+          "El uso de apodos entre compañeros."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q17",
+        "text": "La Ley Nº 263, que trata sobre la Trata y Tráfico de Personas, establece que la prevención de este delito debe incorporarse en:",
+        "options": [
+          "Los eventos deportivos únicamente.",
+          "Todo el sistema preescolar, primario, secundario, superior y otros niveles de formación académica.",
+          "Las materias de ciencias sociales exclusivamente.",
+          "Los manuales de la policía."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q18",
+        "text": "Según la Ley N° 259 de Control al Expendio y Consumo de Bebidas Alcohólicas, los menores de 18 años que consuman estas bebidas serán conducidos a:",
+        "options": [
+          "Las Defensorías de la Niñez y Adolescencia.",
+          "La estación de policía más cercana.",
+          "Directamente a sus domicilios.",
+          "Un centro de detención juvenil."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "id": "convivencia_q19",
+        "text": "El Artículo 5, numeral 8 de la Ley N° 070, tiene como objetivo de la educación:",
+        "options": [
+          "Desarrollar únicamente habilidades artísticas.",
+          "Cultivar y fortalecer el civismo, el diálogo intercultural y los valores éticos, morales y estéticos.",
+          "Promover la competencia entre unidades educativas.",
+          "Fomentar el aprendizaje de memoria."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q20",
+        "text": "¿Qué debe contener, según el Artículo 152, inciso III, literal c), de la Ley 548, el Plan de Convivencia?",
+        "options": [
+          "El procedimiento disciplinario que describa detalladamente las conductas que vulneran las normas.",
+          "Los nombres de todos los estudiantes de la unidad educativa.",
+          "El presupuesto anual de la escuela.",
+          "El cronograma de vacaciones."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "id": "convivencia_q21",
+        "text": "La Ley Nº 913 de Lucha Contra el Tráfico Ilícito de Sustancias Controladas atribuye al Ministerio de Educación la responsabilidad de:",
+        "options": [
+          "Realizar operativos de control en las escuelas.",
+          "Elaborar material pedagógico y didáctico con contenidos sobre prevención.",
+          "Administrar los centros de rehabilitación.",
+          "Sancionar penalmente a los consumidores."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q22",
+        "text": "La Resolución Ministerial N° 864/2019 establece un:",
+        "options": [
+          "Reglamento de uniformes escolares.",
+          "Manual de funciones para directores.",
+          "Protocolo de Prevención, Actuación y Denuncia en Casos de Violencia Física, Psicológica y Sexual.",
+          "Plan de estudios para el nivel inicial."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q23",
+        "text": "El Comité sobre los Derechos del Niño, en su Resolución 60/231, instó a los Estados a:",
+        "options": [
+          "Aumentar las horas de clase.",
+          "Tomar medidas para eliminar la aplicación del castigo corporal en las escuelas.",
+          "Implementar un currículo único a nivel mundial.",
+          "Reducir la edad de escolarización obligatoria."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q24",
+        "text": "¿Qué deben hacer los Estados, según la Convención Relativa a la Lucha contra la Discriminación en la Esfera de la Enseñanza (1960)?",
+        "options": [
+          "Promover la enseñanza de un único idioma.",
+          "Separar a los estudiantes por su rendimiento académico.",
+          "Incluir medidas inmediatas para eliminar cualquier tipo de discriminación.",
+          "Cerrar las escuelas privadas."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q25",
+        "text": "El \"Enfoque de habilidades para la vida\" busca desarrollar destrezas para que las niñas, niños y adolescentes:",
+        "options": [
+          "Obtengan mejores calificaciones en matemáticas.",
+          "Adquieran aptitudes necesarias para el desarrollo humano y para enfrentar los retos de la vida diaria.",
+          "Ganan competencias deportivas.",
+          "Aprendan a programar computadoras."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q26",
+        "text": "¿Qué busca el \"Enfoque inclusivo\"?",
+        "options": [
+          "Garantizar el derecho a la educación, respetando la diversidad y eliminando barreras de ingreso, permanencia y egreso.",
+          "Incluir más horas de materias artísticas en el currículo.",
+          "Agrupar a los estudiantes según sus capacidades.",
+          "Excluir a los estudiantes con dificultades de aprendizaje para mejorar las estadísticas."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "id": "convivencia_q27",
+        "text": "El principio de \"Prevención\" dirige las actuaciones a:",
+        "options": [
+          "Sancionar duramente los conflictos una vez que han ocurrido.",
+          "Generar condiciones facilitadoras de la convivencia y la detección e intervención precoz.",
+          "Ignorar los problemas pequeños para que no se magnifiquen.",
+          "Documentar los conflictos para los informes anuales."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q28",
+        "text": "¿A qué se refiere el principio de \"Planificación\"?",
+        "options": [
+          "A que el Plan debe ser espontáneo y flexible.",
+          "A que el director debe planificar todo sin consultar.",
+          "A que el Plan de Convivencia debe partir de un análisis previo y no ser algo improvisado.",
+          "A que la planificación solo concierne al presupuesto."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q29",
+        "text": "El \"Enfoque pedagógico\" se basa en:",
+        "options": [
+          "Una educación basada en la memoria y la repetición.",
+          "Una educación integral, donde todos reciban una formación acorde a sus aptitudes y puedan tomar decisiones con fundamento.",
+          "Un sistema de castigos y recompensas.",
+          "Una formación exclusivamente teórica."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q30",
+        "text": "El \"Enfoque intergeneracional\" respeta:",
+        "options": [
+          "Únicamente las opiniones de los adultos y docentes.",
+          "Las decisiones de las autoridades por encima de todo.",
+          "Las opiniones, deseos y libertad de expresión de las personas a lo largo de la vida sin perjuicio de su edad.",
+          "Solamente las ideas de los estudiantes más jóvenes."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q31",
+        "text": "El principio de \"Interculturalidad\" en las actuaciones implica:",
+        "options": [
+          "Promover una única cultura como la dominante.",
+          "Tener en cuenta la pluralidad cultural de la comunidad educativa, respetando las diferentes culturas.",
+          "Ignorar las diferencias culturales para evitar conflictos.",
+          "Fomentar la competencia entre diferentes grupos culturales."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q32",
+        "text": "¿Qué se entiende por \"convivencia escolar\" según el documento?",
+        "options": [
+          "El cúmulo de relaciones humanas que se dan en la unidad educativa y se construyen día a día de manera colectiva.",
+          "El conjunto de normas disciplinarias impuestas por el director.",
+          "El estado de la infraestructura y el equipamiento de la escuela.",
+          "El rendimiento académico promedio de los estudiantes."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "id": "convivencia_q33",
+        "text": "¿En qué se sustentan las relaciones de convivencia, según el texto?",
+        "options": [
+          "En la obediencia ciega a la autoridad.",
+          "En el autoconocimiento, la autonomía y el razonamiento moral.",
+          "En la competencia y el individualismo.",
+          "En la capacidad de evitar toda interacción social."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q34",
+        "text": "La capacidad de \"Comprensión crítica\" implica el desarrollo de capacidades orientadas a:",
+        "options": [
+          "Criticar a los compañeros sin fundamentos.",
+          "Aceptar toda la información sin cuestionarla.",
+          "La adquisición de información moralmente relevante sobre la realidad y el compromiso para mejorarla.",
+          "Memorizar los textos escolares al pie de la letra."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q35",
+        "text": "Para que las niñas y niños puedan desarrollar la competencia de la convivencia, la escuela debe:",
+        "options": [
+          "Aumentar las sanciones y los castigos.",
+          "Priorizar una convivencia armónica con prácticas participativas basadas en el diálogo y el respeto.",
+          "Limitar la participación de los estudiantes en las decisiones.",
+          "Enfocarse exclusivamente en los contenidos académicos."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q36",
+        "text": "La \"Pedagogía del cuidado\" promueve, entre otras cosas:",
+        "options": [
+          "Que solo las niñas se encarguen de la limpieza del aula.",
+          "Un cambio en los roles femeninos y masculinos para fomentar la corresponsabilidad de todas las personas.",
+          "Que el personal administrativo realice todas las tareas de cuidado.",
+          "La contratación de empresas externas para el mantenimiento."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q37",
+        "text": "La Ley N° 548 establece la obligatoriedad de elaborar un Plan de Convivencia en su Artículo:",
+        "options": [
+          "116",
+          "117",
+          "152",
+          "348"
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q38",
+        "text": "Según la Ley N° 070 \"Avelino Siñani - Elizardo Pérez\", la educación es una base para erradicar toda forma de:",
+        "options": [
+          "Competencia académica.",
+          "Violencia en el ámbito educativo.",
+          "Expresión cultural diversa.",
+          "Organización estudiantil."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q39",
+        "text": "La Constitución Política del Estado (CPE), en su Artículo 15, garantiza el derecho a la integridad:",
+        "options": [
+          "Territorial y soberana.",
+          "Cultural y lingüística.",
+          "Económica y financiera.",
+          "Física, psicológica y sexual."
+        ],
+        "correctAnswerIndex": 3
+      },
+      {
+        "id": "convivencia_q40",
+        "text": "¿Qué tipo de sanciones prohíbe explícitamente la Ley N° 548 en su Artículo 117 sobre disciplina escolar?",
+        "options": [
+          "Sanciones administrativas.",
+          "Sanciones pecuniarias.",
+          "Sanciones corporales.",
+          "Sanciones académicas."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q41",
+        "text": "El Decreto Supremo N° 1302 tiene como objetivo principal establecer mecanismos para la erradicación de:",
+        "options": [
+          "La violencia, maltrato y abuso contra estudiantes.",
+          "El bajo rendimiento académico general.",
+          "El ausentismo de los docentes.",
+          "El uso de tecnología en las aulas."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "id": "convivencia_q42",
+        "text": "La Ley N° 045 está orientada a la lucha contra el racismo y toda forma de:",
+        "options": [
+          "Expresión política.",
+          "Discriminación.",
+          "Organización social.",
+          "Creencia religiosa."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q43",
+        "text": "La Ley Integral N° 348 obliga al Ministerio de Educación a prohibir materiales educativos con contenidos:",
+        "options": [
+          "Políticos y partidarios.",
+          "Filosóficos y complejos.",
+          "Sexistas y discriminatorios.",
+          "Históricos y controversiales."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q44",
+        "text": "El Artículo 59 de la CPE establece que toda niña, niño y adolescente tiene derecho a su:",
+        "options": [
+          "Desarrollo integral.",
+          "Voto universal.",
+          "Propiedad privada.",
+          "Libre asociación política."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "id": "convivencia_q45",
+        "text": "La normativa que prohíbe la \"Violencia entre Pares\" en las escuelas es la Resolución Ministerial:",
+        "options": [
+          "N° 864/2019",
+          "N° 1204/2018",
+          "N° 1171/2018",
+          "N° 2709/2017"
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q46",
+        "text": "La Convención sobre los Derechos del Niño es un mecanismo normativo de carácter:",
+        "options": [
+          "Municipal.",
+          "Departamental.",
+          "Plurinacional.",
+          "Internacional."
+        ],
+        "correctAnswerIndex": 3
+      },
+      {
+        "id": "convivencia_q47",
+        "text": "El concepto que se refiere a las relaciones humanas que se construyen colectivamente en la escuela es:",
+        "options": [
+          "Clima escolar.",
+          "Convivencia escolar.",
+          "Gestión educativa.",
+          "Currículo base."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q48",
+        "text": "¿Qué enfoque busca restablecer las relaciones entre los actores tras un conflicto?",
+        "options": [
+          "Enfoque pedagógico.",
+          "Enfoque inclusivo.",
+          "Enfoque de derechos.",
+          "Enfoque restaurativo."
+        ],
+        "correctAnswerIndex": 3
+      },
+      {
+        "id": "convivencia_q49",
+        "text": "El principio que exige que el Plan parta de un análisis previo y no sea improvisado es el de:",
+        "options": [
+          "Integralidad.",
+          "Planificación.",
+          "Participación.",
+          "Prevención."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q50",
+        "text": "La \"percepción\" que tienen las personas sobre la unidad educativa a partir de la seguridad y calidad de la enseñanza define el:",
+        "options": [
+          "Proyecto Socio Comunitario.",
+          "Ideologismo pedagógico.",
+          "Clima escolar.",
+          "Reglamento interno."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q51",
+        "text": "Asumir a la persona como un sujeto de derechos sin distinción de género, etnia o creencia corresponde al enfoque:",
+        "options": [
+          "De derechos humanos.",
+          "De bienestar.",
+          "Intergeneracional.",
+          "Intercultural."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "id": "convivencia_q52",
+        "text": "¿Qué capacidad se refiere a la reflexión sobre conflictos teniendo en cuenta valores universales?",
+        "options": [
+          "Autoconocimiento.",
+          "Autorregulación.",
+          "Razonamiento moral.",
+          "Comprensión crítica."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q53",
+        "text": "La implicación y corresponsabilidad de todos los actores en la construcción colectiva de reglas define el principio de:",
+        "options": [
+          "Integralidad.",
+          "Interculturalidad.",
+          "Participación y coordinación.",
+          "Planificación."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q54",
+        "text": "La \"Pedagogía del cuidado\" promueve un cambio en los roles de género para fomentar la:",
+        "options": [
+          "Competitividad.",
+          "Corresponsabilidad.",
+          "Individualidad.",
+          "Jerarquía."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q55",
+        "text": "El enfoque que respeta las opiniones y deseos de las personas sin perjuicio de su edad es el:",
+        "options": [
+          "Restaurativo.",
+          "Intergeneracional.",
+          "Inclusivo.",
+          "Pedagógico."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q56",
+        "text": "Considerar a la comunidad educativa como un todo y abordar las actuaciones de forma sistémica es parte del principio de:",
+        "options": [
+          "Prevención.",
+          "Planificación.",
+          "Integralidad.",
+          "Interculturalidad."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q57",
+        "text": "El objetivo general del Plan es mejorar la convivencia, la comunicación y las:",
+        "options": [
+          "Calificaciones académicas.",
+          "Instalaciones deportivas.",
+          "Relaciones interpersonales.",
+          "Estrategias de marketing."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q58",
+        "text": "La finalidad del Plan es contribuir al desarrollo de una educación de calidad orientando la incorporación de temáticas de:",
+        "options": [
+          "Disciplina militar.",
+          "Prevención de la violencia.",
+          "Formación política.",
+          "Capacitación laboral."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q59",
+        "text": "Según las directrices de la Ley N° 548, el Plan debe contener obligatoriamente los derechos y _________ de los miembros de la comunidad.",
+        "options": [
+          "Salarios.",
+          "Historiales.",
+          "Privilegios.",
+          "Deberes."
+        ],
+        "correctAnswerIndex": 3
+      },
+      {
+        "id": "convivencia_q60",
+        "text": "El Plan debe incluir la remisión de informes anuales sobre casos de acoso y violencia al:",
+        "options": [
+          "Gobierno Municipal.",
+          "Ministerio de Educación.",
+          "Consejo de Padres.",
+          "Seduca Departamental."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q61",
+        "text": "Uno de los objetivos específicos del Plan es fomentar la participación como método de prevención y:",
+        "options": [
+          "Resolución pacífica de conflictos.",
+          "Imposición de sanciones.",
+          "Recaudación de fondos.",
+          "Competencia entre cursos."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "id": "convivencia_q62",
+        "text": "La finalidad del Plan se vincula con la planificación curricular y la elaboración del:",
+        "options": [
+          "Plan Operativo Anual (POA).",
+          "Reglamento Disciplinario.",
+          "Calendario Escolar.",
+          "Proyecto Socio Comunitario Productivo (PSP)."
+        ],
+        "correctAnswerIndex": 3
+      },
+      {
+        "id": "convivencia_q63",
+        "text": "La descripción de sanciones internas es una directriz que debe evitar decisiones:",
+        "options": [
+          "Consensuadas.",
+          "Públicas.",
+          "Arbitrarias.",
+          "Documentadas."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q64",
+        "text": "La organización de programas y talleres de capacitación es una directriz destinada a la:",
+        "options": [
+          "Sanción.",
+          "Evaluación.",
+          "Prevención.",
+          "Financiación."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q65",
+        "text": "La directriz sobre las normas de conducta exige que estas promuevan el:",
+        "options": [
+          "Silencio absoluto.",
+          "Buen trato.",
+          "Temor a la autoridad.",
+          "Individualismo."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q66",
+        "text": "El Plan debe describir procedimientos alternativos para resolver conflictos, siempre que no sean contrarios a:",
+        "options": [
+          "Las tradiciones locales.",
+          "Ninguna norma.",
+          "La opinión del director.",
+          "Los intereses de los padres."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q67",
+        "text": "La responsabilidad principal de liderar el proceso de construcción del Plan recae en:",
+        "options": [
+          "La junta de padres de familia.",
+          "El gobierno estudiantil.",
+          "La directora o director de la unidad educativa.",
+          "El personal administrativo."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q68",
+        "text": "El documento enfatiza que las y los estudiantes deben ser parte principal y _________ del proceso.",
+        "options": [
+          "Observadora.",
+          "Financiera.",
+          "Protagónica.",
+          "Evaluadora."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q69",
+        "text": "El mecanismo de resolución de conflictos donde un tercero neutral facilita la comunicación se denomina:",
+        "options": [
+          "Negociación.",
+          "Arbitraje.",
+          "Mediación.",
+          "Litigio."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q70",
+        "text": "¿Qué procedimiento regulatorio tiene una decisión vinculante y de cumplimiento obligatorio?",
+        "options": [
+          "Diálogo.",
+          "Negociación.",
+          "Mediación.",
+          "Arbitraje."
+        ],
+        "correctAnswerIndex": 3
+      },
+      {
+        "id": "convivencia_q71",
+        "text": "Un derecho de los padres, madres o tutores es:",
+        "options": [
+          "Determinar el currículo escolar.",
+          "Recibir un trato respetuoso.",
+          "Modificar las calificaciones.",
+          "Vetar las decisiones del director."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q72",
+        "text": "El rol de las maestras y maestros en el proceso de construcción del Plan debe ser principalmente:",
+        "options": [
+          "Pasivo.",
+          "Punitivo.",
+          "Orientador.",
+          "Autoritario."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q73",
+        "text": "La negociación y la mediación NO pueden aplicarse a conductas consideradas:",
+        "options": [
+          "Faltas leves.",
+          "Desacuerdos simples.",
+          "Infracciones y/o delitos.",
+          "Conflictos verbales."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q74",
+        "text": "Cuando las mismas partes interesadas buscan voluntariamente una solución a su conflicto, están realizando una:",
+        "options": [
+          "Negociación.",
+          "Mediación.",
+          "Apelación.",
+          "Conciliación."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "id": "convivencia_q75",
+        "text": "¿Cuál es un derecho fundamental de las y los estudiantes en el marco del Plan?",
+        "options": [
+          "Elegir a sus maestros.",
+          "Eximirse de las evaluaciones.",
+          "Recibir una educación gratuita y de calidad.",
+          "Tener acceso ilimitado a las redes sociales."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q76",
+        "text": "El involucramiento activo de los padres de familia en el Plan se enmarca en su organización y apoya a:",
+        "options": [
+          "Las autoridades municipales.",
+          "La dirección de la unidad educativa.",
+          "Las organizaciones no gubernamentales.",
+          "El Ministerio de Educación."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q77",
+        "text": "¿Cuál es la primera de las cinco etapas del proceso de construcción del Plan?",
+        "options": [
+          "Organización.",
+          "Sensibilización y motivación.",
+          "Construcción y aprobación.",
+          "Seguimiento y evaluación."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q78",
+        "text": "La comisión encargada de realizar el diagnóstico y redactar el borrador del Plan es la Comisión de:",
+        "options": [
+          "Aprobación.",
+          "Socialización.",
+          "Construcción.",
+          "Seguimiento."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q79",
+        "text": "La etapa que busca garantizar que toda la comunidad educativa conozca el Plan aprobado es la de:",
+        "options": [
+          "Construcción.",
+          "Socialización.",
+          "Organización.",
+          "Motivación."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q80",
+        "text": "En el Plan de Seguimiento, la pregunta \"¿CUÁNDO?\" se refiere al:",
+        "options": [
+          "Responsable del monitoreo.",
+          "Aspecto a ser monitoreado.",
+          "Instrumento a utilizar.",
+          "Tiempo en que se realizará."
+        ],
+        "correctAnswerIndex": 3
+      },
+      {
+        "id": "convivencia_q81",
+        "text": "La sección de \"Antecedentes y justificación\" en la estructura del Plan responde a la pregunta:",
+        "options": [
+          "¿Cuándo se realizarán las actividades?",
+          "¿Por qué es importante construir el Plan?",
+          "¿Quiénes son los responsables del Plan?",
+          "¿Cómo se medirá el éxito del Plan?"
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q82",
+        "text": "La etapa final del ciclo de construcción del Plan, que permite identificar logros y dificultades, es la de:",
+        "options": [
+          "Aprobación.",
+          "Socialización.",
+          "Seguimiento y evaluación.",
+          "Implementación."
+        ],
+        "correctAnswerIndex": 2
+      },
+      {
+        "id": "convivencia_q83",
+        "text": "La redacción de los \"Acuerdos y compromisos\" dentro del Plan debe realizarse de manera:",
+        "options": [
+          "Individual por el director.",
+          "Conjunta por cada integrante.",
+          "Exclusiva por los docentes.",
+          "Impuesta por el distrito."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q84",
+        "text": "El Código SIE y el número de estudiantes son parte de la sección de:",
+        "options": [
+          "Objetivos del Plan.",
+          "Datos informativos.",
+          "Procedimientos regulatorios.",
+          "Acuerdos y compromisos."
+        ],
+        "correctAnswerIndex": 1
+      },
+      {
+        "id": "convivencia_q85",
+        "text": "La validación y visto bueno final del documento del Plan es responsabilidad de la Comisión de:",
+        "options": [
+          "Aprobación.",
+          "Construcción.",
+          "Socialización.",
+          "Motivación."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "id": "convivencia_q86",
+        "text": "El tiempo de evaluación del Plan (anual, bianual) debe ser establecido de acuerdo a:",
+        "options": [
+          "La normativa nacional fija.",
+          "El calendario del Ministerio.",
+          "La decisión del Seduca.",
+          "Las características de la unidad educativa."
+        ],
+        "correctAnswerIndex": 3
+      }
+    ]
+  },
+  {
+  "id": "ley_070_v2",
+  "title": "Ley N° 070 Avelino Siñani - Elizardo Pérez",
+  "category": "Leyes de Educación",
+  "description": "Cuestionario completo sobre la Ley de la Educación 'Avelino Siñani - Elizardo Pérez' (Ley N° 070).",
+  "questions": [
+    {
+      "id": "ley070_q1",
+      "text": "Según el Artículo 1, la educación es un derecho fundamental que debe ser universal, productiva, gratuita, integral e intercultural. ¿Cuál de las siguientes características NO se menciona explícitamente en el numeral 1 de dicho artículo?",
+      "options": [
+        "Gratuita.",
+        "Productiva.",
+        "Universal.",
+        "Laica."
+      ],
+      "correctAnswerIndex": 3
+    },
+    {
+      "id": "ley070_q2",
+      "text": "El Artículo 2 establece una serie de disposiciones generales. ¿Qué instancia es reconocida por la ley para garantizar la participación social y comunitaria en el sistema educativo?",
+      "options": [
+        "Únicamente los Consejos Educativos conformados por el Ministerio.",
+        "Organismos representativos en todos los niveles del Estado, y en naciones y pueblos indígena originario campesinos, según sus normas propias.",
+        "Las juntas de vecinos y las organizaciones sociales de cada distrito.",
+        "Exclusivamente las madres y padres de familia de forma individual."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q3",
+      "text": "Las Unidades Educativas de Convenio, según el Artículo 2, numeral 4, deben funcionar bajo la tuición de las autoridades públicas. ¿Cuál es una condición esencial para su funcionamiento?",
+      "options": [
+        "Deben tener fines de lucro para garantizar su sostenibilidad.",
+        "Tienen total autonomía en sus planes y programas, independientemente del sistema educativo.",
+        "Deben tener fines de servicio social, con acceso libre y sin fines de lucro.",
+        "Deben ser administradas exclusivamente por el Estado, aunque financiadas por entidades religiosas."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q4",
+      "text": "El Artículo 3 establece las bases de la educación. Una de ellas es que la educación es \"única, diversa y plural\". ¿A qué se refiere el término \"Única\" en este contexto?",
+      "options": [
+        "A que solo hay un tipo de currículo para todo el país, sin variaciones.",
+        "A la unidad en cuanto a calidad, política educativa y currículo base, erradicando diferencias entre lo fiscal y privado, y lo urbano y rural.",
+        "A que es la única responsabilidad del Estado, excluyendo a la sociedad.",
+        "A que todos los estudiantes deben aprender un único idioma oficial."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q5",
+      "text": "El Artículo 4 detalla los fines de la educación. ¿Cuál de los siguientes NO es un fin explícito mencionado en este artículo?",
+      "options": [
+        "Promover una sociedad despatriarcalizada.",
+        "Garantizar la participación plena de todos los habitantes en la educación.",
+        "Asegurar la inserción laboral inmediata de todos los bachilleres en el sector público.",
+        "Fortalecer la unidad, integridad territorial y soberanía del Estado Plurinacional."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q6",
+      "text": "El Artículo 5, sobre los objetivos de la educación, menciona la implementación de programas sociales para estudiantes con menos posibilidades económicas. ¿Qué tipo de apoyo NO se menciona textualmente en el numeral 11 de dicho artículo?",
+      "options": [
+        "Programas de alimentación y vestimenta.",
+        "Transporte y material escolar.",
+        "Asignación de tutores personales y apoyo psicológico.",
+        "Becas a estudiantes de excelente aprovechamiento y residencias estudiantiles en áreas dispersas."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q7",
+      "text": "El Artículo 7 regula el uso de idiomas. En una comunidad monolingüe con predominio del castellano, ¿cómo se debe organizar la enseñanza de lenguas?",
+      "options": [
+        "La lengua originaria como primera lengua y el castellano como segunda.",
+        "La enseñanza debe ser exclusivamente en castellano para fortalecerlo.",
+        "Se debe elegir democráticamente entre el castellano y una lengua originaria como primera lengua.",
+        "El castellano como primera lengua y la originaria como segunda."
+      ],
+      "correctAnswerIndex": 3
+    },
+    {
+      "id": "ley070_q8",
+      "text": "La Educación Secundaria Comunitaria Productiva, según el Artículo 14, está orientada a la obtención del Diploma de Bachiller Técnico Humanístico. ¿Cómo se otorga el grado de Técnico Medio?",
+      "options": [
+        "Se otorga automáticamente a todos los bachilleres al graduarse.",
+        "Requiere dos años adicionales de estudio después del bachillerato.",
+        "Se otorga de manera progresiva, de acuerdo a las vocaciones y potencialidades productivas de las regiones.",
+        "Solo se otorga en las unidades educativas privadas especializadas."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q9",
+      "text": "El Subsistema de Educación Alternativa y Especial, según el Artículo 16, se desarrolla en el marco de tres enfoques. ¿Cuál de los siguientes NO es uno de ellos?",
+      "options": [
+        "Educación Popular y Comunitaria.",
+        "Educación Inclusiva.",
+        "Educación Productiva y Territorial.",
+        "Educación a lo largo de la vida."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q10",
+      "text": "El Artículo 18 permite el reconocimiento y homologación de saberes y experiencias adquiridas en la práctica cotidiana. ¿A qué subsistema corresponde esta disposición?",
+      "options": [
+        "Únicamente al Subsistema de Educación Regular.",
+        "Al Subsistema de Educación Alternativa y Especial.",
+        "A todos los subsistemas del Sistema Educativo Plurinacional.",
+        "Únicamente al Subsistema de Educación Superior de Formación Profesional."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q11",
+      "text": "La Educación Permanente, definida en el Artículo 24, se caracteriza por ser:",
+      "options": [
+        "Escolarizada y destinada a personas mayores de quince años.",
+        "Un programa de nivelación para ingresar a la universidad.",
+        "No escolarizada y destinada a toda la población para su formación socio-comunitaria, productiva y política.",
+        "Obligatoria hasta el bachillerato y con certificación equivalente a la Educación Regular."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q12",
+      "text": "Dentro de la Educación Especial (Art. 25-27), ¿cuál es la modalidad de atención para estudiantes con discapacidad que requieren servicios especializados e integrales?",
+      "options": [
+        "Modalidad directa.",
+        "Modalidad indirecta.",
+        "Modalidad inclusiva.",
+        "Modalidad multisectorial."
+      ],
+      "correctAnswerIndex": 0
+    },
+    {
+      "id": "ley070_q13",
+      "text": "La Formación Superior de Maestras y Maestros es, por naturaleza, fiscal y gratuita. ¿Cuál es la razón que da la ley en el Artículo 32?",
+      "options": [
+        "Porque la educación es un servicio y no una mercancía.",
+        "Para garantizar el acceso democrático de todos los postulantes.",
+        "Porque el Estado asume la responsabilidad, por constituirse en una función suprema y primera responsabilidad financiera del Estado.",
+        "Para evitar la proliferación de institutos privados de formación docente."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q14",
+      "text": "¿Qué institución, según el Artículo 36, tiene la exclusividad para ofertar y desarrollar programas académicos de formación de maestras y maestros?",
+      "options": [
+        "Las Universidades Pedagógicas en coordinación con el Ministerio.",
+        "Las Escuelas Superiores de Formación de Maestras y Maestros.",
+        "Cualquier Universidad Pública Autónoma que cuente con una facultad de humanidades.",
+        "Los Institutos Normales Superiores de carácter fiscal o de convenio."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q15",
+      "text": "El Ministerio de Educación otorga el Título de Maestro con grado de Licenciatura. ¿Qué implicancia tiene este título según el Artículo 38?",
+      "options": [
+        "Habilita al maestro para ejercer en cualquier nivel del sistema educativo, incluyendo la universidad.",
+        "Le otorga un bono económico automático por profesionalización.",
+        "Es un título honorífico, pero el ingreso al magisterio requiere otro examen.",
+        "Conlleva su respectivo reconocimiento en el Escalafón del Magisterio."
+      ],
+      "correctAnswerIndex": 3
+    },
+    {
+      "id": "ley070_q16",
+      "text": "¿Qué instancia es responsable del desarrollo de la Formación Post gradual para maestras y maestros, según el Artículo 39?",
+      "options": [
+        "Las Escuelas Superiores de Formación de Maestros.",
+        "Los Consejos Educativos de Pueblos Originarios.",
+        "La Universidad Pedagógica, con dependencia del Ministerio de Educación.",
+        "Las Universidades Públicas Autónomas a través de convenios."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q17",
+      "text": "Dentro de la Formación Superior Técnica y Tecnológica, ¿qué institución puede otorgar un nivel de Licenciatura, según el Artículo 43 y 45?",
+      "options": [
+        "Los Institutos Técnicos privados.",
+        "Los Institutos Tecnológicos de convenio.",
+        "Las Escuelas Superiores Tecnológicas de carácter fiscal.",
+        "Cualquier Instituto Tecnológico que cumpla cinco años de funcionamiento."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q18",
+      "text": "La Formación Superior Artística (Art. 47-51) se estructura en diferentes instituciones. ¿Cuál de ellas tiene como objetivo desarrollar programas especializados a nivel licenciatura?",
+      "options": [
+        "Los Centros de Capacitación Artística.",
+        "Los Institutos de Formación Artística.",
+        "Las Escuelas Bolivianas Interculturales.",
+        "Las Academias Nacionales de Bellas Artes."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q19",
+      "text": "El Artículo 55 lista los tipos de universidades reconocidas por el Estado. ¿Cuál de las siguientes NO es una categoría mencionada?",
+      "options": [
+        "Universidades Indígenas.",
+        "Universidades de Régimen Especial.",
+        "Universidades Comunitarias Interculturales.",
+        "Universidades Privadas."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q20",
+      "text": "Las Universidades Privadas, según el Artículo 59, se rigen por ciertos criterios. ¿Cuál de los siguientes enunciados es FALSO?",
+      "options": [
+        "Su apertura es autorizada mediante Decreto Supremo.",
+        "Sus programas académicos son regulados por el Ministerio de Educación.",
+        "Serán subvencionadas parcialmente por el Estado para garantizar la calidad.",
+        "Están autorizadas para expedir Diplomas Académicos."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q21",
+      "text": "¿Quiénes componen la instancia de definición de políticas institucionales en las Universidades Indígenas, según el Artículo 60?",
+      "options": [
+        "Las Juntas Comunitarias, compuestas por organizaciones indígenas nacionales y departamentales.",
+        "El Consejo Académico de la universidad, conformado por docentes y estudiantes.",
+        "Un Directorio nombrado directamente por el Ministerio de Educación.",
+        "El Rector y los Vicerrectores de la universidad."
+      ],
+      "correctAnswerIndex": 0
+    },
+    {
+      "id": "ley070_q22",
+      "text": "Las Universidades de Régimen Especial (Militar y Policial) tienen una doble dependencia según el Artículo 61. ¿Cuál es la correcta?",
+      "options": [
+        "Tuición del Ministerio de Educación en lo institucional y del Ministerio del ramo en lo académico.",
+        "Tuición del Ministerio del ramo en lo institucional y supervisión del Ministerio de Educación en lo académico.",
+        "Supervisión del Comando en Jefe de las FFAA en todo aspecto.",
+        "Total autonomía, sin dependencia de ningún ministerio."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q23",
+      "text": "¿Cuál es la misión principal de la formación post gradual, según el Artículo 64?",
+      "options": [
+        "La actualización de conocimientos para el ejercicio docente.",
+        "La cualificación de profesionales y el desarrollo de la ciencia y tecnología a través de la investigación para coadyuvar al desarrollo integral de la sociedad.",
+        "La obtención de un grado académico superior para mejorar el salario.",
+        "La especialización en áreas de gestión administrativa pública."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q24",
+      "text": "¿Qué rol cumplen los profesionales en Ciencias de la Educación y Pedagogía dentro del Sistema Educativo Plurinacional, según el Artículo 67?",
+      "options": [
+        "Son los únicos autorizados para ejercer la docencia en el nivel secundario.",
+        "Deben incorporarse al escalafón docente para ejercer como directores.",
+        "Apoyan y fortalecen al sistema con funciones como psicopedagogía, diseño curricular y evaluación, sin incorporarse al escalafón docente.",
+        "Tienen la responsabilidad de la gestión administrativa en las Direcciones Distritales."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q25",
+      "text": "La organización curricular, según el Artículo 69, se expresa en tres tipos de currículos que garantizan la unidad e integridad del sistema. Estos son:",
+      "options": [
+        "Currículo Nacional, Currículo Departamental y Currículo Local.",
+        "Currículo Troncal Común, Currículo Complementario y Currículo Especializado.",
+        "Currículo base (intercultural), currículos regionalizados y diversificados (intracultural).",
+        "Currículo Oficial, Currículo Oculto y Currículo Nulo."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q26",
+      "text": "¿De quién es la responsabilidad de diseñar, aprobar e implementar el currículo base, según el Artículo 69?",
+      "options": [
+        "De las Escuelas Superiores de Formación de Maestros.",
+        "De un congreso plurinacional de educación.",
+        "Del Ministerio de Educación, con participación de los actores educativos.",
+        "De las Direcciones Departamentales de Educación de forma autónoma."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q27",
+      "text": "La gestión del currículo regionalizado es una competencia concurrente. ¿Entre qué niveles se da esta concurrencia, según el Artículo 70?",
+      "options": [
+        "Entre el nivel central del Estado y las entidades territoriales autónomas.",
+        "Entre las Direcciones Distritales y los Núcleos Educativos.",
+        "Entre el Ministerio de Educación y las universidades públicas.",
+        "Entre los padres de familia y los directores de unidad educativa."
+      ],
+      "correctAnswerIndex": 0
+    },
+    {
+      "id": "ley070_q28",
+      "text": "El Artículo 73 establece los principios de la administración y gestión educativa. ¿Cuál de los siguientes NO es uno de esos principios?",
+      "options": [
+        "Participación, democracia y comunitarismo.",
+        "Horizontalidad en la toma de decisiones.",
+        "Equitativa y complementaria.",
+        "Jerarquía y centralización administrativa."
+      ],
+      "correctAnswerIndex": 3
+    },
+    {
+      "id": "ley070_q29",
+      "text": "La estructura administrativa del Sistema Educativo Plurinacional se organiza en tres niveles (Art. 76). ¿Cuál de las siguientes instancias pertenece al Nivel Departamental?",
+      "options": [
+        "Ministerio de Educación y sus Viceministerios.",
+        "Gobiernos Municipales.",
+        "Direcciones Departamentales de Educación (DDE).",
+        "Direcciones de Núcleo."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q30",
+      "text": "¿Cómo son designados los Directores Distritales de Educación, según el Artículo 79?",
+      "options": [
+        "Por elección directa de los maestros del distrito.",
+        "Por designación directa del Ministro de Educación.",
+        "Por las y los Directores Departamentales de Educación, como resultado de concurso de méritos y examen de competencia.",
+        "Por el Gobernador del departamento a propuesta de una terna."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q31",
+      "text": "El Artículo 80 detalla las atribuciones del Nivel Autonómico. ¿A qué instancia corresponde la responsabilidad de dotar infraestructura y equipamiento a los Institutos Técnicos y Tecnológicos?",
+      "options": [
+        "A los Gobiernos Municipales.",
+        "A los Gobiernos Departamentales.",
+        "A las Autonomías Indígena Originaria Campesinas.",
+        "Al Nivel Central del Estado."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q32",
+      "text": "El Estado, a través del Sistema Plurinacional de Certificación de Competencias, reconocerá las competencias laborales y artísticas de los ciudadanos (Art. 82). ¿Qué tipo de competencias se reconocen?",
+      "options": [
+        "Únicamente las adquiridas a través de la educación formal.",
+        "Solo las competencias certificadas por instituciones privadas.",
+        "Las que desarrollaron en la práctica a lo largo de la vida.",
+        "Exclusivamente las relacionadas con oficios técnicos."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q33",
+      "text": "Se crea el Observatorio Plurinacional de la Calidad Educativa (Art. 83). ¿Cuál es su característica principal en cuanto a su dependencia?",
+      "options": [
+        "Es una dirección dependiente del Viceministerio de Educación Regular.",
+        "Es una institución pública descentralizada, técnica, especializada e independiente en cuanto al proceso y resultados de sus evaluaciones.",
+        "Es un organismo consultivo conformado por los Consejos Educativos.",
+        "Depende directamente de la Asamblea Legislativa Plurinacional."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q34",
+      "text": "El Artículo 88 crea el Instituto Plurinacional de Estudio de Lenguas y Culturas (IPELC). A su vez, el IPELC creará otros institutos más específicos. ¿Quién financiará y sostendrá a estos institutos específicos por cada nación o pueblo?",
+      "options": [
+        "El Tesoro General del Estado exclusivamente.",
+        "El propio Instituto Plurinacional de Estudio de Lenguas y Culturas.",
+        "Las entidades territoriales autónomas.",
+        "Organismos de cooperación internacional."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q35",
+      "text": "El financiamiento de la Educación (Art. 89) proviene de dos fuentes principales. Estas son:",
+      "options": [
+        "El Tesoro General del Estado y la cooperación internacional.",
+        "Recursos del Tesoro General del Estado y de las entidades territoriales autónomas.",
+        "Los aportes de los padres de familia y los recursos de las empresas públicas.",
+        "Los impuestos específicos a la educación y el IDH."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q36",
+      "text": "La Participación Social Comunitaria (Art. 90) es la instancia de participación de varios actores. ¿Cuál de los siguientes grupos NO se menciona explícitamente en la definición del artículo?",
+      "options": [
+        "Actores sociales.",
+        "Actores comunitarios.",
+        "Representantes del magisterio sindicalizado.",
+        "Madres y padres de familia."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q37",
+      "text": "¿Cuál es la instancia máxima de participación de la sociedad para la formulación y definición de lineamientos de la política educativa, según el Artículo 92?",
+      "options": [
+        "El Consejo Educativo Plurinacional.",
+        "El Congreso Plurinacional de Educación.",
+        "Los Consejos Educativos de naciones y pueblos indígena originario campesinos.",
+        "Los Consejos Consultivos del Ministerio de Educación."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q38",
+      "text": "¿Con qué periodicidad debe ser convocado el Congreso Plurinacional de Educación?",
+      "options": [
+        "Cada dos años.",
+        "Cada vez que haya un cambio de gobierno.",
+        "Cada cinco años.",
+        "No tiene una periodicidad fija, se convoca según la necesidad."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q39",
+      "text": "La Disposición Transitoria Cuarta establece un plazo para que las Universidades Privadas existentes jerarquicen su normativa de funcionamiento. ¿De cuánto tiempo es ese plazo?",
+      "options": [
+        "Noventa días.",
+        "Un año.",
+        "Ciento ochenta días.",
+        "El plazo que determine el Ministerio de Educación."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q40",
+      "text": "La Disposición Abrogatoria Única anula explícitamente la Ley 1565 de Reforma Educativa y otra ley. ¿Cuál es esa otra ley?",
+      "options": [
+        "La Ley del Escalafón del Magisterio.",
+        "La Ley 3009 del Consejo Nacional de Acreditación de Educación Superior.",
+        "La Ley de Administración y Control Gubernamentales (SAFCO).",
+        "La Ley de Participación Popular."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q41",
+      "text": "La educación hasta el bachillerato es obligatoria. ¿En qué artículo de la ley se establece este mandato?",
+      "options": [
+        "Artículo 1, numeral 1.",
+        "Artículo 1, numeral 8.",
+        "Artículo 9.",
+        "Artículo 14."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q42",
+      "text": "La ley promueve como principios ético morales de la sociedad plural el \"ama qhilla, ama llulla, ama suwa\". ¿Cuál es la traducción correcta que proporciona el mismo artículo?",
+      "options": [
+        "No robes, no mientas, no seas flojo.",
+        "No seas flojo, no seas mentiroso ni seas ladrón.",
+        "No seas ocioso, no seas ladrón, no seas embustero.",
+        "No mientas, no seas flojo, no explotes."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q43",
+      "text": "Uno de los fines de la educación (Art. 4) es contribuir a reafirmar un derecho territorial de Bolivia. ¿A qué se refiere?",
+      "options": [
+        "La defensa de las fronteras terrestres.",
+        "El derecho irrenunciable e imprescriptible de acceso al Océano Pacífico.",
+        "La soberanía sobre los recursos naturales del subsuelo.",
+        "El control del espacio aéreo nacional."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q44",
+      "text": "¿Cuál es la duración total de la Educación Inicial en Familia Comunitaria, sumando sus dos etapas (no escolarizada y escolarizada)?",
+      "options": [
+        "Tres años.",
+        "Dos años.",
+        "Cinco años.",
+        "Seis años."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q45",
+      "text": "Los Centros de Capacitación Técnica (Art. 20) son instituciones educativas que dependen de un subsistema específico. ¿Cuál es?",
+      "options": [
+        "Subsistema de Educación Regular.",
+        "Subsistema de Educación Superior.",
+        "Subsistema de Educación Alternativa y Especial.",
+        "Son instituciones autónomas que no dependen de ningún subsistema."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q46",
+      "text": "La Educación de Personas Jóvenes y Adultas, según el Artículo 23, está destinada a personas de una edad mínima. ¿Cuál es esa edad?",
+      "options": [
+        "Dieciocho años.",
+        "Quince años.",
+        "Veintiún años.",
+        "No hay una edad mínima especificada."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q47",
+      "text": "¿Qué grado académico se obtiene al concluir la formación inicial de maestras y maestros de cinco años de estudio?",
+      "options": [
+        "Título de Maestro con grado de Técnico Superior.",
+        "Título de Normalista.",
+        "Título de Maestro con grado de Licenciatura.",
+        "Diploma Académico de Licenciatura en Ciencias de la Educación."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q48",
+      "text": "¿Cuál es el nivel mínimo de formación en los Institutos Técnicos y Tecnológicos (fiscales, privados y de convenio) que se menciona después de la capacitación?",
+      "options": [
+        "Técnico Básico.",
+        "Técnico Medio-post bachillerato.",
+        "Técnico Auxiliar.",
+        "Obrero Calificado."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q49",
+      "text": "Las Universidades Extranjeras que deseen ofertar programas en Bolivia deben cumplir los mismos requisitos que una institución específica. ¿Cuál es?",
+      "options": [
+        "Las Universidades Públicas Autónomas.",
+        "Las Universidades Privadas.",
+        "Las Universidades Indígenas.",
+        "Las Escuelas Superiores de Formación de Maestros."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q50",
+      "text": "El proceso de evaluación de la calidad de la educación superior universitaria (Art. 68) contempla tres componentes. ¿Cuál de los siguientes NO es uno de ellos?",
+      "options": [
+        "La autoevaluación.",
+        "La evaluación por pares.",
+        "La evaluación por examen de competencias.",
+        "La evaluación social."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q51",
+      "text": "Las Direcciones Departamentales de Educación (DDE) tienen bajo su dependencia tres subdirecciones. ¿Cuál de las siguientes NO es una de ellas?",
+      "options": [
+        "Subdirección de Educación Regular.",
+        "Subdirección de Educación Superior de Formación Profesional.",
+        "Subdirección de Planificación y Gestión Curricular.",
+        "Subdirección Educación Alternativa y Especial."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q52",
+      "text": "¿Cuál es la principal atribución de las Autonomías Indígena Originaria Campesinas en relación con el currículo?",
+      "options": [
+        "Diseñar el currículo base para todo el país.",
+        "Formular, aprobar y ejecutar planes de educación para su jurisdicción en el marco del currículo regionalizado.",
+        "Vetar los planes y programas del Ministerio de Educación.",
+        "Implementar únicamente el currículo base sin modificaciones."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q53",
+      "text": "El Diploma de Bachiller es otorgado gratuitamente por el Ministerio de Educación. ¿A través de qué instancia se realiza esta acción, según el Artículo 81?",
+      "options": [
+        "A través de las Direcciones Departamentales de Educación.",
+        "A través de las Direcciones Distritales.",
+        "Directamente desde las oficinas centrales del Ministerio en La Paz.",
+        "A través de las propias Unidades Educativas."
+      ],
+      "correctAnswerIndex": 0
+    },
+    {
+      "id": "ley070_q54",
+      "text": "¿Qué rol tiene el Consejo Educativo Plurinacional, según el Artículo 92?",
+      "options": [
+        "Es la instancia máxima de participación de la sociedad.",
+        "Propone proyectos de políticas educativas integrales y evalúa el cumplimiento de las conclusiones del Congreso Plurinacional.",
+        "Participa en la gestión educativa a nivel de núcleo y unidad educativa.",
+        "Formula y ejecuta el currículo regionalizado en las naciones originarias."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q55",
+      "text": "La Disposición Transitoria Segunda establece el destino de los Institutos, Academias y Escuelas de Bellas Artes de carácter fiscal. ¿Cuál es?",
+      "options": [
+        "Pasan a depender de los Gobiernos Municipales.",
+        "Se convierten en instituciones privadas autogestionarias.",
+        "Pasan a depender del Ministerio de Educación según reglamento específico.",
+        "Son transferidos a las Universidades Públicas Autónomas."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q56",
+      "text": "La Disposición Transitoria Novena, inciso d), trata sobre los recursos para el pago de haberes del magisterio fiscal. ¿Qué establece sobre su administración?",
+      "options": [
+        "Serán administrados permanentemente por los Gobiernos Departamentales.",
+        "Serán transferidos a las DDE, pero mientras estas no tengan capacidad técnica, se ejecutarán bajo la administración del Ministerio de Educación.",
+        "Serán administrados directamente por los Gobiernos Municipales.",
+        "Serán centralizados en una cuenta única del Tesoro General del Estado."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q57",
+      "text": "La Disposición Final Primera establece la entrada en vigencia de la Ley. ¿A partir de cuándo entra en vigencia?",
+      "options": [
+        "A partir de la fecha de su promulgación y publicación.",
+        "Noventa días después de su publicación.",
+        "Al inicio del siguiente año fiscal.",
+        "Una vez que todos sus reglamentos sean aprobados."
+      ],
+      "correctAnswerIndex": 0
+    },
+    {
+      "id": "ley070_q58",
+      "text": "La ley enfatiza un modelo de educación \"descolonizadora\". De acuerdo con la base 1 del Artículo 3, ¿hacia qué está orientada esta educación?",
+      "options": [
+        "Al rechazo de todos los conocimientos universales por considerarlos coloniales.",
+        "A la reafirmación cultural de las naciones y pueblos indígena originario campesinos, las comunidades interculturales y afrobolivianas.",
+        "A la adopción de modelos educativos exclusivamente de países no europeos.",
+        "A la eliminación de la enseñanza de la historia universal."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q59",
+      "text": "En el marco de la organización estudiantil (Art. 2, num. 9), se reconoce la participación de estas organizaciones en la defensa de sus derechos. ¿Qué estudiantes se exceptúan de este derecho?",
+      "options": [
+        "Los estudiantes de unidades educativas privadas.",
+        "Los estudiantes de Educación Alternativa.",
+        "Los estudiantes de los institutos militares y policiales.",
+        "Los estudiantes con talentos extraordinarios."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q60",
+      "text": "La Educación Primaria Comunitaria Vocacional (Art. 13) tiene una duración específica. ¿De cuántos años es?",
+      "options": [
+        "Cinco años.",
+        "Seis años.",
+        "Ocho años.",
+        "Varía según la región."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q61",
+      "text": "¿Qué entidad tiene la responsabilidad de organizar y apoyar la gestión participativa de los pueblos indígenas en la Educación Inicial, Primaria y Secundaria, según el Art. 80?",
+      "options": [
+        "Los Gobiernos Municipales.",
+        "Los Consejos Educativos Social Comunitarios.",
+        "Las Autonomías Indígena Originaria Campesinas.",
+        "Las Direcciones Distritales de Educación."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q62",
+      "text": "La formación continua de maestras y maestros es definida como un derecho y un deber. ¿Cuál es su objetivo principal según el Artículo 40?",
+      "options": [
+        "Obtener un grado académico de maestría o doctorado.",
+        "La actualización y capacitación para mejorar la calidad de la gestión, los procesos, los resultados y el ambiente educativo.",
+        "La recertificación obligatoria cada cinco años para poder ejercer.",
+        "Aprender las lenguas originarias del lugar donde trabajan."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q63",
+      "text": "Los niveles de formación en Educación de Personas Jóvenes y Adultas (Art. 23) son dos. ¿Cuáles son?",
+      "options": [
+        "Alfabetización y Post-alfabetización.",
+        "Educación Primaria y Educación Secundaria.",
+        "Educación Primaria de Personas Jóvenes y Adultas (que incluye Alfabetización y Post-alfabetización) y Educación Secundaria de Personas Jóvenes y Adultas.",
+        "Formación Técnica Básica y Formación Técnica Media."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q64",
+      "text": "¿Qué nivel de gobierno es responsable de garantizar recursos económicos para la alimentación complementaria y, en casos justificados, el transporte escolar?",
+      "options": [
+        "El Gobierno Central.",
+        "Los Gobiernos Departamentales.",
+        "Los Gobiernos Municipales.",
+        "Las Autonomías Indígena Originaria Campesinas."
+      ],
+      "correctAnswerIndex": 3
+    },
+    {
+      "id": "ley070_q65",
+      "text": "¿Qué sucede con los bienes muebles e inmuebles de los ex Servicios Departamentales de Educación (SEDUCA), según la Disposición Transitoria Novena?",
+      "options": [
+        "Pasan a ser propiedad de los Gobiernos Municipales.",
+        "Los Gobiernos Departamentales los transfieren a título gratuito a favor de las Direcciones Departamentales de Educación.",
+        "Se subastan para generar recursos para el sector.",
+        "Pasan a ser administrados por el Ministerio de Economía y Finanzas."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q66",
+      "text": "¿Qué prioridad establece la Disposición Décima primera para las escuelas de frontera, extrema pobreza e inaccesibles?",
+      "options": [
+        "Serán cerradas y sus estudiantes reubicados en centros urbanos.",
+        "Recibirán el mismo trato que cualquier otra unidad educativa.",
+        "Son prioridad del Estado, tendrán carácter integral y recibirán atención en personal, infraestructura y equipamiento.",
+        "Pasarán a ser administradas por las Fuerzas Armadas."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q67",
+      "text": "La ley promueve una educación \"intracultural, intercultural y plurilingüe\". La intraculturalidad, según el Artículo 6, se enfoca principalmente en:",
+      "options": [
+        "La interacción y el diálogo entre diferentes culturas.",
+        "La recuperación, fortalecimiento, desarrollo y cohesión al interior de las propias culturas.",
+        "El aprendizaje de al menos tres idiomas (originario, castellano y extranjero).",
+        "La adopción de una cultura universal y globalizada."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q68",
+      "text": "La enseñanza de lengua extranjera, según el Artículo 7, tiene una característica particular en cuanto a su inicio. ¿Cuál es?",
+      "options": [
+        "Se inicia en el nivel secundario.",
+        "Es opcional y depende de la decisión de cada unidad educativa.",
+        "Se inicia en forma gradual y obligatoria desde los primeros años de escolaridad.",
+        "Se enfoca únicamente en el idioma inglés por ser el idioma universal."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q69",
+      "text": "Si bien el Ministerio de Educación ejerce tuición sobre todo el sistema, el Artículo 72 menciona una excepción amparada en la Constitución. ¿Cuál es?",
+      "options": [
+        "Las Unidades Educativas de Convenio.",
+        "Las Universidades Públicas Autónomas.",
+        "Las Autonomías Indígena Originaria Campesinas.",
+        "Las Unidades Educativas Privadas."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q70",
+      "text": "La Disposición Décima segunda establece planes y programas intersectoriales que constituyen prioridades del Estado. ¿Cuál de los siguientes temas NO se menciona en esa lista?",
+      "options": [
+        "Educación sin violencia.",
+        "Educación en derechos de la Madre Tierra.",
+        "Educación para la salud sexual y reproductiva.",
+        "Educación contra el racismo."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q71",
+      "text": "Según la ley Nº 070 de educación “Avelino Siñani – Elizardo Pérez”, ¿Cuáles son los enfoques de la educación alternativa y especial?",
+      "options": [
+        "Educación comunitaria, educación participativa, educación productiva, educación transformadora.",
+        "Educación popular y comunitaria; educación inclusiva; educación a lo largo de la vida.",
+        "Educación Formal; Educación no formal; educación informal.",
+        "educación inclusiva¸ educación transformadora."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q72",
+      "text": "Según la ley Nº 070 de educación “Avelino Siñani – Elizardo Pérez”, el currículo que se elabora “considerando fundamentalmente las características del contexto Sociocultural y lingüístico” se denomina:",
+      "options": [
+        "currículo base.",
+        "currículo regionalizado.",
+        "currículo diversificado.",
+        "currículo sociocultural."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q73",
+      "text": "Según la ley Nº 070 de educación “Avelino Siñani – Elizardo Pérez”, “los saberes conocimientos y experiencias de las personas, adquiridos en su práctica cotidiana y comunitaria, serán reconocidos y homologados a niveles y modalidades que…",
+      "options": [
+        "…correspondan al subsistema de educación regular”.",
+        "… correspondan al subsistema de educación superior de formación profesional”.",
+        "…correspondan al subsistema de educación alternativa y especial.",
+        "todas las respuestas anteriores."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q74",
+      "text": "Según la ley 070 Avelino Siñani Elizardo Pérez: El modelo educativo como base para su concreción asume los siguientes principios:",
+      "options": [
+        "Educación descolonizadora, liberadora, revolucionaria, antiimperialista y transformadora; educación comunitaria Democrática participativa y de consensos; educación intracultural intercultural y plurilingüe; educación productiva, territorial, científica, técnica tecnológica y artística.",
+        "Educación descolonizadora, liberadora revolucionaria, antiimperialista y transformadora educación comunitaria democrática participativa y de consensos; educación intracultural intercultural y plurilingüe.",
+        "educación intracultural intercultural y bilingüe; educación productiva territorial científica técnica tecnológica y artística.",
+        "educación descolonizadora, liberadora revolucionaria antiimperialista y transformadora educación comunitaria democrática participativa y de consensos."
+      ],
+      "correctAnswerIndex": 0
+    },
+    {
+      "id": "ley070_q75",
+      "text": "Según la ley 070 Avelino Siñani Elizardo Pérez: Una educación que propicia la transmisión cultural en la comprensión holística de la vida y la cohesión social en convivencia con la naturaleza y el cosmos, se refiere a:",
+      "options": [
+        "educación comunitaria democrática participativa y de consensos.",
+        "Educación comunitaria.",
+        "Educación intracultural intercultural y plurilingüe.",
+        "educación plurilingüe."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q76",
+      "text": "Según la ley 070 Avelino Siñani Elizardo Pérez: El campo comunidad y sociedad se rige bajo el principio de:",
+      "options": [
+        "relacionalidad entre el ser humano-madre tierra-cosmos-factores que se complementan y autorregulan.",
+        "complementariedad entre los seres vivos.",
+        "De reconfiguración de las relaciones de poder entre los diversos agentes.",
+        "ninguno de los anteriores."
+      ],
+      "correctAnswerIndex": 3
+    },
+    {
+      "id": "ley070_q77",
+      "text": "Desde el marco constitucional de la ley Nº 070, la educación se constituye en:",
+      "options": [
+        "La más alta función del estado, porque es un derecho del pueblo e instrumento de liberación nacional y porque tiene la obligación de sostenerla.",
+        "La función suprema y primera responsabilidad financiera del estado, que tiene la obligación indeclinable de sostenerla, garantizarla y gestionarla.",
+        "Primera responsabilidad financiera del Estado, que tiene la obligación indeclinable de sostenerla garantizarla y gestionarla.",
+        "Un derecho del pueblo e instrumento de liberación nacional y porque tiene la obligación de sostenerla dirigirla y controlarla, a través de un vasto sistema escolar."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q78",
+      "text": "Según la ley 070 Avelino Siñani Elizardo Pérez: El sistema educativo plurinacional comprende:",
+      "options": [
+        "Subsistema de educación primaria, subsistema de educación alternativa, Subsistema de educación profesional.",
+        "Subsistema de educación regular, el subsistema de educación alternativa y especial y el subsistema de educación superior e información profesional.",
+        "subsistema de educación regular, el subsistema de educación especial, el subsistema de educación superior y profesional.",
+        "subsistema de educación regular, el subsistema de educación especial y alternativa y el subsistema de educación superior de formación profesional."
+      ],
+      "correctAnswerIndex": 3
+    },
+    {
+      "id": "ley070_q79",
+      "text": "Según la Ley de la Educación Nº 070 “Avelino Siñani – Elizardo Pérez”, el Sistema Educativo Plurinacional comprende los siguientes subsistemas:",
+      "options": [
+        "Educación Regular",
+        "Educación Alternativa y Especial",
+        "Educación Superior de formación profesional",
+        "Todas las respuestas anteriores"
+      ],
+      "correctAnswerIndex": 3
+    },
+    {
+      "id": "ley070_q80",
+      "text": "De acuerdo a Ley de la Educación Nº 070 “Avelino Siñani – Elizardo Pérez”, la instancia responsable de dotar, financiar y garantizar los servicios básicos, infraestructura, mobiliario, material educativo y equipamiento de las unidades educativas es:",
+      "options": [
+        "Ministerio de educación.",
+        "Direcciones departamentales de educación.",
+        "Gobiernos municipales.",
+        "Gobiernos departamentales."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q81",
+      "text": "Según la Ley de la Educación Nº 070 “Avelino Siñani – Elizardo Pérez”, los objetivos de la administración y gestión del sistema educativo son:",
+      "options": [
+        "lograr una adecuada y transparente gestión y administración del sistema educativo plurinacional.",
+        "definir la distribución de recursos y la evaluación administrativa- financiera del sistema educativo plurinacional.",
+        "generar condiciones favorables de relación intercultural para que todos los actores de la educación cumplan y desempeñen adecuadamente su rol.",
+        "los incisos a y c."
+      ],
+      "correctAnswerIndex": 3
+    },
+    {
+      "id": "ley070_q82",
+      "text": "de acuerdo a Ley de la Educación Nº 070 “Avelino Siñani – Elizardo Pérez”, el objetivo de la educación alternativa y especial:",
+      "options": [
+        "democratizar el acceso y permanencia a una educación adecuada en lo cultural y relevante en lo social.",
+        "formar integral y equitativamente a mujeres y hombres, en función a sus necesidades y particularidades.",
+        "universalizar los saberes y conocimientos académicos, para el desarrollo de una educación desde las identidades culturales.",
+        "desarrollar saberes y conocimientos científicos, técnicos y tecnológicos."
+      ],
+      "correctAnswerIndex": 0
+    },
+    {
+      "id": "ley070_q83",
+      "text": "La Ley de la Educación Nº 070 “Avelino Siñani – Elizardo Pérez”, en su artículo 19, establece las características de la educación técnica- humanística en educación alternativa y especial. Uno de los siguientes enunciados no corresponde a esas características:",
+      "options": [
+        "se realizara según las vocaciones y potencialidades productivas de las regiones.",
+        "contribuir a la formación técnica de oficios de las personas jóvenes y adultas.",
+        "se realizara según las prioridades económicas productivas establecidas en los planes de desarrollo del estado plurinacional.",
+        "contribuir a potenciar capacidades productivas, la incorporación al sector productivo y el desarrollo de emprendimientos comunitarios."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q84",
+      "text": "Según la ley 070 Avelino Siñani Elizardo Pérez: Las adaptaciones curriculares en los procesos educativos nos permiten incorporar modificaciones, cambios y adecuaciones en los elementos curriculares de acuerdo a las potencialidades y necesidades de las y los estudiantes con la finalidad de garantizar:",
+      "options": [
+        "El logro de los objetivo holísticos y desarrollo de las cuatro dimensiones ajustando contenidos, metodologías, materiales, instrumentos y técnicas de evaluación.",
+        "El logro y desarrollo de los contenidos de los cuatro campos de saberes y conocimientos.",
+        "El logro y la implementación del PSP y plan anual bimestralizado en la unidad educativa.",
+        "Ninguna de las anteriores."
+      ],
+      "correctAnswerIndex": 0
+    },
+    {
+      "id": "ley070_q85",
+      "text": "Según la Ley AS-EP, indique cuáles son los subsistemas que comprende el Sistema Educativo Plurinacional.",
+      "options": [
+        "Sub sistema de Educación Regular, Sub Sistema de Educación Alternativa y Especial, Sub Sistema de Educación Superior de Formación Profesional.",
+        "Sub Sistema de Educación Permanente, Sub Sistema de Educación Continua, Sub Sistema de Educación Superior.",
+        "Sub Sistema de Educación Intracultural, Intercultural y Plurilingue.",
+        "Sub Sistema de Educación Inicial, Primaria y Secundaria."
+      ],
+      "correctAnswerIndex": 0
+    },
+    {
+      "id": "ley070_q86",
+      "text": "De acuerdo a la nueva ley Educativa 070, indique qué institución está encargada de la formación inicial de maestros y maestras con carácter exclusivo:",
+      "options": [
+        "Unidad especializada de Formación continua.",
+        "Escuelas Superiores de Formación de Maestros/as.",
+        "Universidades públicas y privadas.",
+        "Universidades pedagógicas."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q87",
+      "text": "Según la ley 070 Avelino Siñani Elizardo Pérez: Cosmos y pensamiento, Vida, tierra y territorio, Comunidad y Sociedad, Ciencia, Tecnología y producción, dentro la estructura curricular corresponde a:",
+      "options": [
+        "Principios educativos",
+        "Ejes articuladores",
+        "Campos de saberes y conocimientos",
+        "Áreas de saberes y conocimientos"
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q88",
+      "text": "Según la ley 070 Avelino Siñani Elizardo Pérez: La educación descolonizadora, liberadora, revolucionaria y transformadora y la educación productiva territorial son parte de:",
+      "options": [
+        "Los fundamentos políticos, ideológicos y jurídicos.",
+        "Las bases de la educación.",
+        "Los ejes articuladores de la educación.",
+        "Las áreas y disciplinas curriculares en la nueva ley educativa."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q89",
+      "text": "De acuerdo a la Ley AS-EP el Reglamento del Escalafón del servicio de educación es el instrumento normativo de vigencia plena que garantiza:",
+      "options": [
+        "La carrera docente en el sistema educativo plurinacional",
+        "La carrera docente, administrativa y de servicio en el sistema educativo plurinacional",
+        "La carrera docente y la inamovilidad del personal docente, administrativo y de servicio del magisterio nacional",
+        "El derecho a la sindicalización"
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q90",
+      "text": "Según la ley 070 Avelino Siñani Elizardo Pérez: Establece los mecanismos de articulación entre la teoría y la práctica educativa, se expresa en el currículo base de carácter intercultural, los currículos regionalizados y diversificados de carácter intracultural que en su complementariedad, garantizan la unidad e integridad del Sistema Educativo Plurinacional:",
+      "options": [
+        "UNIVERSIDAD DE RÉGIMEN POLICIAL",
+        "ORGANIZACIÓN CURRICULAR",
+        "FUNDAMENTOS DEL CURRÍCULO"
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q91",
+      "text": "Según la ley 070 Avelino Siñani Elizardo Pérez: Es la instancia que planifica, organiza, dirige y controla los recursos del Sistema Educativo Plurinacional, con participación social.",
+      "options": [
+        "Organización Curricular",
+        "Administración y gestión de educación",
+        "Administración curricular"
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ley070_q92",
+      "text": "Según la ley 070 Avelino Siñani Elizardo Pérez: Bajo qué artículo El Estado Plurinacional, a través del Ministerio de Educación, ejerce tuición sobre la administración y gestión del Sistema Educativo Plurinacional.",
+      "options": [
+        "Artículo 63",
+        "Artículo 81",
+        "Artículo 72"
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q93",
+      "text": "Según la ley 070 Avelino Siñani Elizardo Pérez: La Estructura Administrativa y Gestión del Sistema Educativo Plurinacional está establecida:",
+      "options": [
+        "Nivel Nacional, Nivel Departamental, Nivel Distrital y Nivel Regional",
+        "Nivel del Estado Plurinacional, Nivel Departamental y Nivel Distrital",
+        "Nivel Central., Nivel Departamental y Nivel Autonómico"
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ley070_q94",
+      "text": "Según la ley 070 Avelino Siñani Elizardo Pérez: En el Nivel Autonómico de la Estructura Administrativa y Gestión del Sistema Educativo Plurinacional está establecida:",
+      "options": [
+        "Gobiernos Departamentales, Gobiernos Municipales y Autonomías Indígena Originario Campesinas",
+        "Gobiernos Departamentales, Gobiernos Municipales y Alcaldías Municipales",
+        "Gobiernos Departamentales, Gobiernos Municipales, OTBs y ONGs"
+      ],
+      "correctAnswerIndex": 0
+    },
+    {
+      "id": "ley070_q95",
+      "text": "Según la ley 070 Avelino Siñani Elizardo Pérez: La instancia de Participación Social Comunitaria en la educación a nivel Departamental, Regional, Distrital, de Núcleo y Unidades Educativas:",
+      "options": [
+        "Consejos Consultivos del Ministerio de Educación",
+        "Consejos Educativos Social Comunitarios",
+        "Consejos Educativos de Naciones y pueblos indígena originario campesinos"
+      ],
+      "correctAnswerIndex": 1
+    }
+  ]
+},
+  {
+  "id": "ia_lasse_rouhiainen_v1",
+  "title": "Examen de Inteligencia Artificial (Lasse Rouhiainen)",
+  "category": "Inteligencia Artificial",
+  "description": "Cuestionario basado en el libro 'Inteligencia Artificial: 101 cosas que debes saber hoy sobre nuestro futuro' de Lasse Rouhiainen.",
+  "questions": [
+    {
+      "id": "ia_q1",
+      "text": "¿QUIÉN ES EL AUTOR DEL LIBRO 'INTELIGENCIA ARTIFICIAL: 101 COSAS QUE DEBES SABER HOY SOBRE NUESTRO FUTURO'?",
+      "options": [
+        "CLIVE HUMBY",
+        "SEBASTIAN THRUN",
+        "LASSE ROUHIAINEN",
+        "KAI-FU LEE"
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ia_q2",
+      "text": "¿QUÉ EDITORIAL PUBLICÓ ESTE LIBRO?",
+      "options": [
+        "PLANETA, S.A.",
+        "SHUTTERSTOCK",
+        "ALIENTA EDITORIAL",
+        "ARTES GRÁFICAS HUERTAS, S.A."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ia_q3",
+      "text": "SEGÚN EL SUMARIO (PÁGINA 4), ¿QUÉ TEMA SE TRATA EN EL CAPÍTULO 6?",
+      "options": [
+        "ROBOTS Y ROBÓTICA",
+        "COCHES SIN CONDUCTOR",
+        "EL MERCADO DE TRABAJO",
+        "LOS CHATBOTS"
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ia_q4",
+      "text": "SEGÚN LA DEFINICIÓN SIMPLIFICADA QUE EL AUTOR USA EN SUS SEMINARIOS, ¿QUÉ ES LA INTELIGENCIA ARTIFICIAL (IA)?",
+      "options": [
+        "LA CIENCIA DE DATOS QUE USA ALGORITMOS COMPLEJOS.",
+        "LA CAPACIDAD DE LAS MÁQUINAS PARA APRENDER DE LOS DATOS.",
+        "LA HABILIDAD DE LOS ORDENADORES PARA HACER ACTIVIDADES QUE NORMALMENTE REQUIEREN INTELIGENCIA HUMANA.",
+        "UN CONJUNTO DE REDES NEURONALES PARA RESOLVER PROBLEMAS."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ia_q5",
+      "text": "¿CUÁL ES LA DEFINICIÓN MÁS DETALLADA DE IA QUE SE OFRECE EN EL TEXTO?",
+      "options": [
+        "LA CAPACIDAD DE PROCESAR GRANDES VOLÚMENES DE INFORMACIÓN SIN DESCANSAR.",
+        "LA CAPACIDAD DE LAS MÁQUINAS PARA USAR ALGORITMOS, APRENDER DE LOS DATOS Y UTILIZAR LO APRENDIDO EN LA TOMA DE DECISIONES COMO LO HARÍA UN SER HUMANO.",
+        "EL USO DE APRENDIZAJE PROFUNDO PARA EL RECONOCIMIENTO DE VOZ Y DE IMÁGENES.",
+        "LA PROGRAMACIÓN EXPLÍCITA DE ORDENADORES PARA REALIZAR TAREAS COMPLEJAS."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ia_q6",
+      "text": "¿QUÉ ES EL APRENDIZAJE AUTOMÁTICO (MACHINE LEARNING)?",
+      "options": [
+        "UN TIPO DE IA QUE REQUIERE PROGRAMACIÓN EXPLÍCITA PARA CADA TAREA.",
+        "EL PROCESO DE UTILIZAR ROBOTS PARA APRENDER DE SU ENTORNO.",
+        "LA ESTRUCTURACIÓN DE DATOS PARA SU ANÁLISIS POR ORDENADORES.",
+        "UN ASPECTO DE LA INFORMÁTICA DONDE LOS ORDENADORES TIENEN LA CAPACIDAD DE APRENDER SIN ESTAR PROGRAMADOS PARA ELLO."
+      ],
+      "correctAnswerIndex": 3
+    },
+    {
+      "id": "ia_q7",
+      "text": "¿CUÁL DE LOS SIGUIENTES ES UN TIPO DE APRENDIZAJE AUTOMÁTICO?",
+      "options": [
+        "APRENDIZAJE PROFUNDO",
+        "APRENDIZAJE LINEAL",
+        "APRENDIZAJE SUPERVISADO",
+        "APRENDIZAJE ESTÁTICO"
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ia_q8",
+      "text": "¿QUÉ CARACTERIZA AL APRENDIZAJE SUPERVISADO?",
+      "options": [
+        "LOS ALGORITMOS DESCUBREN PATRONES POR SÍ MISMOS SIN DATOS ETIQUETADOS.",
+        "LOS ALGORITMOS RECIBEN 'RECOMPENSAS' POR SUS ACIERTOS.",
+        "LOS ALGORITMOS USAN DATOS PREVIAMENTE ETIQUETADOS Y REQUIEREN INTERVENCIÓN HUMANA PARA LA RETROALIMENTACIÓN.",
+        "ES EL TIPO DE APRENDIZAJE UTILIZADO EXCLUSIVAMENTE EN REDES NEURONALES."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ia_q9",
+      "text": "¿CÓMO FUNCIONA EL APRENDIZAJE POR REFUERZO?",
+      "options": [
+        "LOS ALGORITMOS APRENDEN DE LA EXPERIENCIA RECIBIENDO UN 'REFUERZO POSITIVO' CADA VEZ QUE ACIERTAN.",
+        "LOS ALGORITMOS ANALIZAN DATOS NO ESTRUCTURADOS PARA APRENDER.",
+        "REQUIERE QUE UN HUMANO SUPERVISE CONSTANTEMENTE EL PROCESO.",
+        "SE BASA EN ENCONTRAR PATRONES EN DATOS PREVIAMENTE CLASIFICADOS."
+      ],
+      "correctAnswerIndex": 0
+    },
+    {
+      "id": "ia_q10",
+      "text": "EL APRENDIZAJE PROFUNDO (DEEP LEARNING) ES UN SUBCAMPO DEL...",
+      "options": [
+        "PROCESAMIENTO DEL LENGUAJE NATURAL",
+        "APRENDIZAJE POR REFUERZO",
+        "APRENDIZAJE AUTOMÁTICO",
+        "APRENDIZAJE NO SUPERVISADO"
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ia_q11",
+      "text": "¿QUÉ TECNOLOGÍA UTILIZA EL APRENDIZAJE PROFUNDO PARA RECONOCER PATRONES COMPLEJOS?",
+      "options": [
+        "ALGORITMOS DE FILTRADO DE SPAM.",
+        "SISTEMAS DE BASES DE DATOS ESTRUCTURADAS.",
+        "REDES NEURONALES ORGANIZADAS EN CAPAS.",
+        "ONDAS DE RADIOFRECUENCIA."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ia_q12",
+      "text": "SEGÚN EL TEXTO, ¿QUÉ EMPRESA UTILIZA EL APRENDIZAJE PROFUNDO PARA REALIZAR 4.500 MILLONES DE TRADUCCIONES DIARIAS?",
+      "options": [
+        "GOOGLE",
+        "AMAZON",
+        "DEEPMIND",
+        "FACEBOOK"
+      ],
+      "correctAnswerIndex": 3
+    },
+    {
+      "id": "ia_q13",
+      "text": "¿CUÁLES SON LAS TRES CAPACIDADES (VER, OÍR, ENTENDER) QUE LA IA ESTÁ DESARROLLANDO, SEGÚN LA FIGURA 1.4?",
+      "options": [
+        "VISIÓN ARTIFICIAL, APRENDIZAJE AUTOMÁTICO Y RECONOCIMIENTO FACIAL.",
+        "VISIÓN ARTIFICIAL, RECONOCIMIENTO DE VOZ Y PROCESAMIENTO DEL LENGUAJE NATURAL.",
+        "VISIÓN POR COMPUTADORA, ROBÓTICA Y APRENDIZAJE PROFUNDO.",
+        "RECONOCIMIENTO DE VOZ, TRADUCCIÓN AUTOMÁTICA Y ANÁLISIS DE DATOS."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ia_q14",
+      "text": "¿QUÉ LOGRO SORPRENDENTE EN VISIÓN ARTIFICIAL DEL MIT SE MENCIONA EN EL LIBRO?",
+      "options": [
+        "AÑADIR COLOR A FOTOS EN BLANCO Y NEGRO.",
+        "DETECTAR OBJETOS CON UN 95% DE PRECISIÓN.",
+        "RECONOCER ROSTROS EN GRANDES MULTITUDES.",
+        "DESARROLLAR UNA IA CAPAZ DE VER A TRAVÉS DE LAS PAREDES."
+      ],
+      "correctAnswerIndex": 3
+    },
+    {
+      "id": "ia_q15",
+      "text": "¿QUÉ PORCENTAJE DE EXACTITUD TIENEN LAS HERRAMIENTAS DE RECONOCIMIENTO DE VOZ DE GOOGLE, SEGÚN EL LIBRO?",
+      "options": [
+        "80%",
+        "90%",
+        "95%",
+        "99%"
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ia_q16",
+      "text": "¿A QUÉ SE REFIERE LA FRASE 'LOS DATOS SON EL NUEVO PETRÓLEO'?",
+      "options": [
+        "A QUE LOS DATOS SON UN RECURSO FINITO Y CONTAMINANTE.",
+        "A QUE LOS DATOS SON DIFÍCILES DE EXTRAER Y REFINAR.",
+        "A QUE EL VALOR DE LOS DATOS ESTÁ DISMINUYENDO COMO EL DEL PETRÓLEO.",
+        "A QUE LOS DATOS SE HAN CONVERTIDO EN UN ELEMENTO FUNDAMENTAL Y DE GRAN VALOR PARA LA ECONOMÍA Y LA TECNOLOGÍA."
+      ],
+      "correctAnswerIndex": 3
+    },
+    {
+      "id": "ia_q17",
+      "text": "¿CUÁL ES LA DIFERENCIA PRINCIPAL ENTRE DATOS ESTRUCTURADOS Y NO ESTRUCTURADOS?",
+      "options": [
+        "LOS DATOS ESTRUCTURADOS SON VISUALES Y LOS NO ESTRUCTURADOS SON TEXTUALES.",
+        "LOS DATOS ESTRUCTURADOS SON FÁCILMENTE ORGANIZABLES (NÚMEROS, FECHAS), MIENTRAS QUE LOS NO ESTRUCTURADOS SON MÁS COMPLEJOS (TEXTOS, IMÁGENES, VÍDEOS).",
+        "LOS DATOS ESTRUCTURADOS PROVIENEN DE EMPRESAS Y LOS NO ESTRUCTURADOS DE USUARIOS.",
+        "LOS DATOS ESTRUCTURADOS REQUIEREN IA PARA SU ANÁLISIS, MIENTRAS QUE LOS NO ESTRUCTURADOS NO."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ia_q18",
+      "text": "SEGÚN MERRILL LYNCH, ¿QUÉ PORCENTAJE DE LOS DATOS DE NEGOCIOS EN EL MUNDO NO ESTÁN ESTRUCTURADOS?",
+      "options": [
+        "40-50%",
+        "60-70%",
+        "80-90%",
+        "MÁS DEL 95%"
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ia_q19",
+      "text": "SEGÚN EL MODELO DE KAI-FU LEE, ¿CUÁL ES EL PRIMER PASO EN EL CICLO DE LA IA PARA LAS EMPRESAS TECNOLÓGICAS?",
+      "options": [
+        "CREAR MEJORES PRODUCTOS BASADOS EN IA.",
+        "AUMENTAR LOS INGRESOS.",
+        "OBTENCIÓN DE MÁS DATOS.",
+        "CONSEGUIR UN MAYOR NÚMERO DE USUARIOS."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ia_q20",
+      "text": "EN EL CICLO DE 5 PASOS DESCRITO EN EL LIBRO, ¿QUÉ SE CONSIGUE INMEDIATAMENTE DESPUÉS DE OBTENER UN 'MAYOR NÚMERO DE USUARIOS'?",
+      "options": [
+        "MÁS EXPERTOS EN IA.",
+        "MAYORES INGRESOS.",
+        "MEJORES PRODUCTOS BASADOS EN IA.",
+        "MÁS DATOS."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ia_q21",
+      "text": "¿CUÁL ES EL LOGRO DE IA EN JUEGOS QUE OCURRIÓ EN 1996?",
+      "options": [
+        "WATSON DE IBM GANÓ EN JEOPARDY.",
+        "DEEPMIND DE GOOGLE VENCIÓ AL MEJOR JUGADOR DE GO.",
+        "DEEP BLUE DE IBM GANÓ AL AJEDRECISTA GARRY KASPAROV.",
+        "LIBRATUS VENCIÓ A JUGADORES DE PÓQUER."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ia_q22",
+      "text": "¿QUÉ HITO LOGRÓ EL PROGRAMA LIBRATUS EN 2017?",
+      "options": [
+        "VENCIÓ AL MEJOR JUGADOR DE GO.",
+        "GANÓ EN EL JUEGO JEOPARDY.",
+        "ALCANZÓ EL MÁXIMO NIVEL EN GO SIN DATOS HUMANOS.",
+        "GANÓ A LOS MEJORES JUGADORES DE PÓQUER DEL MUNDO."
+      ],
+      "correctAnswerIndex": 3
+    },
+    {
+      "id": "ia_q23",
+      "text": "¿QUÉ HIZO TAN ESPECIAL AL LOGRO DE ALPHAGO ZERO EN 2017?",
+      "options": [
+        "FUE LA PRIMERA IA EN VENCER A UN HUMANO EN GO.",
+        "UTILIZÓ LA MAYOR CANTIDAD DE DATOS DE LA HISTORIA.",
+        "APRENDIÓ A JUGAR DESDE CERO, ENSEÑÁNDOSE A SÍ MISMO SIN DATOS HUMANOS.",
+        "FUE DESARROLLADO POR LA UNIVERSIDAD CARNEGIE MELLON."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ia_q24",
+      "text": "¿QUÉ JUEGO ESTRATÉGICO MULTIJUGADOR DOMINÓ LA IA DE OPENAI EN 2018?",
+      "options": [
+        "LEAGUE OF LEGENDS",
+        "STARCRAFT II",
+        "DOTA 2",
+        "FORTNITE"
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ia_q25",
+      "text": "SEGÚN BILL GATES, ¿POR QUÉ FUE TAN IMPORTANTE LA VICTORIA DE LA IA EN DOTA 2?",
+      "options": [
+        "PORQUE DEMOSTRÓ LA SUPERIORIDAD DE LA VELOCIDAD DE LA MÁQUINA.",
+        "PORQUE EL JUEGO ERA EL MÁS COMPLEJO JAMÁS INTENTADO POR UNA IA.",
+        "PORQUE FUE LA PRIMERA VEZ QUE UNA IA GANÓ EN UN JUEGO QUE REQUERÍA TRABAJO EN EQUIPO Y COLABORACIÓN.",
+        "PORQUE UTILIZÓ MENOS PODER DE CÓMPUTO QUE LOGROS ANTERIORES."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ia_q26",
+      "text": "¿QUÉ EXPERTO EN IA SUGIERE USAR EL TÉRMINO 'CIENCIA DE DATOS' EN LUGAR DE 'INTELIGENCIA ARTIFICIAL' PARA QUE SEA MENOS INTIMIDATORIO?",
+      "options": [
+        "LASSE ROUHIAINEN",
+        "SEBASTIAN THRUN",
+        "KAI-FU LEE",
+        "GARRY KASPAROV"
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ia_q27",
+      "text": "¿QUÉ EJEMPLO SE UTILIZA PARA EXPLICAR EL APRENDIZAJE SUPERVISADO EN EL CONTEXTO DE CLASIFICAR FOTOS?",
+      "options": [
+        "EL ALGORITMO APRENDE A IDENTIFICAR GATOS POR SÍ SOLO.",
+        "ENSEÑAR PREVIAMENTE AL ALGORITMO CON FOTOS DONDE APARECE UN GATO PARA QUE LUEGO PUEDA IDENTIFICAR IMÁGENES SIMILARES.",
+        "RECOMPENSAR AL ALGORITMO CADA VEZ QUE IDENTIFICA CORRECTAMENTE UN GATO.",
+        "USAR REDES NEURONALES PARA ANALIZAR 10,000 FOTOS SIMULTÁNEAMENTE."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ia_q28",
+      "text": "SEGÚN EL TEXTO, ¿QUÉ SON LOS FILTROS DE SPAM DE CORREO ELECTRÓNICO UN EJEMPLO?",
+      "options": [
+        "DE INTELIGENCIA ARTIFICIAL GENERAL.",
+        "DE APRENDIZAJE AUTOMÁTICO QUE APRENDE DE PATRONES DE DATOS.",
+        "DE APRENDIZAJE PROFUNDO CON REDES NEURONALES.",
+        "DE PROCESAMIENTO DEL LENGUAJE NATURAL."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ia_q29",
+      "text": "¿EN QUÉ PERIODO DE TIEMPO SE CENTRA EL LIBRO PARA ANALIZAR LOS CAMBIOS QUE PROVOCARÁ LA IA?",
+      "options": [
+        "EL PRÓXIMO AÑO.",
+        "ENTRE TRES Y DIEZ AÑOS.",
+        "ENTRE TREINTA Y CINCUENTA AÑOS.",
+        "EL SIGLO XXI EN GENERAL."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ia_q30",
+      "text": "ADEMÁS DEL ACCESO A DATOS, ¿CUÁL ES LA OTRA RAZÓN OBVIA MENCIONADA PARA EL CRECIMIENTO DE LA IA?",
+      "options": [
+        "LA DISMINUCIÓN DE LOS COSTOS DE ALMACENAMIENTO.",
+        "EL AUMENTO DE LA VELOCIDAD DE INTERNET.",
+        "LAS INVERSIONES DE LOS GOBIERNOS.",
+        "EL AUMENTO EXPONENCIAL DEL PODER DE PROCESAMIENTO DE LOS ORDENADORES."
+      ],
+      "correctAnswerIndex": 3
+    },
+    {
+      "id": "ia_q31",
+      "text": "¿CÓMO DESCRIBE EL TEXTO LA PRINCIPAL DIFERENCIA ENTRE LOS ORDENADORES DEL PASADO Y LOS DEL FUTURO?",
+      "options": [
+        "LOS PRIMEROS SERÁN CAPACES DE APRENDER Y MEJORAR POR SÍ MISMOS.",
+        "LOS PRIMEROS SERÁN MÁS RÁPIDOS Y EFICIENTES.",
+        "LOS PRIMEROS UTILIZARÁN DATOS NO ESTRUCTURADOS.",
+        "LOS PRIMEROS ESTARÁN CONECTADOS A LA NUBE."
+      ],
+      "correctAnswerIndex": 0
+    },
+    {
+      "id": "ia_q32",
+      "text": "¿QUÉ APLICACIÓN TÉCNICA DE LA IA SE MENCIONA COMO ÚTIL PARA BANCOS Y SISTEMAS DE PAGO EN LÍNEA?",
+      "options": [
+        "MANTENIMIENTO PREDICTIVO.",
+        "DISTRIBUCIÓN DE CONTENIDO EN REDES SOCIALES.",
+        "PROTECCIÓN CONTRA AMENAZAS DE SEGURIDAD CIBERNÉTICA.",
+        "PROCESAMIENTO EFICIENTE DE DATOS DE PACIENTES."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ia_q33",
+      "text": "¿CUÁL DE LOS SIGUIENTES TEMAS NO SE MENCIONA EN EL SUMARIO DEL LIBRO?",
+      "options": [
+        "LOS CHATBOTS",
+        "EL MERCADO DE TRABAJO",
+        "ROBOTS Y ROBÓTICA",
+        "LA ÉTICA DE LA IA Y LA PRIVACIDAD"
+      ],
+      "correctAnswerIndex": 3
+    },
+    {
+      "id": "ia_q34",
+      "text": "SEGÚN EL AUTOR, ¿POR QUÉ LOS DATOS SON 'INCLUSO MEJORES QUE EL PETRÓLEO'?",
+      "options": [
+        "PORQUE LOS DATOS SON UN RECURSO RENOVABLE.",
+        "PORQUE CASI CUALQUIER PERSONA PUEDE APRENDER A USARLOS Y TENER ACCESO A FUENTES GRATUITAS, A DIFERENCIA DEL PETRÓLEO.",
+        "PORQUE LOS DATOS NO CONTAMINAN EL MEDIO AMBIENTE.",
+        "PORQUE EL VALOR DE LOS DATOS AUMENTA CON EL TIEMPO, MIENTRAS QUE EL DEL PETRÓLEO DISMINUYE."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ia_q35",
+      "text": "¿QUÉ EJEMPLO DE APRENDIZAJE AUTOMÁTICO EN LA VIDA COTIDIANA SE MENCIONA EN LA PÁGINA 9?",
+      "options": [
+        "EL FUNCIONAMIENTO DE LOS ASISTENTES VIRTUALES COMO SIRI.",
+        "LA CONDUCCIÓN DE VEHÍCULOS AUTÓNOMOS.",
+        "LA PERSONALIZACIÓN DE LOS SITIOS DE MEDIOS SOCIALES.",
+        "EL DIAGNÓSTICO MÉDICO ASISTIDO POR IA."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ia_q36",
+      "text": "¿QUÉ INFOGRAFÍA APARECE EN LA PÁGINA 5 RESUMIENDO EL CONTENIDO DEL CAPÍTULO 1?",
+      "options": [
+        "UN DIAGRAMA CON OCHO CAJAS QUE INCLUYEN TEMAS COMO '¿QUÉ ES LA IA?' Y 'EVOLUCIÓN DE LA IA'.",
+        "UNA LÍNEA DE TIEMPO DE LOS LOGROS DE LA IA.",
+        "UN GRÁFICO CIRCULAR SOBRE LOS TIPOS DE APRENDIZAJE AUTOMÁTICO.",
+        "UNA ILUSTRACIÓN DEL CEREBRO HUMANO CONECTADO A UNA RED."
+      ],
+      "correctAnswerIndex": 0
+    },
+    {
+      "id": "ia_q37",
+      "text": "¿CUÁNDO SE PUBLICÓ LA PRIMERA EDICIÓN DE ESTE LIBRO?",
+      "options": [
+        "JUNIO DE 2017",
+        "NOVIEMBRE DE 2018",
+        "ENERO DE 2016",
+        "AGOSTO DE 2017"
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ia_q38",
+      "text": "¿A QUÉ SE COMPARA EL APRENDIZAJE POR REFUERZO EN LA PÁGINA 11?",
+      "options": [
+        "A UN NIÑO APRENDIENDO A HABLAR.",
+        "A UN CIENTÍFICO REALIZANDO UN EXPERIMENTO.",
+        "A UN PERRO APRENDIENDO A SENTARSE A CAMBIO DE RECOMPENSAS.",
+        "A UN ORDENADOR RESOLVIENDO UN PROBLEMA MATEMÁTICO."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ia_q39",
+      "text": "¿QUÉ TIPO DE DATOS ERAN TRADICIONALMENTE MÁS UTILIZADOS ANTES DEL AUGE DE LA IA?",
+      "options": [
+        "DATOS NO ESTRUCTURADOS",
+        "MACRODATOS (BIG DATA)",
+        "DATOS VISUALES",
+        "DATOS ESTRUCTURADOS"
+      ],
+      "correctAnswerIndex": 3
+    },
+    {
+      "id": "ia_q40",
+      "text": "¿QUÉ CAPÍTULOS DEL LIBRO ESTÁN DEDICADOS A 'PREGUNTAS FRECUENTES SOBRE LA IA'?",
+      "options": [
+        "CAPÍTULOS 7 Y 8",
+        "CAPÍTULOS 8 Y 9",
+        "CAPÍTULOS 9 Y 10",
+        "SOLO EL CAPÍTULO 10"
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ia_q41",
+      "text": "¿CUÁL ES EL OBJETIVO FINAL DEL LIBRO, SEGÚN EL AUTOR?",
+      "options": [
+        "OFRECER UNA GUÍA COMPLETA Y TÉCNICA SOBRE IA.",
+        "DESPERTAR LA CURIOSIDAD DEL LECTOR E INSPIRARLE A PROFUNDIZAR EN EL MUNDO DE LA IA.",
+        "ADVERTIR SOBRE LOS PELIGROS EXISTENCIALES DE LA IA.",
+        "ENSEÑAR A PROGRAMAR ALGORITMOS DE APRENDIZAJE AUTOMÁTICO."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ia_q42",
+      "text": "EN EL MODELO DE 5 PASOS DE KAI-FU LEE, ¿QUÉ PERMITE A LAS EMPRESAS ATRAER 'MÁS EXPERTOS Y CIENTÍFICOS EN IA'?",
+      "options": [
+        "TENER LOS PRODUCTOS MÁS INNOVADORES.",
+        "TENER MAYORES INGRESOS.",
+        "POSEER LA MAYOR CANTIDAD DE DATOS.",
+        "TENER EL MAYOR NÚMERO DE USUARIOS."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ia_q43",
+      "text": "¿QUÉ EMPRESA DESARROLLÓ DEEPMIND, EL PROGRAMA QUE VENCIÓ AL CAMPEÓN DE GO?",
+      "options": [
+        "IBM",
+        "OPENAI",
+        "FACEBOOK",
+        "GOOGLE"
+      ],
+      "correctAnswerIndex": 3
+    },
+    {
+      "id": "ia_q44",
+      "text": "¿QUÉ ES EL APRENDIZAJE NO SUPERVISADO?",
+      "options": [
+        "APRENDIZAJE DONDE EL HUMANO SOLO DA RECOMPENSAS POSITIVAS.",
+        "LOS ALGORITMOS CLASIFICAN DATOS SIN QUE ESTOS HAYAN SIDO ETIQUETADOS PREVIAMENTE, ENCONTRANDO LA MANERA POR SÍ MISMOS.",
+        "APRENDIZAJE QUE NO REQUIERE ORDENADORES POTENTES.",
+        "UN TIPO DE APRENDIZAJE QUE NO PUEDE UTILIZAR DATOS NO ESTRUCTURADOS."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ia_q45",
+      "text": "¿QUÉ EJEMPLO DE USO DE IA SE MENCIONA PARA 'DISTRIBUCIÓN DE CONTENIDO EN LAS REDES SOCIALES'?",
+      "options": [
+        "DETECTAR NOTICIAS FALSAS.",
+        "MODERAR COMENTARIOS OFENSIVOS.",
+        "PROTEGER LA PRIVACIDAD DE LOS USUARIOS.",
+        "HERRAMIENTA DE MARKETING Y DIFUSIÓN DE INFORMACIÓN COMO SERVICIO PÚBLICO."
+      ],
+      "correctAnswerIndex": 3
+    },
+    {
+      "id": "ia_q46",
+      "text": "SEGÚN EL TEXTO, ¿QUÉ PERMITIRÁ LA IA QUE HAGA EL SER HUMANO?",
+      "options": [
+        "DEJAR DE TRABAJAR POR COMPLETO.",
+        "REALIZAR AQUELLO QUE ANTES CREÍA IMPOSIBLE, DEJANDO LAS TAREAS DIFÍCILES, ABURRIDAS O PELIGROSAS A LAS MÁQUINAS.",
+        "ENTENDER MEJOR EL FUNCIONAMIENTO DEL CEREBRO.",
+        "VIVIR EN MUNDOS VIRTUALES."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": "ia_q47",
+      "text": "¿CUÁL ES LA IDEA CLAVE EN EL PASO 'OBTENCIÓN DE MÁS DATOS' DEL MODELO DE KAI-FU LEE?",
+      "options": [
+        "CREAR SERVICIOS TAN ÚTILES QUE LA GENTE PERMITA QUE SUS DATOS SEAN UTILIZADOS.",
+        "COMPRAR BASES DE DATOS A OTRAS EMPRESAS.",
+        "UTILIZAR DATOS PÚBLICOS Y GUBERNAMENTALES.",
+        "GENERAR DATOS SINTÉTICOS MEDIANTE SIMULACIONES."
+      ],
+      "correctAnswerIndex": 0
+    },
+    {
+      "id": "ia_q48",
+      "text": "¿POR QUÉ LA IA APRENDE DE FORMA EXPONENCIAL, SEGÚN EL TEXTO?",
+      "options": [
+        "PORQUE LA LEY DE MOORE LO DICTA.",
+        "PORQUE LA CANTIDAD DE DATOS SE DUPLICA CADA AÑO.",
+        "PORQUE LAS MÁQUINAS APRENDEN COSAS NUEVAS EN LUGAR DE REQUERIR PROGRAMACIÓN ESPECÍFICA, MEJORANDO POR SÍ MISMAS.",
+        "PORQUE LOS HUMANOS PENSAMOS DE FORMA LINEAL Y NO PODEMOS SEGUIR SU RITMO."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": "ia_q49",
+      "text": "¿QUÉ LOGRO DE IA SE MENCIONA EN EL AÑO 2011?",
+      "options": [
+        "WATSON DE IBM GANÓ CONTRA LOS MEJORES JUGADORES DE JEOPARDY.",
+        "LIBRATUS GANÓ EN PÓQUER.",
+        "DEEP BLUE VENCIÓ EN AJEDREZ.",
+        "DEEPMIND VENCIÓ EN GO."
+      ],
+      "correctAnswerIndex": 0
+    },
+    {
+      "id": "ia_q50",
+      "text": "EN GENERAL, ¿QUÉ CAMBIARÁ LA IA EN EL MUNDO DE LOS NEGOCIOS?",
+      "options": [
+        "ELIMINARÁ A TODAS LAS EMPRESAS PEQUEÑAS.",
+        "HARÁ QUE TODOS LOS PRODUCTOS SEAN GRATUITOS.",
+        "PROPORCIONARÁ VENTAJAS COMPETITIVAS A LAS EMPRESAS QUE LA ENTIENDAN Y APLIQUEN RÁPIDAMENTE.",
+        "SUSTITUIRÁ A TODOS LOS DIRECTORES EJECUTIVOS POR ALGORITMOS."
+      ],
+      "correctAnswerIndex": 2
+    }
+  ]
+}
+
 
 
 ]

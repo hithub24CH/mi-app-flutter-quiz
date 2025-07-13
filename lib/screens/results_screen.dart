@@ -1,53 +1,44 @@
+// lib/screens/results_screen.dart
+
 //==============================================================================
-// === IMPORTACIONES ===
+// === IMPORTACIONES (Sin cambios) ===
 //==============================================================================
 import 'package:flutter/material.dart';
-import 'package:percent_indicator/percent_indicator.dart'; // Para el indicador circular de porcentaje.
-import '../models/quiz_model.dart'; // Necesita el modelo 'Quiz' para entender los datos que recibe.
-import '../widgets/result_question_card.dart'; // Importa el widget reutilizable para mostrar cada pregunta/respuesta.
+import 'package:percent_indicator/percent_indicator.dart';
+import '../models/quiz_model.dart';
+import '../models/question_model.dart';
+import '../widgets/result_question_card.dart';
 
 //==============================================================================
-// === DEFINICIÓN DE LA CLASE ===
+// === DEFINICIÓN DE LA CLASE (Sin cambios en los parámetros) ===
 //==============================================================================
-// Es un 'StatelessWidget' porque una vez que se dibuja con los datos recibidos,
-// no necesita cambiar su propio estado interno.
 class ResultsScreen extends StatelessWidget {
-  //============================================================================
-  // === DATOS DE ENTRADA (Recibidos desde QuizScreen) ===
-  //============================================================================
-  // El objeto Quiz original. Lo necesita para acceder al texto de las preguntas y las respuestas correctas.
   final Quiz quiz;
-  // La lista de respuestas que dio el usuario.
   final List<int?> userAnswers;
+  final List<Question> questionsPlayed;
 
-  // El constructor que recibe los datos cuando se navega a esta pantalla.
   const ResultsScreen({
     super.key,
     required this.quiz,
     required this.userAnswers,
+    required this.questionsPlayed,
   });
 
   @override
   Widget build(BuildContext context) {
-    //==========================================================================
-    // === LÓGICA DE CÁLCULO (Se ejecuta dentro del build) ===
-    //==========================================================================
-    // Se calculan los resultados aquí mismo porque son datos de presentación
-    // que no necesitan ser gestionados en un provider separado.
+    // --- Toda la lógica de cálculo de puntaje permanece igual ---
     int score = 0;
-    // Itera sobre todas las preguntas del quiz original.
-    for (int i = 0; i < quiz.questions.length; i++) {
-      // Compara la respuesta del usuario con la respuesta correcta para esa pregunta.
-      if (userAnswers.length > i && // Verificación de seguridad
-          userAnswers[i] == quiz.questions[i].correctAnswerIndex) {
-        score++; // Incrementa la puntuación si coinciden.
+    for (int i = 0; i < questionsPlayed.length; i++) {
+      if (userAnswers.length > i &&
+          userAnswers[i] == questionsPlayed[i].correctAnswerIndex) {
+        score++;
       }
     }
-    final totalQuestions = quiz.questions.length;
+
+    final totalQuestions = questionsPlayed.length;
     final double percentage =
         totalQuestions > 0 ? (score / totalQuestions) : 0.0;
 
-    // Función local para obtener un mensaje de ánimo basado en el porcentaje.
     String getResultMessage() {
       if (percentage >= 0.9) return "¡Excelente trabajo!";
       if (percentage >= 0.7) return "¡Muy bien hecho!";
@@ -55,78 +46,118 @@ class ResultsScreen extends StatelessWidget {
       return "¡Sigue practicando, la práctica hace al maestro!";
     }
 
-    //==========================================================================
-    // === CONSTRUCCIÓN DE LA INTERFAZ DE USUARIO ===
-    //==========================================================================
+    final theme = Theme.of(context);
+
     return Scaffold(
       appBar: AppBar(
-        title: Text('Resultados de "${quiz.title}"'),
-        actions: [
-          // Botón para reiniciar el juego.
-          IconButton(
-            icon: const Icon(Icons.refresh),
-            onPressed: () {
-              // ¡ACCIÓN DE NAVEGACIÓN!
-              // 'popUntil' cierra todas las pantallas de la pila de navegación
-              // hasta que encuentra la primera (WelcomeScreen). Es la forma más
-              // limpia de volver al inicio.
-              Navigator.of(context).popUntil((route) => route.isFirst);
-            },
-            tooltip: 'Jugar de Nuevo',
-          ),
-        ],
-      ),
-      body: Column(
-        children: [
-          //--- WIDGET DE INDICADOR DE PORCENTAJE ---
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: CircularPercentIndicator(
-              radius: 80.0,
-              lineWidth: 15.0,
-              percent: percentage, // Usa el porcentaje calculado.
-              center: Text(
-                "$score/$totalQuestions", // Muestra la puntuación calculada.
-                style: const TextStyle(
-                    fontWeight: FontWeight.bold, fontSize: 24.0),
-              ),
-              // ... Estilos del indicador ...
-            ),
-          ),
-          //--- MENSAJE DE RESULTADO ---
-          Text(
-            getResultMessage(), // Muestra el mensaje de ánimo.
-            // ...
-          ),
-          const SizedBox(height: 10),
-          const Divider(),
-          //--- LISTA DETALLADA DE PREGUNTAS Y RESPUESTAS ---
-          Expanded(
-            child: ListView.builder(
-              itemCount:
-                  quiz.questions.length, // Una tarjeta por cada pregunta.
-              itemBuilder: (context, index) {
-                // Para cada pregunta, recopila toda la información necesaria.
-                final question = quiz.questions[index];
-                final userAnswerIndex =
-                    userAnswers.length > index ? userAnswers[index] : -1;
-                final bool isCorrect =
-                    userAnswerIndex == question.correctAnswerIndex;
-                final int questionNumber = index + 1;
+        //======================================================================
+        // ===> INICIO DE LA MODIFICACIÓN <===
+        //======================================================================
 
-                // ¡REUTILIZACIÓN DE WIDGETS!
-                // En lugar de definir la tarjeta aquí, se usa un widget separado
-                // (ResultQuestionCard) para mantener el código limpio y organizado.
-                // Se le pasan todos los datos que necesita para dibujarse.
-                return ResultQuestionCard(
-                  questionNumber: questionNumber,
-                  question: question,
-                  selectedAnswerIndex: userAnswerIndex,
-                  isCorrect: isCorrect,
-                );
+        // 1. AÑADIMOS EL BOTÓN DE RETROCESO (LA FLECHA)
+        // La propiedad `leading` coloca un widget al principio del AppBar.
+        // Usamos un `IconButton` para crear un botón con un icono.
+        leading: IconButton(
+          // El icono estándar de flecha hacia atrás.
+          icon: const Icon(Icons.arrow_back),
+          // La acción que se ejecuta al presionar el botón.
+          onPressed: () {
+            // Esta es la parte clave. Usamos `popUntil` para cerrar todas las
+            // pantallas (la de resultados y la del cuestionario) hasta llegar
+            // a la primera pantalla de la aplicación, que es tu lista de
+            // cuestionarios (`welcome_screen.dart`).
+            // Esto asegura que el usuario no regrese a la pantalla del quiz
+            // que acaba de terminar, sino a la lista principal.
+            Navigator.of(context).popUntil((route) => route.isFirst);
+          },
+        ),
+
+        // 2. HEMOS ELIMINADO LA LÍNEA `automaticallyImplyLeading: false`
+        // Antes tenías esta línea que le decía a Flutter que no añadiera
+        // una flecha de retroceso automáticamente. Al quitarla y añadir
+        // nuestro propio `leading`, tomamos el control total.
+
+        //======================================================================
+        // ===> FIN DE LA MODIFICACIÓN <===
+        //======================================================================
+
+        // --- El resto del AppBar permanece sin cambios ---
+        title: const Text('Resultados del Cuestionario'),
+        backgroundColor: theme.colorScheme.primary,
+        foregroundColor: theme.colorScheme.onPrimary,
+        centerTitle: true,
+      ),
+      // El resto del widget permanece exactamente igual.
+      body: ListView(
+        padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
+        children: [
+          // --- Parte 1: El Resumen (Círculo, Mensaje, Botón) ---
+          CircularPercentIndicator(
+            radius: 65.0,
+            lineWidth: 12.0,
+            percent: percentage,
+            center: Text(
+              "$score/$totalQuestions",
+              style:
+                  const TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+            ),
+            circularStrokeCap: CircularStrokeCap.round,
+            progressColor: Colors.green,
+            backgroundColor: Colors.grey.shade300,
+          ),
+          const SizedBox(height: 16),
+
+          Text(
+            getResultMessage(),
+            style: theme.textTheme.titleLarge
+                ?.copyWith(fontWeight: FontWeight.bold),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 16),
+
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 40.0),
+            child: ElevatedButton.icon(
+              icon: const Icon(Icons.refresh, size: 20),
+              label: const Text('Jugar de Nuevo'),
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: theme.colorScheme.primary,
+                  foregroundColor: theme.colorScheme.onPrimary,
+                  textStyle: const TextStyle(fontWeight: FontWeight.bold)),
+              onPressed: () {
+                // La acción de este botón es la misma que la de la nueva flecha.
+                Navigator.of(context).popUntil((route) => route.isFirst);
               },
             ),
           ),
+
+          const Divider(height: 40, thickness: 1),
+
+          // --- Parte 2: La Revisión de Respuestas ---
+          const Padding(
+            padding: EdgeInsets.only(bottom: 8.0),
+            child: Text(
+              'Revisión de respuestas:',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+          ),
+
+          ...questionsPlayed.asMap().entries.map((entry) {
+            final index = entry.key;
+            final question = entry.value;
+            final userAnswerIndex =
+                userAnswers.length > index ? userAnswers[index] : -1;
+            final bool isCorrect =
+                userAnswerIndex == question.correctAnswerIndex;
+            final int questionNumber = index + 1;
+
+            return ResultQuestionCard(
+              questionNumber: questionNumber,
+              question: question,
+              selectedAnswerIndex: userAnswerIndex,
+              isCorrect: isCorrect,
+            );
+          }).toList(),
         ],
       ),
     );

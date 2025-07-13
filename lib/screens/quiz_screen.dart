@@ -1,7 +1,5 @@
-//==============================================================================
-// === IMPORTACIONES ===
-// Objetivo: Traer las herramientas y "planos" necesarios para esta pantalla.
-//==============================================================================
+// lib/screens/quiz_screen.dart
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -9,10 +7,9 @@ import '../models/quiz_model.dart';
 import '../providers/quiz_provider.dart';
 import 'results_screen.dart';
 
-//==============================================================================
-// === WIDGET DE ENTRADA (Wrapper) ===
-// Objetivo: Preparar el entorno para la pantalla de juego.
-//==============================================================================
+// El Wrapper del Provider y la lógica de estado (initState, etc.) no cambian.
+// ...
+
 class QuizScreen extends StatelessWidget {
   final Quiz quiz;
   const QuizScreen({super.key, required this.quiz});
@@ -26,10 +23,6 @@ class QuizScreen extends StatelessWidget {
   }
 }
 
-//==============================================================================
-// === WIDGET DE LA VISTA (El que dibuja y tiene lógica de ciclo de vida) ===
-// Objetivo: Dibujar la UI y reaccionar a eventos del ciclo de vida.
-//==============================================================================
 class _QuizScreenView extends StatefulWidget {
   const _QuizScreenView();
   @override
@@ -53,6 +46,7 @@ class _QuizScreenViewState extends State<_QuizScreenView> {
           builder: (_) => ResultsScreen(
             quiz: _quizProvider.quiz,
             userAnswers: _quizProvider.userAnswers,
+            questionsPlayed: _quizProvider.questions,
           ),
         ),
       );
@@ -65,7 +59,6 @@ class _QuizScreenViewState extends State<_QuizScreenView> {
     super.dispose();
   }
 
-  // --- CONSTRUCCIÓN DE LA INTERFAZ DE USUARIO ---
   @override
   Widget build(BuildContext context) {
     final provider = context.watch<QuizProvider>();
@@ -74,12 +67,10 @@ class _QuizScreenViewState extends State<_QuizScreenView> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(provider.quiz.title),
-        automaticallyImplyLeading: !provider.isAnswered,
+        title: Text(provider.quiz.title, overflow: TextOverflow.ellipsis),
       ),
       body: Column(
         children: [
-          //--- SECCIÓN DEL TEMPORIZADOR ---
           Padding(
             padding:
                 const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
@@ -90,161 +81,162 @@ class _QuizScreenViewState extends State<_QuizScreenView> {
                   child: LinearProgressIndicator(
                     value: provider.timerProgress,
                     minHeight: 12,
-                    backgroundColor: Colors.grey.shade300,
+                    backgroundColor: theme.colorScheme.surfaceVariant,
                     valueColor: AlwaysStoppedAnimation<Color>(
-                      provider.timerProgress > 0.5
-                          ? Colors.green
-                          : provider.timerProgress > 0.2
-                              ? Colors.orange
-                              : Colors.red,
+                      theme.colorScheme.secondary,
                     ),
                   ),
                 ),
                 const SizedBox(height: 4),
                 Text(
                   'Tiempo: ${provider.tiempoRestante}s',
-                  style: theme.textTheme.bodyMedium
-                      ?.copyWith(color: Colors.grey.shade700),
+                  style: theme.textTheme.bodySmall
+                      ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
                 ),
               ],
             ),
           ),
-          //--- SECCIÓN PRINCIPAL CON SCROLL ---
           Expanded(
             child: CustomScrollView(
               slivers: [
-                //--- Widget para el texto de la pregunta ---
                 SliverToBoxAdapter(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 24.0, vertical: 8.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        Text(
-                          'Pregunta ${provider.currentQuestionIndex + 1}/${provider.totalQuestions}',
-                          style: theme.textTheme.titleMedium
-                              ?.copyWith(color: Colors.blueGrey),
-                          textAlign: TextAlign.center,
+                  child: Container(
+                    margin: const EdgeInsets.symmetric(
+                        vertical: 16.0, horizontal: 16.0),
+                    padding: const EdgeInsets.all(20.0),
+                    decoration: BoxDecoration(
+                      color: theme.colorScheme.primary,
+                      borderRadius: BorderRadius.circular(16),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.25),
+                          blurRadius: 10,
+                          offset: const Offset(0, 5),
                         ),
-                        const SizedBox(height: 12),
-                        Container(
-                          padding: const EdgeInsets.all(16.0),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(12),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.grey.withOpacity(0.3),
-                                  spreadRadius: 2,
-                                  blurRadius: 5,
-                                  offset: const Offset(0, 3)),
-                            ],
-                          ),
-                          child: Text(
-                            currentQuestion.text,
-                            style: theme.textTheme.titleMedium?.copyWith(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        ).animate(key: ValueKey(currentQuestion.id)).flipH(
-                              duration: 400.ms,
-                              curve: Curves.easeOut,
-                            ),
-                        const SizedBox(height: 24),
                       ],
                     ),
-                  ),
+                    child: Column(
+                      children: [
+                        Text(
+                          'Pregunta ${provider.currentQuestionIndex + 1} de ${provider.totalQuestions}',
+                          style: theme.textTheme.bodyMedium?.copyWith(
+                            color: theme.colorScheme.onPrimary.withOpacity(0.8),
+                          ),
+                        ),
+                        const SizedBox(height: 12),
+                        Text(
+                          currentQuestion.text,
+                          textAlign: TextAlign.center,
+                          // --- CORRECCIÓN FINAL ---
+                          // Se ha eliminado 'const' de aquí
+                          style: TextStyle(
+                            fontSize: 19,
+                            color: theme.colorScheme.onPrimary,
+                            fontWeight: FontWeight.bold,
+                            height: 1.4,
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                      .animate(key: ValueKey(currentQuestion.id))
+                      .fadeIn(duration: 500.ms)
+                      .slideY(begin: 0.1, end: 0),
                 ),
-                //--- Widget para la lista de opciones ---
                 SliverPadding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 16.0, vertical: 10.0),
                   sliver: SliverList.builder(
                     itemCount: currentQuestion.options.length,
                     itemBuilder: (ctx, index) {
-                      final optionColor = _getOptionColor(provider, index);
-                      final optionIcon = _getOptionIcon(provider, index);
+                      final optionBgColor =
+                          _getOptionColor(provider, index, theme);
+                      final optionIconData = _getOptionIcon(provider, index);
+                      final bool isHighlighted = provider.isAnswered &&
+                          (index ==
+                                  provider.currentQuestion.correctAnswerIndex ||
+                              index == provider.selectedOptionIndex);
+                      final contentColor = isHighlighted
+                          ? Colors.white
+                          : theme.colorScheme.onSurface;
+
                       return Card(
-                        elevation: 2,
+                        color: optionBgColor,
                         margin: const EdgeInsets.symmetric(vertical: 6.0),
-                        color: optionColor,
                         child: InkWell(
                           onTap: provider.isAnswered
                               ? null
                               : () => provider.answerQuestion(index),
+                          borderRadius: BorderRadius.circular(12),
                           child: Padding(
-                            padding: const EdgeInsets.all(16.0),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 16.0, vertical: 18.0),
                             child: Row(
                               children: [
-                                Icon(
-                                  optionIcon,
-                                  color: (optionColor == Colors.grey[300]!)
-                                      ? Colors.grey
-                                      : Colors.white,
-                                ),
-                                const SizedBox(width: 12),
+                                Icon(optionIconData,
+                                    color: contentColor, size: 26),
+                                const SizedBox(width: 16),
                                 Expanded(
-                                  // El widget que contiene el texto de la opción.
                                   child: Text(
                                     currentQuestion.options[index],
-                                    // El estilo se aplica aquí.
-                                    style: theme.textTheme.bodyMedium?.copyWith(
+                                    style: TextStyle(
                                       fontSize: 16,
-                                      // El color del texto es reactivo para garantizar la legibilidad.
-                                      // Si el fondo es gris claro (sin responder), el texto es negro.
-                                      // Si el fondo tiene color (verde/rojo), el texto es blanco.
-                                      color: (optionColor == Colors.grey[300]!)
-                                          ? Colors.black87
-                                          : Colors.white,
+                                      color: contentColor,
                                     ),
                                   ),
-                                ), // Cierre del Expanded
-                              ], // Cierre de la lista de children del Row
-                            ), // Cierre del Padding
-                          ), // Cierre del InkWell
-                        ), // Cierre del Card
-                      ); // Cierre del return del itemBuilder
-                    }, // Cierre del itemBuilder
-                  ), // Cierre del SliverList.builder
-                ), // Cierre del SliverPadding
-                //--- Widget para la puntuación ---
-                SliverToBoxAdapter(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 20.0),
-                    child: Text(
-                      'Puntuación: ${provider.score}',
-                      textAlign: TextAlign.center,
-                      style: theme.textTheme.titleLarge,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+                SliverFillRemaining(
+                  hasScrollBody: false,
+                  child: Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom: 24.0, top: 16.0),
+                      child: Text(
+                        'Puntuación: ${provider.score}',
+                        style: theme.textTheme.headlineSmall?.copyWith(
+                          fontWeight: FontWeight.bold,
+                          color:
+                              theme.colorScheme.onBackground.withOpacity(0.8),
+                        ),
+                      ),
                     ),
                   ),
                 ),
-              ], // Cierre de la lista de slivers
-            ), // Cierre del CustomScrollView
-          ), // Cierre del Expanded
-        ], // Cierre de la lista de children de Column
-      ), // Cierre del Scaffold
-    ); // Cierre del return del build
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
   }
 
-  //============================================================================
-  // === MÉTODOS DE AYUDA (Helper Methods) para la UI ===
-  //============================================================================
-  Color _getOptionColor(QuizProvider provider, int optionIndex) {
-    if (!provider.isAnswered) return Colors.grey[300]!;
-    final currentQuestion = provider.currentQuestion;
-    if (optionIndex == currentQuestion.correctAnswerIndex)
-      return Colors.green.withOpacity(0.7);
-    if (optionIndex == provider.selectedOptionIndex)
-      return Colors.red.withOpacity(0.7);
-    return Colors.grey[300]!;
+  Color _getOptionColor(
+      QuizProvider provider, int optionIndex, ThemeData theme) {
+    if (!provider.isAnswered) {
+      return theme.cardTheme.color!;
+    }
+    if (optionIndex == provider.currentQuestion.correctAnswerIndex) {
+      return Colors.green.shade500;
+    }
+    if (optionIndex == provider.selectedOptionIndex) {
+      return Colors.red.shade500;
+    }
+    return theme.brightness == Brightness.dark
+        ? theme.cardTheme.color!.withOpacity(0.5)
+        : Colors.grey.shade300;
   }
 
   IconData _getOptionIcon(QuizProvider provider, int optionIndex) {
     if (!provider.isAnswered) return Icons.radio_button_unchecked;
-    final currentQuestion = provider.currentQuestion;
-    if (optionIndex == currentQuestion.correctAnswerIndex)
+    if (optionIndex == provider.currentQuestion.correctAnswerIndex)
       return Icons.check_circle;
     if (optionIndex == provider.selectedOptionIndex) return Icons.cancel;
     return Icons.radio_button_unchecked;

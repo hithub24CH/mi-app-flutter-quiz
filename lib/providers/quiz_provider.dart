@@ -45,7 +45,7 @@ class QuizProvider extends ChangeNotifier {
 
   // El temporizador y sus variables de control.
   static const int tiempoPorPregunta =
-      15; // Tiempo fijo en segundos para cada pregunta.
+      20; // Tiempo fijo en segundos para cada pregunta.
   Timer? _timer; // El objeto Timer que descuenta el tiempo.
   int _tiempoRestante = tiempoPorPregunta; // El contador de segundos actual.
 
